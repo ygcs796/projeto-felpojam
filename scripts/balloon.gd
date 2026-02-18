@@ -43,6 +43,11 @@ var dialogue_line: DialogueLine:
 			dialogue_line = value
 			apply_dialogue_line()
 		else:
+			# Quando o diálogo termina, destava o movimento do player
+			var player = get_tree().get_first_node_in_group("player")
+			if player:
+				player.dialogue_open = false
+
 			# The dialogue has finished so close the balloon
 			if owner == null:
 				queue_free()
@@ -70,7 +75,6 @@ var mutation_cooldown: Timer = Timer.new()
 
 ## Indicator to show that player can progress dialogue.
 @onready var progress: Polygon2D = %Progress
-
 
 func _ready() -> void:
 	balloon.hide()
@@ -112,6 +116,10 @@ func _notification(what: int) -> void:
 
 ## Start some dialogue
 func start(with_dialogue_resource: DialogueResource = null, title: String = "", extra_game_states: Array = []) -> void:
+	var player = get_tree().get_first_node_in_group("player")
+	if player:
+		player.dialogue_open = true
+	
 	temporary_game_states = [self] + extra_game_states
 	is_waiting_for_input = false
 	if is_instance_valid(with_dialogue_resource):
