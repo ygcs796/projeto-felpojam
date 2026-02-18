@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctiwydkwdjuee"
-path="res://.godot/imported/16x32 Jump-Sheet.png-7fff258bab54e30c9d7a8f56ac55abd0.ctex"
+uid="uid://bivnmwkom1m8v"
+path="res://.godot/imported/Andando_frente.png-23cedf0940a427aed6d20a7cca1ee29c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bonecos_sprites_treinamento/16x32/16x32 Jump-Sheet.png"
-dest_files=["res://.godot/imported/16x32 Jump-Sheet.png-7fff258bab54e30c9d7a8f56ac55abd0.ctex"]
+source_file="res://assets/linuz_sprites/Andando_frente.png"
+dest_files=["res://.godot/imported/Andando_frente.png-23cedf0940a427aed6d20a7cca1ee29c.ctex"]
 
 [params]
 

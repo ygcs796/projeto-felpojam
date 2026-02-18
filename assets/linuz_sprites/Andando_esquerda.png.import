@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgdx6hnvqyx0s"
-path="res://.godot/imported/teste_tilessheet.png-b6516ac6255c136096ded6f5ae35a1e2.ctex"
+uid="uid://cycpb3a67csgb"
+path="res://.godot/imported/Andando_esquerda.png-0184b1474cc82f5ecbf1377ec9f95914.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/teste_tilessheet.png"
-dest_files=["res://.godot/imported/teste_tilessheet.png-b6516ac6255c136096ded6f5ae35a1e2.ctex"]
+source_file="res://assets/linuz_sprites/Andando_esquerda.png"
+dest_files=["res://.godot/imported/Andando_esquerda.png-0184b1474cc82f5ecbf1377ec9f95914.ctex"]
 
 [params]
 

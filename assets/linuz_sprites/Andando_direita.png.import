@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5yrgbgy1pf27"
-path="res://.godot/imported/16x32 Run-Sheet.png-624042329e290f4eee395f952dabdd8c.ctex"
+uid="uid://cohif3gfsxl5u"
+path="res://.godot/imported/Andando_direita.png-06ee564986df20fd18981b4729957e1f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bonecos_sprites_treinamento/16x32/16x32 Run-Sheet.png"
-dest_files=["res://.godot/imported/16x32 Run-Sheet.png-624042329e290f4eee395f952dabdd8c.ctex"]
+source_file="res://assets/linuz_sprites/Andando_direita.png"
+dest_files=["res://.godot/imported/Andando_direita.png-06ee564986df20fd18981b4729957e1f.ctex"]
 
 [params]
 

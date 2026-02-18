@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn0br4xg1wjeu"
-path="res://.godot/imported/16x16 Run-Sheet.png-5909a89a054412ce246c040452b865fc.ctex"
+uid="uid://c7xvd43riyvks"
+path="res://.godot/imported/Andando_costas.png-be66ddc50946f8e1e0ed263e09e2ac63.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bonecos_sprites_treinamento/16x16/16x16 Run-Sheet.png"
-dest_files=["res://.godot/imported/16x16 Run-Sheet.png-5909a89a054412ce246c040452b865fc.ctex"]
+source_file="res://assets/linuz_sprites/Andando_costas.png"
+dest_files=["res://.godot/imported/Andando_costas.png-be66ddc50946f8e1e0ed263e09e2ac63.ctex"]
 
 [params]
 

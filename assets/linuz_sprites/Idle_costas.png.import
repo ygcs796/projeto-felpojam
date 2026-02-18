@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c82avdh7boxdm"
-path="res://.godot/imported/16x16 Idle-Sheet.png-92bf1bb85cb25dea95f47a596e5f772b.ctex"
+uid="uid://bamd3vdct8nb6"
+path="res://.godot/imported/Idle_costas.png-fb24b6acda2821af3d05b00a2d9559e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bonecos_sprites_treinamento/16x16/16x16 Idle-Sheet.png"
-dest_files=["res://.godot/imported/16x16 Idle-Sheet.png-92bf1bb85cb25dea95f47a596e5f772b.ctex"]
+source_file="res://assets/linuz_sprites/Idle_costas.png"
+dest_files=["res://.godot/imported/Idle_costas.png-fb24b6acda2821af3d05b00a2d9559e9.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mfysvcpeb62f"
-path="res://.godot/imported/16x16 All Animations-Sheet.png-844d8b9b4aba22323003696cdf4abc35.ctex"
+uid="uid://4oijqglh4m1t"
+path="res://.godot/imported/Idle_esquerda.png-60e2935b968feedd0fccd2e3584ca75c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bonecos_sprites_treinamento/16x16/16x16 All Animations-Sheet.png"
-dest_files=["res://.godot/imported/16x16 All Animations-Sheet.png-844d8b9b4aba22323003696cdf4abc35.ctex"]
+source_file="res://assets/linuz_sprites/Idle_esquerda.png"
+dest_files=["res://.godot/imported/Idle_esquerda.png-60e2935b968feedd0fccd2e3584ca75c.ctex"]
 
 [params]
 

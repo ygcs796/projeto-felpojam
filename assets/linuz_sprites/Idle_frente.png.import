@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck6etflkugjwe"
-path="res://.godot/imported/16x32 Walk-Sheet.png-91f484d87a5268203da5498fce16c9eb.ctex"
+uid="uid://dtx8oclkdwvm6"
+path="res://.godot/imported/Idle_frente.png-4693f1c9b9df228c0850f181bcec3e09.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bonecos_sprites_treinamento/16x32/16x32 Walk-Sheet.png"
-dest_files=["res://.godot/imported/16x32 Walk-Sheet.png-91f484d87a5268203da5498fce16c9eb.ctex"]
+source_file="res://assets/linuz_sprites/Idle_frente.png"
+dest_files=["res://.godot/imported/Idle_frente.png-4693f1c9b9df228c0850f181bcec3e09.ctex"]
 
 [params]
 
