@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://clhie26je5byp"]
 
 [ext_resource type="Script" uid="uid://btsykbbcv5bgy" path="res://menu.gd" id="1_lti8b"]
+[ext_resource type="AudioStream" uid="uid://brqi6kr602bx6" path="res://sfx/musica_menu.ogg" id="2_ouk20"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ouk20"]
 
@@ -122,6 +123,11 @@ text = "QUIT"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1033094484]
 libraries/ = SubResource("AnimationLibrary_ouk20")
 autoplay = &"reveal"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=146584450]
+stream = ExtResource("2_ouk20")
+volume_db = -5.0
+autoplay = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Button4" to="." method="_on_button_4_pressed"]
