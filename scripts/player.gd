@@ -3,6 +3,8 @@ extends CharacterBody2D
 var tile_size = 16  # Tamanho do seu grid
 var is_moving = false
 
+@onready var actionable_finder: Area2D = $Direction/ActionableFinder
+
 func _physics_process(_delta):
 	if is_moving:
 		return
@@ -52,3 +54,10 @@ func move_to_grid(dir):
 	
 	# Quando terminar de mover, permite novo input
 	tween.finished.connect(func(): is_moving = false)
+	
+func _unhandled_input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("interaction_button"):
+		var actionables = actionable_finder.get_overlapping_areas()
+		if actionables.size() > 0:
+			actionables[0].action()
+			return
