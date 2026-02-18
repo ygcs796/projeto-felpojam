@@ -73,7 +73,9 @@ func move(dir, prev_dir):
 	tween.finished.connect(func(): is_moving = false)
 	
 func _unhandled_input(_event: InputEvent) -> void:
+	# Verifica se o jogador apertou a tecla de interação
 	if Input.is_action_just_pressed("interaction_button"):
+		# Pega todas as Area2D que estão encostandono ActionableFinder
 		var actionables = actionable_finder.get_overlapping_areas()
 		if actionables.size() > 0:
 			actionables[0].action()

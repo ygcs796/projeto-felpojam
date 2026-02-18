@@ -74,6 +74,11 @@ height = 20.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rv78h"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_rv78h"]
+font_size = 4
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
 [node name="Npc" type="CharacterBody2D" unique_id=2088960319]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1241614585]
@@ -85,11 +90,25 @@ frame_progress = 0.86530036
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=8597988]
+visible = false
 shape = SubResource("CapsuleShape2D_rv78h")
 
 [node name="Actionable" parent="." unique_id=1295379747 instance=ExtResource("2_abqhh")]
+collision_layer = 1
+collision_mask = 2
 dialogue_resource = ExtResource("3_rv78h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable" unique_id=1835676534]
 position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_rv78h")
+
+[node name="Label" type="Label" parent="Actionable" unique_id=1711806568]
+offset_left = -50.0
+offset_top = -16.0
+offset_right = 5.0
+offset_bottom = -8.0
+text = "Aperte E para interagir"
+label_settings = SubResource("LabelSettings_rv78h")
+
+[connection signal="area_entered" from="Actionable" to="Actionable" method="_on_area_entered"]
+[connection signal="area_exited" from="Actionable" to="Actionable" method="_on_area_exited"]

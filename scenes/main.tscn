@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ddry44an54yp1" path="res://scenes/player.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://vqhc52fmlbap" path="res://scenes/npc.tscn" id="4_jyhfs"]
 
-[node name="Main" type="Node2D" unique_id=686263271]
+[node name="Main" type="Node2D" unique_id=686263271 groups=["player_interact_area"]]
 position = Vector2(4, 0)
 script = ExtResource("1_h2yge")
 
@@ -15,4 +15,4 @@ script = ExtResource("1_h2yge")
 position = Vector2(345, 162)
 
 [node name="Npc" parent="." unique_id=2088960319 instance=ExtResource("4_jyhfs")]
-position = Vector2(453, 162)
+position = Vector2(456, 162)
