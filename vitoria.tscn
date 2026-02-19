@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bo3y6m68utb6h"]
+
+[ext_resource type="Script" uid="uid://cxmnmrl31elwn" path="res://vitoria.gd" id="1_8wiqx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8wiqx"]
+
+[node name="Vitoria" type="Control" unique_id=660914674]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8wiqx")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1893117888]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.57254905, 0.57254905, 0.57254905, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=293941028]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Texto" type="Label" parent="VBoxContainer" unique_id=2130494570]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Parabéns!
+Você ganhou 😃"
+horizontal_alignment = 1
+
+[node name="VSeparator2" type="VSeparator" parent="VBoxContainer" unique_id=363171157]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_8wiqx")
+
+[node name="continue_button" type="Button" parent="VBoxContainer" unique_id=1386239407]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 27
+text = "CONTINUAR"
+
+[connection signal="button_down" from="VBoxContainer/continue_button" to="." method="_on_continue_button_down"]
+[connection signal="pressed" from="VBoxContainer/continue_button" to="." method="_on_continue_button_pressed"]

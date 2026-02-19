@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://btvwahi5pk6lb"]
+
+[ext_resource type="Script" uid="uid://b0yivgdpcx6ap" path="res://derrota.gd" id="1_kkwv5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ypvqh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kkwv5"]
+
+[node name="Derrota" type="Control" unique_id=523125271]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kkwv5")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=994669242]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.57254905, 0.57254905, 0.57254905, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=499441130]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Texto" type="Label" parent="ColorRect/VBoxContainer" unique_id=145111324]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Você perdeu 😭"
+horizontal_alignment = 1
+
+[node name="VSeparator2" type="VSeparator" parent="ColorRect/VBoxContainer" unique_id=865414634]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_ypvqh")
+
+[node name="restart_button" type="Button" parent="ColorRect/VBoxContainer" unique_id=1867946554]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 27
+text = "RECOMEÇAR"
+
+[node name="VSeparator" type="VSeparator" parent="ColorRect/VBoxContainer" unique_id=543349343]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_kkwv5")
+
+[node name="quit_button" type="Button" parent="ColorRect/VBoxContainer" unique_id=14910489]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 27
+text = "QUIT"
+
+[connection signal="button_down" from="ColorRect/VBoxContainer/restart_button" to="." method="_on_restart_button_down"]
+[connection signal="button_down" from="ColorRect/VBoxContainer/quit_button" to="." method="_on_quit_button_down"]
