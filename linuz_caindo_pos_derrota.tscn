@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://cloxyt02v73e8"]
+
+[ext_resource type="Texture2D" uid="uid://d2skvjkij4s2w" path="res://assets/linuz_sprites/animacao-pos-derrota.png" id="1_ujboy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kt18a"]
+atlas = ExtResource("1_ujboy")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bedxb"]
+atlas = ExtResource("1_ujboy")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7dhgq"]
+atlas = ExtResource("1_ujboy")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slrna"]
+atlas = ExtResource("1_ujboy")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6ld6"]
+atlas = ExtResource("1_ujboy")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmcvi"]
+atlas = ExtResource("1_ujboy")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kr1gb"]
+atlas = ExtResource("1_ujboy")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p31q1"]
+atlas = ExtResource("1_ujboy")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0lm6"]
+atlas = ExtResource("1_ujboy")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84g74"]
+atlas = ExtResource("1_ujboy")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fyr5u"]
+atlas = ExtResource("1_ujboy")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvbp2"]
+atlas = ExtResource("1_ujboy")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0g1n"]
+atlas = ExtResource("1_ujboy")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0mpt"]
+atlas = ExtResource("1_ujboy")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfitu"]
+atlas = ExtResource("1_ujboy")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bn5b2"]
+atlas = ExtResource("1_ujboy")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cs057"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kt18a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bedxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7dhgq")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_slrna")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_d6ld6")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_kmcvi")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_kr1gb")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_p31q1")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_w0lm6")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_84g74")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_fyr5u")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_dvbp2")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_d0g1n")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_v0mpt")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_nfitu")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_bn5b2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="linuz caindo pos derrota" type="AnimatedSprite2D" unique_id=433422810]
+sprite_frames = SubResource("SpriteFrames_cs057")
+frame_progress = 0.63373804

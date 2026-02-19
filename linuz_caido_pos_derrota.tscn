@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://syy1j46furqn"]
+
+[ext_resource type="Texture2D" uid="uid://c2d0bpiivs7yi" path="res://assets/linuz_sprites/caido-pos-derrota.png" id="1_2ogmy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3peq"]
+atlas = ExtResource("1_2ogmy")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbyc2"]
+atlas = ExtResource("1_2ogmy")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bv27g"]
+atlas = ExtResource("1_2ogmy")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b7ome"]
+atlas = ExtResource("1_2ogmy")
+region = Rect2(768, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_en0w4"]
+atlas = ExtResource("1_2ogmy")
+region = Rect2(1024, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ywm0"]
+atlas = ExtResource("1_2ogmy")
+region = Rect2(1280, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cs3sh"]
+atlas = ExtResource("1_2ogmy")
+region = Rect2(1536, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rl44"]
+atlas = ExtResource("1_2ogmy")
+region = Rect2(1792, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hddqw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3peq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbyc2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bv27g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b7ome")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_en0w4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ywm0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cs3sh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rl44")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="linuz caido pos derrota" type="AnimatedSprite2D" unique_id=761928783]
+sprite_frames = SubResource("SpriteFrames_hddqw")
+autoplay = "default"
+frame_progress = 0.027596986
