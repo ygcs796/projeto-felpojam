@@ -1,0 +1,13 @@
+[gd_resource type="Theme" format=3 uid="uid://b477csdrpdh4g"]
+
+[ext_resource type="StyleBox" uid="uid://bluq6lw1fnoye" path="res://style_btn_escuro_padrao.tres" id="1_qhd2s"]
+
+[resource]
+Button/colors/font_focus_color = Color(1, 1, 0, 0.99607843)
+Button/colors/font_hover_color = Color(1, 1, 0, 0.99607843)
+Button/colors/font_pressed_color = Color(1, 0.5176471, 0, 0.99607843)
+Button/font_sizes/font_size = 7
+Button/styles/focus = ExtResource("1_qhd2s")
+Button/styles/hover = ExtResource("1_qhd2s")
+Button/styles/normal = ExtResource("1_qhd2s")
+Button/styles/pressed = ExtResource("1_qhd2s")

@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://fienaprlgwtm"]
+
+[ext_resource type="Theme" uid="uid://b477csdrpdh4g" path="res://pause_menu_button_theme.tres" id="1_hdmo1"]
+[ext_resource type="Script" uid="uid://b4dl002pf4l47" path="res://pause_menu.gd" id="1_nwcfo"]
+[ext_resource type="AudioStream" uid="uid://dvom3j07nc3k7" path="res://assets/sfx/som_start_8bit_trocar.wav" id="3_p81d2"]
+[ext_resource type="AudioStream" uid="uid://dwofjc0lf6tnf" path="res://assets/sfx/som_selecao_opcoes_menu_8bit_trocar.wav" id="4_2nc7s"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_p81d2"]
+action = &"ui_cancel"
+
+[sub_resource type="Shortcut" id="Shortcut_2nc7s"]
+events = [SubResource("InputEventAction_p81d2")]
+
+[node name="pause_menu" type="CanvasLayer" unique_id=1602011080]
+process_mode = 3
+script = ExtResource("1_nwcfo")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1545920722]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.25490198)
+
+[node name="menu_box" type="VBoxContainer" parent="." unique_id=746759511]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+
+[node name="resume_btn" type="Button" parent="menu_box" unique_id=12114207]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_hdmo1")
+theme_override_font_sizes/font_size = 7
+shortcut = SubResource("Shortcut_2nc7s")
+shortcut_feedback = false
+shortcut_in_tooltip = false
+text = "CONTINUAR"
+
+[node name="quit_btn" type="Button" parent="menu_box" unique_id=662394621]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_hdmo1")
+theme_override_font_sizes/font_size = 7
+text = "FECHAR JOGO"
+
+[node name="start_sound" type="AudioStreamPlayer" parent="." unique_id=280923951]
+stream = ExtResource("3_p81d2")
+volume_db = -10.0
+
+[node name="select_sound" type="AudioStreamPlayer" parent="." unique_id=363312784]
+stream = ExtResource("4_2nc7s")
+volume_db = -15.0
+
+[connection signal="focus_entered" from="menu_box/resume_btn" to="." method="_on_resume_btn_focus_entered"]
+[connection signal="mouse_entered" from="menu_box/resume_btn" to="." method="_on_resume_btn_mouse_entered"]
+[connection signal="pressed" from="menu_box/resume_btn" to="." method="_on_resume_btn_pressed"]
+[connection signal="focus_entered" from="menu_box/quit_btn" to="." method="_on_quit_btn_focus_entered"]
+[connection signal="mouse_entered" from="menu_box/quit_btn" to="." method="_on_quit_btn_mouse_entered"]
+[connection signal="pressed" from="menu_box/quit_btn" to="." method="_on_quit_btn_pressed"]
