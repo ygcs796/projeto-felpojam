@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg6fx6enk3cma"
-path="res://.godot/imported/copacabana_e_areia-sheet.png-5fbeb8c06c8389132ce45c839074568a.ctex"
+uid="uid://cqlwv0xd5smut"
+path="res://.godot/imported/Copacabana e areia arcos-sheet.png-785885f0119b6f220db3113f67962d45.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/copacabana_e_areia-sheet.png"
-dest_files=["res://.godot/imported/copacabana_e_areia-sheet.png-5fbeb8c06c8389132ce45c839074568a.ctex"]
+source_file="res://assets/tiles/Copacabana e areia arcos-sheet.png"
+dest_files=["res://.godot/imported/Copacabana e areia arcos-sheet.png-785885f0119b6f220db3113f67962d45.ctex"]
 
 [params]
 
