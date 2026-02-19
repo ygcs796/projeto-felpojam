@@ -64,7 +64,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_sptji")
 }],
 "loop": true,
-"name": &"walk_down",
+"name": &"idle",
 "speed": 8.0
 }]
 
@@ -84,9 +84,8 @@ outline_color = Color(0, 0, 0, 1)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1241614585]
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_abqhh")
-animation = &"walk_down"
-autoplay = "walk_down"
-frame_progress = 0.86530036
+animation = &"idle"
+autoplay = "idle"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=8597988]
@@ -109,6 +108,7 @@ offset_right = 5.0
 offset_bottom = -8.0
 text = "Aperte E para interagir"
 label_settings = SubResource("LabelSettings_rv78h")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="area_entered" from="Actionable" to="Actionable" method="_on_area_entered"]
 [connection signal="area_exited" from="Actionable" to="Actionable" method="_on_area_exited"]

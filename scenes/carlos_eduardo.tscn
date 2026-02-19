@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://dnxu13yjhv6jl"]
+
+[ext_resource type="PackedScene" uid="uid://vqhc52fmlbap" path="res://scenes/npc.tscn" id="1_q8bo2"]
+[ext_resource type="Texture2D" uid="uid://c8nouden23n6w" path="res://assets/characters/Carlos Eduardo/Idle olhando pra direita.png" id="2_6f6nn"]
+[ext_resource type="Texture2D" uid="uid://c0omlraqvresl" path="res://assets/characters/Carlos Eduardo/Andando e olhando pra esquerda (pra cima ou pra baixo).png" id="3_n7um7"]
+[ext_resource type="Texture2D" uid="uid://cp80872iu3l56" path="res://assets/characters/Carlos Eduardo/Andando e olhando pra direita (pra cima ou pra baixo).png" id="4_uvlje"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nsq1q"]
+atlas = ExtResource("2_6f6nn")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7um7"]
+atlas = ExtResource("2_6f6nn")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xy51j"]
+atlas = ExtResource("3_n7um7")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvaoq"]
+atlas = ExtResource("3_n7um7")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3t4yg"]
+atlas = ExtResource("4_uvlje")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncf36"]
+atlas = ExtResource("4_uvlje")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uvlje"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nsq1q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7um7")
+}],
+"loop": true,
+"name": &"idle_right",
+"speed": 1.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xy51j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wvaoq")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3t4yg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncf36")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}]
+
+[node name="Carlos Eduardo" unique_id=2088960319 instance=ExtResource("1_q8bo2")]
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=1241614585]
+scale = Vector2(1, 1)
+sprite_frames = SubResource("SpriteFrames_uvlje")
+animation = &"new_animation"
+autoplay = "idle_right"
+flip_h = false

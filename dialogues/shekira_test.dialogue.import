@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ddo8p8niva030"
+path="res://.godot/imported/shekira_test.dialogue-b2355ca810a94958cba29e4a4d0732b4.tres"
+
+[deps]
+
+source_file="res://dialogues/shekira_test.dialogue"
+dest_files=["res://.godot/imported/shekira_test.dialogue-b2355ca810a94958cba29e4a4d0732b4.tres"]
+
+[params]
+
+defaults=true
