@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpsxvyq6bogya"
-path="res://.godot/imported/Idle de lado.png-7925ca412d2d131bbb0248893bbf9018.ctex"
+uid="uid://byikgsm2graov"
+path="res://.godot/imported/Idle de frente (espaçado).png-3ceb9aaa49254af71a32f3f7a606dce9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/Shekira Tarn/Idle de lado.png"
-dest_files=["res://.godot/imported/Idle de lado.png-7925ca412d2d131bbb0248893bbf9018.ctex"]
+source_file="res://assets/characters/Carlos Eduardo/Idle de frente (espaçado).png"
+dest_files=["res://.godot/imported/Idle de frente (espaçado).png-3ceb9aaa49254af71a32f3f7a606dce9.ctex"]
 
 [params]
 

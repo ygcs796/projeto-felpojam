@@ -1,27 +1,27 @@
 [gd_scene format=3 uid="uid://rxxqwa7hkmuc"]
 
 [ext_resource type="PackedScene" uid="uid://vqhc52fmlbap" path="res://scenes/npc.tscn" id="1_un4vw"]
-[ext_resource type="Texture2D" uid="uid://b7itkrmdf4gqr" path="res://assets/characters/Shekira Tarn/Idle de frente.png" id="2_vmi4p"]
-[ext_resource type="Texture2D" uid="uid://qcxb2tnu2jg0" path="res://assets/characters/Shekira Tarn/Idle de lado.png" id="3_20l3y"]
-[ext_resource type="Texture2D" uid="uid://b7d7ruc6pbyx" path="res://assets/characters/Shekira Tarn/Idle de costas.png" id="4_r8dg7"]
-[ext_resource type="Texture2D" uid="uid://bdv4jhqcnhkua" path="res://assets/characters/Shekira Tarn/Andando para frente.png" id="5_ifmxk"]
-[ext_resource type="Texture2D" uid="uid://f44nyiwyj2e1" path="res://assets/characters/Shekira Tarn/Andando pro lado.png" id="6_dadin"]
-[ext_resource type="Texture2D" uid="uid://crv6wgg81hold" path="res://assets/characters/Shekira Tarn/Andando pra trás.png" id="7_lbwik"]
+[ext_resource type="Texture2D" uid="uid://lu24wjmjwkst" path="res://assets/characters/Shekira Tarn/Idle de frente.png" id="2_vmi4p"]
+[ext_resource type="Texture2D" uid="uid://cpsxvyq6bogya" path="res://assets/characters/Shekira Tarn/Idle de lado.png" id="3_20l3y"]
+[ext_resource type="Texture2D" uid="uid://iargqv482gsl" path="res://assets/characters/Shekira Tarn/Idle de costas.png" id="4_r8dg7"]
+[ext_resource type="Texture2D" uid="uid://bi2vbiql052pv" path="res://assets/characters/Shekira Tarn/Andando pra frente.png" id="5_ifmxk"]
+[ext_resource type="Texture2D" uid="uid://c1cuwsg7yatdb" path="res://assets/characters/Shekira Tarn/Andando pro lado.png" id="6_dadin"]
+[ext_resource type="Texture2D" uid="uid://otxbivr4h44m" path="res://assets/characters/Shekira Tarn/Andando pra trás.png" id="7_lbwik"]
 [ext_resource type="Resource" uid="uid://ddo8p8niva030" path="res://dialogues/shekira_test.dialogue" id="8_ifmxk"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lc10p"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmi4p"]
 atlas = ExtResource("2_vmi4p")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jy3xf"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_20l3y"]
 atlas = ExtResource("2_vmi4p")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r8dg7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lc10p"]
 atlas = ExtResource("2_vmi4p")
 region = Rect2(32, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ifmxk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jy3xf"]
 atlas = ExtResource("2_vmi4p")
 region = Rect2(48, 0, 16, 16)
 
@@ -109,20 +109,20 @@ region = Rect2(48, 0, 16, 16)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_vmi4p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_20l3y")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_lc10p")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jy3xf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_r8dg7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ifmxk")
 }],
 "loop": true,
 "name": &"idle_down",
-"speed": 1.0
+"speed": 1.5
 }, {
 "frames": [{
 "duration": 1.0,
@@ -139,7 +139,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_right",
-"speed": 1.0
+"speed": 1.5
 }, {
 "frames": [{
 "duration": 1.0,
@@ -156,7 +156,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_up",
-"speed": 1.0
+"speed": 1.5
 }, {
 "frames": [{
 "duration": 1.0,
@@ -215,7 +215,7 @@ animations = [{
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1241614585]
 scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_vnfxj")
-animation = &"idle_down"
+animation = &"walk_up"
 autoplay = "idle_down"
 flip_h = false
 

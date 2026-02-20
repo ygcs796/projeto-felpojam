@@ -122,7 +122,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_down",
-"speed": 1.0
+"speed": 1.5
 }, {
 "frames": [{
 "duration": 1.0,
@@ -139,7 +139,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_right",
-"speed": 1.0
+"speed": 1.5
 }, {
 "frames": [{
 "duration": 1.0,
@@ -156,7 +156,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_up",
-"speed": 1.0
+"speed": 1.5
 }, {
 "frames": [{
 "duration": 1.0,
@@ -215,10 +215,8 @@ animations = [{
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1241614585]
 scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_kyl3h")
-animation = &"idle_down"
+animation = &"idle_up"
 autoplay = "idle_down"
-frame = 1
-frame_progress = 0.104654096
 flip_h = false
 
 [node name="Actionable" parent="." index="2" unique_id=1295379747]

@@ -1,9 +1,6 @@
 [gd_scene format=3 uid="uid://cxypotqbampln"]
 
-[ext_resource type="PackedScene" uid="uid://bjhbrkng5i0ou" path="res://scenes/cenario.tscn" id="1_0xm2m"]
-[ext_resource type="Script" uid="uid://be7egr0hrlin5" path="res://scripts/main.gd" id="1_h2yge"]
-[ext_resource type="PackedScene" uid="uid://ddry44an54yp1" path="res://scenes/player.tscn" id="2_h2yge"]
-[ext_resource type="PackedScene" uid="uid://vqhc52fmlbap" path="res://scenes/npc.tscn" id="4_jyhfs"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://bxg7pwqp1vtpw" path="res://scenes/lucas_necutis.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://dnxu13yjhv6jl" path="res://scenes/carlos_eduardo.tscn" id="6_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://rxxqwa7hkmuc" path="res://scenes/shekira_tarn.tscn" id="6_tefeu"]
@@ -11,11 +8,6 @@
 [node name="Main" type="Node2D" unique_id=686263271]
 position = Vector2(4, 0)
 script = ExtResource("1_h2yge")
-
-[node name="Cenario" parent="." unique_id=33138836 instance=ExtResource("1_0xm2m")]
-
-[node name="Npc" parent="." unique_id=2088960319 instance=ExtResource("4_jyhfs")]
-position = Vector2(456, 162)
 
 [node name="Lucas Necutis" parent="." unique_id=1580967403 instance=ExtResource("5_tbgi4")]
 position = Vector2(417, 89)
@@ -25,6 +17,3 @@ position = Vector2(374, 89)
 
 [node name="Carlos Eduardo" parent="." unique_id=2008012341 instance=ExtResource("6_o6xl0")]
 position = Vector2(332, 89)
-
-[node name="Player" parent="." unique_id=895579848 instance=ExtResource("2_h2yge")]
-position = Vector2(345, 162)
