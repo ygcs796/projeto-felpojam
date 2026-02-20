@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://lpdqjroqlh5f"]
+
+[ext_resource type="Texture2D" uid="uid://cohif3gfsxl5u" path="res://assets/linuz_sprites/Andando_direita.png" id="1_et82b"]
+[ext_resource type="Script" uid="uid://kjgvnsgic2jq" path="res://linuz_andando.gd" id="1_udlhw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_udlhw"]
+atlas = ExtResource("1_et82b")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omncu"]
+atlas = ExtResource("1_et82b")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tja6l"]
+atlas = ExtResource("1_et82b")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbppo"]
+atlas = ExtResource("1_et82b")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1tey8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_udlhw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omncu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tja6l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbppo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6xke1"]
+size = Vector2(29, 33)
+
+[node name="linuz_andando" type="CharacterBody2D" unique_id=1018299021]
+script = ExtResource("1_udlhw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=584362407]
+scale = Vector2(1.5312498, 1.5312498)
+sprite_frames = SubResource("SpriteFrames_1tey8")
+autoplay = "default"
+frame_progress = 0.42373443
+
+[node name="colisao_paredes" type="RayCast2D" parent="." unique_id=2059725051]
+target_position = Vector2(0, 24)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=44851621]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1968663630]
+shape = SubResource("RectangleShape2D_6xke1")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

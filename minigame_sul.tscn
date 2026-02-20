@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dxy6ijd1eh02i"]
+
+[ext_resource type="PackedScene" uid="uid://c8v6bjrljt1e3" path="res://cenario_minigame_sul.tscn" id="1_rh4ta"]
+[ext_resource type="PackedScene" uid="uid://lpdqjroqlh5f" path="res://linuz_andando.tscn" id="2_r3iah"]
+[ext_resource type="PackedScene" uid="uid://76shdiuoeixg" path="res://galinha_azul.tscn" id="3_hj5hm"]
+[ext_resource type="PackedScene" uid="uid://bxscmtpe4aquj" path="res://galinha_branca.tscn" id="4_qgkl5"]
+[ext_resource type="PackedScene" uid="uid://defbltnmuyvlw" path="res://galinha_marrom.tscn" id="5_8ybvf"]
+
+[node name="minigame_sul" type="Node2D" unique_id=1115196896]
+
+[node name="cenario_minigame_sul" parent="." unique_id=1928550560 instance=ExtResource("1_rh4ta")]
+
+[node name="linuz_andando" parent="." unique_id=1018299021 instance=ExtResource("2_r3iah")]
+position = Vector2(54, 79)
+
+[node name="galinha_azul" parent="." unique_id=232089259 instance=ExtResource("3_hj5hm")]
+position = Vector2(216, 128)
+
+[node name="galinha_branca" parent="." unique_id=1122922911 instance=ExtResource("4_qgkl5")]
+position = Vector2(217, 33)
+
+[node name="galinha_marrom" parent="." unique_id=1229653890 instance=ExtResource("5_8ybvf")]
+position = Vector2(217, 80)
