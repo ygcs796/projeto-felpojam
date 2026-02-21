@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cxypotqbampln"]
+
+[ext_resource type="PackedScene" uid="uid://cgjhi544i8s85" path="res://chao.tscn" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://be7egr0hrlin5" path="res://main.gd" id="1_lquwl"]
+[ext_resource type="PackedScene" uid="uid://crxhukvu468ac" path="res://rede_volei.tscn" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://ddry44an54yp1" path="res://player.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cfqgnc3vn4pe1" path="res://adversario.tscn" id="5_7mycd"]
+[ext_resource type="PackedScene" uid="uid://cj4bwxp5xka7e" path="res://bola_volei.tscn" id="6_7mycd"]
+
+[node name="Main" type="Node2D" unique_id=880995638]
+script = ExtResource("1_lquwl")
+
+[node name="chao" parent="." unique_id=1193712267 instance=ExtResource("1_0xm2m")]
+
+[node name="rede_volei" parent="." unique_id=1752700843 instance=ExtResource("2_1bvp3")]
+position = Vector2(114, 80)
+
+[node name="Player" parent="." unique_id=1497244088 instance=ExtResource("2_h2yge")]
+position = Vector2(31, 108)
+
+[node name="adversario" parent="." unique_id=1436166508 instance=ExtResource("5_7mycd")]
+position = Vector2(212, 108)
+
+[node name="bola_volei" parent="." unique_id=1832368253 instance=ExtResource("6_7mycd")]
+position = Vector2(40, 56)
