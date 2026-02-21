@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dm4t4ywyv2lfo"]
+
+[ext_resource type="Script" uid="uid://cttbh383ph28j" path="res://scripts/obstacles.gd" id="1_a612w"]
+[ext_resource type="Texture2D" uid="uid://mow1ye7opi2o" path="res://assets/tiles/polo sul/polo sul-Sheet1.png" id="2_c765p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ksn8"]
+atlas = ExtResource("2_c765p")
+region = Rect2(25, 161, 49, 63)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kykx4"]
+radius = 44.0
+height = 146.0
+
+[node name="Iceberg" type="Area2D" unique_id=1185941702]
+script = ExtResource("1_a612w")
+speed = 70.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1904024969]
+scale = Vector2(2.3, 2.3)
+texture = SubResource("AtlasTexture_7ksn8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=611571386]
+position = Vector2(1, 0)
+shape = SubResource("CapsuleShape2D_kykx4")
