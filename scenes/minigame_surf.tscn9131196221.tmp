@@ -36,7 +36,7 @@ position = Vector2(120, 147)
 iceberg_scene = ExtResource("6_7cqgg")
 
 [node name="PhaseTimer" type="Timer" parent="." unique_id=834679166]
-wait_time = 30.0
+wait_time = 10.0
 one_shot = true
 autostart = true
 

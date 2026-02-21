@@ -47,4 +47,4 @@ func _on_phase_timer_timeout():
 func _spawn_iceberg():
 	var iceberg = iceberg_scene.instantiate()
 	obstacles.add_child(iceberg)
-	iceberg.position = Vector2(260, 80)
+	iceberg.position = Vector2(85, -150)

@@ -7,18 +7,14 @@
 atlas = ExtResource("2_c765p")
 region = Rect2(25, 161, 49, 63)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kykx4"]
-radius = 44.0
-height = 146.0
-
 [node name="Iceberg" type="Area2D" unique_id=1185941702]
 script = ExtResource("1_a612w")
-speed = 70.0
+speed = 50.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1904024969]
-scale = Vector2(2.3, 2.3)
+scale = Vector2(5, 5)
 texture = SubResource("AtlasTexture_7ksn8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=611571386]
-position = Vector2(1, 0)
-shape = SubResource("CapsuleShape2D_kykx4")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1911134245]
+scale = Vector2(5, 5)
+polygon = PackedVector2Array(0.39999998, 29.599998, 1.3999999, 31.599998, 3.7999997, 31.599998, 5.2, 23.599998, 18.199999, -1.3999999, 24.8, -8.999999, 13.799999, -14.799999, 13.799999, -18.4, 15.599999, -22.599998, 15.599999, -31.799997, 4.7999997, -24.599998, -1.3999999, -24.599998, -10.4, -28.8, -10.599999, -23.8, -18.599998, -17.4, -19.199999, -11.999999, -21.4, -6.3999996, -21.599998, -4.3999996, -24.599998, -4.6, -24.599998, -3.3999999, -21.599998, -3.3999999, -16.599998, 9.4, -13.799999, 9.599999, -10.2, 14.799999, -7.7999997, 14.799999, -3.6, 21.4, -3.6, 24.599998, -2.6, 24.599998, -2.6, 27.599998, -1.5999999, 27.599998, 0, 24.399998, 0.39999998, 27.599998, 1.3999999, 31.399998)
