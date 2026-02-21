@@ -1,23 +1,25 @@
 [gd_scene format=3 uid="uid://dxy6ijd1eh02i"]
 
+[ext_resource type="Script" uid="uid://dx6attcmfquf7" path="res://minigame_sul.gd" id="1_qgkl5"]
 [ext_resource type="PackedScene" uid="uid://c8v6bjrljt1e3" path="res://cenario_minigame_sul.tscn" id="1_rh4ta"]
 [ext_resource type="PackedScene" uid="uid://lpdqjroqlh5f" path="res://linuz_andando.tscn" id="2_r3iah"]
-[ext_resource type="PackedScene" uid="uid://76shdiuoeixg" path="res://galinha_azul.tscn" id="3_hj5hm"]
-[ext_resource type="PackedScene" uid="uid://bxscmtpe4aquj" path="res://galinha_branca.tscn" id="4_qgkl5"]
-[ext_resource type="PackedScene" uid="uid://defbltnmuyvlw" path="res://galinha_marrom.tscn" id="5_8ybvf"]
+[ext_resource type="PackedScene" uid="uid://x63b5w12q82d" path="res://spawner.tscn" id="4_ompls"]
 
 [node name="minigame_sul" type="Node2D" unique_id=1115196896]
+script = ExtResource("1_qgkl5")
 
 [node name="cenario_minigame_sul" parent="." unique_id=1928550560 instance=ExtResource("1_rh4ta")]
 
 [node name="linuz_andando" parent="." unique_id=1018299021 instance=ExtResource("2_r3iah")]
 position = Vector2(54, 79)
 
-[node name="galinha_azul" parent="." unique_id=232089259 instance=ExtResource("3_hj5hm")]
-position = Vector2(216, 128)
+[node name="spawner" parent="." unique_id=556894672 instance=ExtResource("4_ompls")]
 
-[node name="galinha_branca" parent="." unique_id=1122922911 instance=ExtResource("4_qgkl5")]
-position = Vector2(217, 33)
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=975221824]
 
-[node name="galinha_marrom" parent="." unique_id=1229653890 instance=ExtResource("5_8ybvf")]
-position = Vector2(217, 80)
+[node name="score_label" type="Label" parent="CanvasLayer" unique_id=1157101917]
+offset_left = 6.0
+offset_top = 3.0
+offset_right = 143.0
+offset_bottom = 26.0
+text = "Score: 0 | Vidas: 3"

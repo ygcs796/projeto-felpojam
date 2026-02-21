@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://x63b5w12q82d"]
+
+[ext_resource type="Script" uid="uid://dgee8hxuj8gds" path="res://spawner.gd" id="1_yp5lu"]
+[ext_resource type="PackedScene" uid="uid://bxscmtpe4aquj" path="res://galinha_branca.tscn" id="2_bphdf"]
+[ext_resource type="PackedScene" uid="uid://defbltnmuyvlw" path="res://galinha_marrom.tscn" id="3_7ocbr"]
+[ext_resource type="PackedScene" uid="uid://76shdiuoeixg" path="res://galinha_azul.tscn" id="4_mv5bd"]
+
+[node name="spawner" type="Node2D" unique_id=556894672]
+script = ExtResource("1_yp5lu")
+galinhas = Array[PackedScene]([ExtResource("2_bphdf"), ExtResource("3_7ocbr"), ExtResource("4_mv5bd")])
+
+[node name="Pos_up" type="Marker2D" parent="." unique_id=834688167]
+position = Vector2(217, 33)
+
+[node name="Pos_mid" type="Marker2D" parent="." unique_id=142593751]
+position = Vector2(217, 80)
+
+[node name="Pos_down" type="Marker2D" parent="." unique_id=169581314]
+position = Vector2(217, 128)

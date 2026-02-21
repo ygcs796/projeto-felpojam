@@ -1,6 +1,7 @@
 extends Area2D
 
-const velocidade = 70
+signal coletada(cor)
+@export var cor_da_galinha: String = "marrom"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,7 +11,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	# fazendo a galinha andar da direita para a esquerda
-	position.x -= velocidade * delta
+	position.x -= Global.velocidade_jogo * delta
 	
 	if position.x <= -20:
 		print("Galinha excluída")
@@ -18,5 +19,6 @@ func _process(delta: float) -> void:
 	pass
 
 func hit():
+	coletada.emit(cor_da_galinha)
 	print("Galinha atingidda")
 	queue_free()

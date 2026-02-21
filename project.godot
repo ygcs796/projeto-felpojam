@@ -14,6 +14,10 @@ config/name="Projeto Felpojam"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*uid://dmpa61s1wkta"
+
 [display]
 
 window/size/viewport_width=240

@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-const SPEED = 70
 @onready var bg = $background
 
 # Called when the node enters the scene tree for the first time.
@@ -13,5 +12,5 @@ func _process(delta: float) -> void:
 	if bg.position.x < -240:
 		bg.position.x = 0
 		
-	bg.position.x = bg.position.x - (SPEED * delta)
+	bg.position.x -= (Global.velocidade_jogo * delta)
 	pass
