@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cmemp1dp1m6ty" path="res://scenes/linuz.tscn" id="3_oeutb"]
 [ext_resource type="PackedScene" uid="uid://x63b5w12q82d" path="res://scenes/spawner.tscn" id="4_qjjgo"]
 [ext_resource type="PackedScene" uid="uid://dm4t4ywyv2lfo" path="res://scenes/obstacles/iceberg.tscn" id="6_7cqgg"]
+[ext_resource type="AudioStream" uid="uid://b48ct8b4immmr" path="res://assets/songs/4polominigameloop.ogg" id="6_jnnuv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vnrbd"]
 texture = ExtResource("2_5vpe1")
@@ -34,6 +35,10 @@ position = Vector2(120, 147)
 
 [node name="Spawner" parent="." unique_id=2042530505 instance=ExtResource("4_qjjgo")]
 iceberg_scene = ExtResource("6_7cqgg")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=473049225]
+stream = ExtResource("6_jnnuv")
+autoplay = true
 
 [node name="PhaseTimer" type="Timer" parent="." unique_id=834679166]
 wait_time = 30.0
