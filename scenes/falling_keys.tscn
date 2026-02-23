@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dk4ropsbt80y2"]
+
+[ext_resource type="Texture2D" uid="uid://cxgbvh1kcxx6p" path="res://assets/minigame_ritmo/falling_keys_placeholder.png" id="1_m5rbe"]
+[ext_resource type="Script" uid="uid://5ys224j2amdc" path="res://scripts/falling_keys.gd" id="2_m5rbe"]
+
+[node name="FallingKeys" type="Sprite2D" unique_id=1753458230]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_m5rbe")
+hframes = 4
+script = ExtResource("2_m5rbe")
+fall_speed = 2.0
+
+[node name="Timer" type="Timer" parent="." unique_id=188724614]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="DestroyTimer" type="Timer" parent="." unique_id=2132050829]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="DestroyTimer" to="." method="_on_destroy_timer_timeout"]

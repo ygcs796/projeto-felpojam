@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://d1130xb1phcm7"]
+
+[ext_resource type="PackedScene" uid="uid://crdmyuirxo16q" path="res://scenes/key_listener.tscn" id="1_nwtba"]
+
+[node name="Minigame Ritmo" type="Node2D" unique_id=1939867043]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=343907532]
+
+[node name="KeyListener" parent="." unique_id=2088530918 instance=ExtResource("1_nwtba")]
+position = Vector2(-59.5, 62)
+hframes = 4
+key_name = "button_left"
+
+[node name="KeyListener2" parent="." unique_id=1047822103 instance=ExtResource("1_nwtba")]
+position = Vector2(-19.5, 62)
+hframes = 4
+frame = 1
+key_name = "button_down"
+
+[node name="KeyListener3" parent="." unique_id=826436353 instance=ExtResource("1_nwtba")]
+position = Vector2(20.5, 62)
+hframes = 4
+frame = 2
+key_name = "button_up"
+
+[node name="KeyListener4" parent="." unique_id=1831083940 instance=ExtResource("1_nwtba")]
+position = Vector2(60.5, 62)
+hframes = 4
+frame = 3
+key_name = "button_right"
