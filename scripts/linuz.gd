@@ -8,13 +8,15 @@ extends CharacterBody2D
 @export var max_lives := 3
 
 var lives := 3
+enum PlayerState {surf, swim}
+var state = PlayerState.surf
 
 @onready var animation: AnimatedSprite2D = $AnimatedSprite2D
 @onready var lives_label: Label = $"../UI/Lives"
 
 func _ready() -> void:
-	# Sempre “andando”
-	animation.play("walk_up")
+	# Sempre “surfando”
+	animation.play("surf")
 	lives = max_lives
 	_update_lives_ui()
 	
@@ -40,9 +42,17 @@ func _on_collision_area_entered(area: Area2D) -> void:
 	lives -= 1
 	_update_lives_ui()
 	area.queue_free()
+	
+	if area.is_in_group("iceberg"):
+		_start_swimming()
+		return
 
 	if lives <= 0:
 		_game_over()
+		
+func _start_swimming():
+	state = PlayerState.swim
+	$AnimatedSprite2D.play("swim")
 		
 func _game_over() -> void:
 	get_tree().reload_current_scene()

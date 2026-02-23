@@ -32,9 +32,9 @@ func _spawn() -> void:
 
 	# Instancia e coloca no container de obstáculos
 	var scene = obstacle_scenes.pick_random()
-	var o = scene.instantiate()
-	obstacles.add_child(o)
-	o.global_position = p.global_position
+	var obstacle = scene.instantiate()
+	obstacles.add_child(obstacle)
+	obstacle.global_position = p.global_position
 
 	# Muda o tempo de spawn
 	spawn_timer.wait_time = randf_range(min_wait, max_wait)

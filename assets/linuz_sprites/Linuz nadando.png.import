@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bamd3vdct8nb6"
-path="res://.godot/imported/Idle_costas.png-fb24b6acda2821af3d05b00a2d9559e9.ctex"
+uid="uid://dibkluhljbnis"
+path="res://.godot/imported/Linuz nadando.png-628a513cc3f9822b1031d945826078b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/linuz_sprites/Idle_costas.png"
-dest_files=["res://.godot/imported/Idle_costas.png-fb24b6acda2821af3d05b00a2d9559e9.ctex"]
+source_file="res://assets/linuz_sprites/Linuz nadando.png"
+dest_files=["res://.godot/imported/Linuz nadando.png-628a513cc3f9822b1031d945826078b5.ctex"]
 
 [params]
 

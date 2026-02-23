@@ -1,9 +1,9 @@
-[gd_scene format=4 uid="uid://jk1inedbg4gj"]
+[gd_scene format=4 uid="uid://bvxgdm0wbm120"]
 
 [ext_resource type="Texture2D" uid="uid://bgd2wikuac75r" path="res://assets/tiles/polo sul/ondas-Sheet escuro azul.png" id="2_5vpe1"]
-[ext_resource type="Script" uid="uid://chskkvifcxyb1" path="res://scripts/background.gd" id="3_5vpe1"]
-[ext_resource type="PackedScene" uid="uid://cmemp1dp1m6ty" path="res://scenes/linuz.tscn" id="3_oeutb"]
-[ext_resource type="PackedScene" uid="uid://x63b5w12q82d" path="res://scenes/spawner.tscn" id="4_qjjgo"]
+[ext_resource type="Script" path="res://scripts/background.gd" id="3_5vpe1"]
+[ext_resource type="PackedScene" uid="uid://c8ilt6teih73y" path="res://scenes/linuz.tscn" id="3_oeutb"]
+[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="4_qjjgo"]
 [ext_resource type="PackedScene" uid="uid://dm4t4ywyv2lfo" path="res://scenes/obstacles/iceberg.tscn" id="6_7cqgg"]
 [ext_resource type="AudioStream" uid="uid://b48ct8b4immmr" path="res://assets/songs/4polominigameloop.ogg" id="6_jnnuv"]
 

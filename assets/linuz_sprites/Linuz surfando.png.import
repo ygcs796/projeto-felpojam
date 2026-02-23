@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4oijqglh4m1t"
-path="res://.godot/imported/Idle_esquerda.png-60e2935b968feedd0fccd2e3584ca75c.ctex"
+uid="uid://dxuusflbp2y3"
+path="res://.godot/imported/Linuz surfando.png-778e433c40141f66c09b65bec4c48951.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/linuz_sprites/Idle_esquerda.png"
-dest_files=["res://.godot/imported/Idle_esquerda.png-60e2935b968feedd0fccd2e3584ca75c.ctex"]
+source_file="res://assets/linuz_sprites/Linuz surfando.png"
+dest_files=["res://.godot/imported/Linuz surfando.png-778e433c40141f66c09b65bec4c48951.ctex"]
 
 [params]
 
