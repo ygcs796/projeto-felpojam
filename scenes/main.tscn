@@ -11,7 +11,7 @@ script = ExtResource("1_h2yge")
 
 [node name="Cenario" parent="." unique_id=33138836 instance=ExtResource("1_0xm2m")]
 
-[node name="Player" parent="." unique_id=895579848 groups=["player"] instance=ExtResource("2_h2yge")]
+[node name="Player" parent="." unique_id=895579848 instance=ExtResource("2_h2yge")]
 position = Vector2(345, 162)
 
 [node name="Npc" parent="." unique_id=2088960319 instance=ExtResource("4_jyhfs")]
