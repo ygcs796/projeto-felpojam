@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cxypotqbampln"]
+
+[ext_resource type="PackedScene" uid="uid://bbt6f3mldvv1n" path="res://cenario_polo_sul.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://ddry44an54yp1" path="res://player.tscn" id="2_h2yge"]
+
+[node name="main" type="Node2D" unique_id=1824085522]
+
+[node name="cenario_polo_sul" parent="." unique_id=733751591 instance=ExtResource("1_0xm2m")]
+
+[node name="Player" parent="." unique_id=895579848 instance=ExtResource("2_h2yge")]
+position = Vector2(120, 80)
