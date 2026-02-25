@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://qwyedmpw38ei"]
+[gd_scene format=3 uid="uid://bgxawjvok4l2q"]
 
 [ext_resource type="Script" uid="uid://danofokt4r1p0" path="res://scripts/balloon.gd" id="1_s2gbs"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_hfvdi"]
@@ -112,9 +112,11 @@ animations = [{
 "texture": SubResource("AtlasTexture_lc4cd")
 }],
 "loop": true,
-"name": &"default",
+"name": &"talk_player",
 "speed": 5.0
 }]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kvj2v"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u045a"]
 texture = ExtResource("7_kvj2v")
@@ -154,6 +156,7 @@ script = ExtResource("1_s2gbs")
 [node name="Balloon" type="Control" parent="." unique_id=778005874]
 unique_name_in_owner = true
 layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -186,22 +189,18 @@ offset_top = 30.0
 offset_right = 80.0
 offset_bottom = 70.0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Balloon/BackgroundLayers/PortraitsLayer" unique_id=925540369]
-sprite_frames = SubResource("SpriteFrames_x4oq6")
-frame_progress = 0.7709462
-
-[node name="Portrait" type="TextureRect" parent="Balloon/BackgroundLayers/PortraitsLayer" unique_id=1751527114]
+[node name="PortraitPlayer" type="AnimatedSprite2D" parent="Balloon/BackgroundLayers/PortraitsLayer" unique_id=925540369]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 0
-offset_left = 8.0
-offset_top = 115.0
-offset_right = 58.0
-offset_bottom = 165.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-expand_mode = 3
-stretch_mode = 5
+sprite_frames = SubResource("SpriteFrames_x4oq6")
+animation = &"talk_player"
+autoplay = "talk_player"
+
+[node name="PortraitNpc" type="AnimatedSprite2D" parent="Balloon/BackgroundLayers/PortraitsLayer" unique_id=123135957]
+unique_name_in_owner = true
+position = Vector2(160, 0)
+sprite_frames = SubResource("SpriteFrames_kvj2v")
+autoplay = "default"
+flip_h = true
 
 [node name="OrelhasSuperior" type="TextureRect" parent="Balloon/BackgroundLayers" unique_id=1235788931]
 layout_mode = 0
@@ -238,13 +237,6 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_i80d5")
 theme_override_styles/focus = SubResource("StyleBoxTexture_hsek3")
 text = "Response Example"
 
-[node name="MarginContainer2" type="MarginContainer" parent="Balloon" unique_id=2047235475]
-layout_mode = 0
-offset_left = 31.0
-offset_top = 110.0
-offset_right = 207.0
-offset_bottom = 159.0
-
 [node name="VBoxContainer" type="VBoxContainer" parent="Balloon" unique_id=776503463]
 layout_mode = 0
 offset_left = 65.0
@@ -274,9 +266,6 @@ theme_override_font_sizes/bold_italics_font_size = 5
 theme_override_font_sizes/italics_font_size = 5
 theme_override_font_sizes/mono_font_size = 5
 text = "Dialogue..."
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2064926516]
-unique_name_in_owner = true
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="response_selected" from="Balloon/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

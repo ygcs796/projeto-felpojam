@@ -1,0 +1,25 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://byg6py78iw518"]
+
+[ext_resource type="Texture2D" uid="uid://bxwq3ptpga67j" path="res://assets/characters/Lucas/Lucas necutis falando.png" id="1_hpvox"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yg1q0"]
+atlas = ExtResource("1_hpvox")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7ibt"]
+atlas = ExtResource("1_hpvox")
+region = Rect2(32, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yg1q0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7ibt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

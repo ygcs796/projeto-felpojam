@@ -1,8 +1,10 @@
 ~ start
-npc_placeholder: Eu gosto de banana
-- Eu também
-	npc_placeholder: Que legal :)
-- Eu odeio
-	npc_placeholder: Nossa :(
+npc_placeholder: Com quem você quer falar?
+- Shekira
+	Shekira: Eu sou Shekira.
+- Carlos Eduardo
+	Carlos: Eu sou Carlos.
+- Lucas
+	Lucas: Eu sou Lucas.
 npc_placeholder: Deixando isso de lado...
 => END

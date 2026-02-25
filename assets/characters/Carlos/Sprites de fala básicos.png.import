@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lkpqxppobevv"
-path="res://.godot/imported/dialogue_box_placeholder.png-197d42a96ca09f8b0defa2b72433c28b.ctex"
+uid="uid://bsymaf5vay3u1"
+path="res://.godot/imported/Sprites de fala básicos.png-1693a0a92d90615f36e817403a9ce4c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dialogue_box_placeholder.png"
-dest_files=["res://.godot/imported/dialogue_box_placeholder.png-197d42a96ca09f8b0defa2b72433c28b.ctex"]
+source_file="res://assets/characters/Carlos/Sprites de fala básicos.png"
+dest_files=["res://.godot/imported/Sprites de fala básicos.png-1693a0a92d90615f36e817403a9ce4c4.ctex"]
 
 [params]
 
