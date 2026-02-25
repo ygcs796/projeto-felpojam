@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://d1h3pnh2sv86"]
 
-[ext_resource type="PackedScene" path="res://scenes/cenario.tscn" id="1_0xm2m"]
-[ext_resource type="Script" path="res://scripts/main.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bjhbrkng5i0ou" path="res://scenes/cenario.tscn" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://be7egr0hrlin5" path="res://scripts/main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://ddry44an54yp1" path="res://scenes/player.tscn" id="2_h2yge"]
-[ext_resource type="PackedScene" path="res://scenes/npc.tscn" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://vqhc52fmlbap" path="res://scenes/npc.tscn" id="4_jyhfs"]
 
 [node name="Main" type="Node2D" unique_id=686263271]
 position = Vector2(4, 0)
@@ -13,7 +13,7 @@ script = ExtResource("1_h2yge")
 position = Vector2(3, 0)
 
 [node name="Player" parent="." unique_id=895579848 instance=ExtResource("2_h2yge")]
-position = Vector2(345, 162)
+position = Vector2(346, 162)
 
 [node name="Npc" parent="." unique_id=2088960319 instance=ExtResource("4_jyhfs")]
 position = Vector2(456, 162)

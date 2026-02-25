@@ -47,7 +47,6 @@ func _ready() -> void:
 			assert(false, DMConstants.get_error_message(DMConstants.ERR_MISSING_RESOURCE_FOR_AUTOSTART))
 		start()
 
-
 func start(with_dialogue_resource: DialogueResource = null, title: String = "", extra_game_states: Array = []) -> void:
 	var player = get_tree().get_first_node_in_group("player")
 	if player:
@@ -67,7 +66,6 @@ func start(with_dialogue_resource: DialogueResource = null, title: String = "", 
 
 
 func apply_dialogue_line() -> void:
-
 	is_waiting_for_input = false
 	balloon.focus_mode = Control.FOCUS_ALL
 	balloon.grab_focus()
@@ -83,13 +81,23 @@ func apply_dialogue_line() -> void:
 	responses_menu.hide()
 	responses_menu.responses = dialogue_line.responses
 
+	# Show our balloon
 	balloon.show()
 
+	# Sempre começa sem ninguém falando
+	_stop_talk(portrait_player)
+	_stop_talk(portrait_npc)
+
+	# Digitar texto + animar boca SÓ enquanto digita
 	dialogue_label.show()
 	if not dialogue_line.text.is_empty():
+		var speaker: AnimatedSprite2D = _get_speaker_sprite(dialogue_line.character)
+		_start_talk(speaker)
 		dialogue_label.type_out()
 		await dialogue_label.finished_typing
+		_stop_talk(speaker)
 
+	# Depois que terminou de digitar, decide o que fazer
 	if dialogue_line.responses.size() > 0:
 		balloon.focus_mode = Control.FOCUS_NONE
 		responses_menu.show()
@@ -104,9 +112,20 @@ func apply_dialogue_line() -> void:
 		balloon.focus_mode = Control.FOCUS_ALL
 		balloon.grab_focus()
 
+# Função para decidir quem está falando
+func _get_speaker_sprite(character_name: String) -> AnimatedSprite2D:
+	return portrait_player if character_name == "Linuz" else portrait_npc
+	
+func _stop_talk(portrait: AnimatedSprite2D) -> void:
+	if not is_instance_valid(portrait): return
+	portrait.stop()
+	portrait.frame = 0
+
+func _start_talk(portrait: AnimatedSprite2D) -> void:
+	if not is_instance_valid(portrait): return
+	portrait.play("talk")
 
 func _set_portrait_for(character_name: String) -> void:
-
 	var frames_path: String = "res://assets/characters/%s/portrait.tres" % character_name
 	var frames: SpriteFrames = null
 
@@ -119,8 +138,8 @@ func _set_portrait_for(character_name: String) -> void:
 
 	portrait_npc.sprite_frames = frames
 
-	if frames and frames.has_animation("default"):
-		portrait_npc.play("default")
+	if frames and frames.has_animation("talk"):
+		portrait_npc.play("talk")
 	else:
 		portrait_npc.stop()
 		portrait_npc.frame = 0
@@ -131,7 +150,6 @@ func next(next_id: String) -> void:
 
 
 func _on_balloon_gui_input(event: InputEvent) -> void:
-
 	if dialogue_label.is_typing:
 
 		var mouse_click: bool = (

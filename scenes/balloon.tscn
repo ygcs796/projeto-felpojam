@@ -94,25 +94,25 @@ MarginContainer/constants/margin_right = 8
 MarginContainer/constants/margin_top = 4
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_i6nbm")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8copa"]
-atlas = ExtResource("4_kvj2v")
-region = Rect2(0, 0, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_lc4cd"]
 atlas = ExtResource("4_kvj2v")
 region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8copa"]
+atlas = ExtResource("4_kvj2v")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x4oq6"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8copa")
+"texture": SubResource("AtlasTexture_lc4cd")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lc4cd")
+"texture": SubResource("AtlasTexture_8copa")
 }],
 "loop": true,
-"name": &"talk_player",
+"name": &"talk",
 "speed": 5.0
 }]
 
@@ -192,14 +192,13 @@ offset_bottom = 70.0
 [node name="PortraitPlayer" type="AnimatedSprite2D" parent="Balloon/BackgroundLayers/PortraitsLayer" unique_id=925540369]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_x4oq6")
-animation = &"talk_player"
-autoplay = "talk_player"
+animation = &"talk"
+autoplay = "talk"
 
 [node name="PortraitNpc" type="AnimatedSprite2D" parent="Balloon/BackgroundLayers/PortraitsLayer" unique_id=123135957]
 unique_name_in_owner = true
 position = Vector2(160, 0)
 sprite_frames = SubResource("SpriteFrames_kvj2v")
-autoplay = "default"
 flip_h = true
 
 [node name="OrelhasSuperior" type="TextureRect" parent="Balloon/BackgroundLayers" unique_id=1235788931]
@@ -266,6 +265,7 @@ theme_override_font_sizes/bold_italics_font_size = 5
 theme_override_font_sizes/italics_font_size = 5
 theme_override_font_sizes/mono_font_size = 5
 text = "Dialogue..."
+seconds_per_step = 0.06
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="response_selected" from="Balloon/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

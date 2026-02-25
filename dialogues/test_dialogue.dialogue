@@ -1,10 +1,13 @@
 ~ start
 npc_placeholder: Com quem você quer falar?
 - Shekira
-	Shekira: Eu sou Shekira.
+	Linuz: Quero falar com a Shekira!
+	Shekira: Eu sou a Shekira.
 - Carlos Eduardo
-	Carlos: Eu sou Carlos.
+	Linuz: Quero falar com o Carlos Eduardo!
+	Carlos: Eu sou o Carlos Eduardo.
 - Lucas
-	Lucas: Eu sou Lucas.
+	Linuz: Quero falar com o Lucas!
+	Lucas: Eu sou o Lucas.
 npc_placeholder: Deixando isso de lado...
 => END
