@@ -23,4 +23,3 @@ func _input(event: InputEvent) -> void:
 			print("R apertado")
 			bola.position.x = 40
 			bola.position.y = 56
-			print("processo feito")
