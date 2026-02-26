@@ -30,6 +30,7 @@ position = Vector2(212, 108)
 
 [node name="bola_volei" parent="." unique_id=1832368253 instance=ExtResource("6_7mycd")]
 position = Vector2(44, 56)
+linear_damp = 0.0
 
 [node name="zona_player" type="Area2D" parent="." unique_id=768409238]
 

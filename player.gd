@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 100.0
 const JUMP_VELOCITY = -250.0
-const forca_cabecada = 1
+const forca_cabecada = 0.1
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -25,9 +25,8 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-#func _on_cabeca_body_entered(body: Node2D) -> void:
-	#if body is RigidBody2D:
-		#body.linear_velocity = Vector2.ZERO
-		#var direcao = Vector2(0, -1).rotated(deg_to_rad(randf_range(-10, 10)))
-		#body.apply_central_impulse(direcao * forca_cabecada)
-	#pass # Replace with function body.
+func _on_cabeca_body_entered(body: Node2D) -> void:
+	if body is RigidBody2D:
+		body.linear_velocity = Vector2.ZERO
+		var direcao = Vector2(0, -1).rotated(deg_to_rad(randf_range(-10, 10)))
+		body.apply_central_impulse(direcao * forca_cabecada)
