@@ -3,6 +3,7 @@ extends CharacterBody2D
 # Configurações
 var tile_size = 16  # O tamanho do seu passo (conforme você pediu)
 var move_speed = 0.3 # Tempo em segundos para dar um passo (quanto menor, mais rápido)
+var dialogue_open = false # Se a caixa de diálogo está aberta
 
 # Variáveis de controle
 var is_moving = false # Trava o input enquanto o boneco anda
@@ -14,9 +15,15 @@ var primeira_perna = true # variável para deixar a animação mais realista
 @onready var anim = $AnimatedSprite2D
 #@onready var sprite = $Sprite2D
 
+@onready var actionable_finder: Area2D = $Direction/ActionableFinder
+
 func _physics_process(_delta):
 	# Se já estiver andando, não aceita novos comandos
 	if is_moving:
+		return
+	if dialogue_open:
+		# Mantém idle na última direção
+		update_animation(Vector2.ZERO, previous_direction)
 		return
 
 	# Verifica as teclas (configure "ui_up", "ui_down", etc. no mapa de entrada)
@@ -69,6 +76,19 @@ func move(dir, prev_dir):
 	
 	# Quando o tween terminar, libera para andar de novo
 	tween.finished.connect(func(): is_moving = false)
+	
+func _unhandled_input(_event: InputEvent) -> void:
+	# Verifica se a caixa do diálogo está aberta
+	if dialogue_open:
+		return
+		
+	# Verifica se o jogador apertou a tecla de interação
+	if Input.is_action_just_pressed("interaction_button"):
+		# Pega todas as Area2D que estão encostandono ActionableFinder
+		var actionables = actionable_finder.get_overlapping_areas()
+		if actionables.size() > 0:
+			actionables[0].action()
+			return
 
 func update_animation(dir, prev_dir):
 	# é necessário eu declarar aqui

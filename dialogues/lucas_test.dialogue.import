@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://hljndelyvjul"
+path="res://.godot/imported/lucas_test.dialogue-b871bf3e9d40c3beff6ce617953af2bc.tres"
+
+[deps]
+
+source_file="res://dialogues/lucas_test.dialogue"
+dest_files=["res://.godot/imported/lucas_test.dialogue-b871bf3e9d40c3beff6ce617953af2bc.tres"]
+
+[params]
+
+defaults=true

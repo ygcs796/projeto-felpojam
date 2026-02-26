@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c835rvd10kxfy"
+path="res://.godot/imported/carlos_test.dialogue-85924011d4c9a0dddd0a5bd6d0467c8c.tres"
+
+[deps]
+
+source_file="res://dialogues/carlos_test.dialogue"
+dest_files=["res://.godot/imported/carlos_test.dialogue-85924011d4c9a0dddd0a5bd6d0467c8c.tres"]
+
+[params]
+
+defaults=true

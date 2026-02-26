@@ -1,0 +1,50 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+<<<<<<<< HEAD:assets/linuz_sprites/Andando_esquerda.png.import
+uid="uid://cycpb3a67csgb"
+path="res://.godot/imported/Andando_esquerda.png-0184b1474cc82f5ecbf1377ec9f95914.ctex"
+========
+uid="uid://d0fgujskh3sof"
+path="res://.godot/imported/Idle pra esquerda.png-3d27a44f11651bd55ed8dcc721f51a50.ctex"
+>>>>>>>> npcs:assets/characters/Carlos Eduardo/Idle pra esquerda.png.import
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+<<<<<<<< HEAD:assets/linuz_sprites/Andando_esquerda.png.import
+source_file="res://assets/linuz_sprites/Andando_esquerda.png"
+dest_files=["res://.godot/imported/Andando_esquerda.png-0184b1474cc82f5ecbf1377ec9f95914.ctex"]
+========
+source_file="res://assets/characters/Carlos Eduardo/Idle pra esquerda.png"
+dest_files=["res://.godot/imported/Idle pra esquerda.png-3d27a44f11651bd55ed8dcc721f51a50.ctex"]
+>>>>>>>> npcs:assets/characters/Carlos Eduardo/Idle pra esquerda.png.import
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
