@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://cfqgnc3vn4pe1"]
+[gd_scene format=3 uid="uid://dum6d8o615fk1"]
 
-[ext_resource type="Script" uid="uid://d3pdpngs3cyi0" path="res://adversario.gd" id="1_gvuwc"]
+[ext_resource type="Script" path="res://adversario.gd" id="1_gvuwc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sh265"]
 radius = 9.0

@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cxypotqbampln"]
 
-[ext_resource type="PackedScene" uid="uid://cgjhi544i8s85" path="res://chao.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" path="res://chao.tscn" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://be7egr0hrlin5" path="res://main.gd" id="1_lquwl"]
-[ext_resource type="PackedScene" uid="uid://crxhukvu468ac" path="res://rede_volei.tscn" id="2_1bvp3"]
+[ext_resource type="PackedScene" path="res://rede_volei.tscn" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://ddry44an54yp1" path="res://player.tscn" id="2_h2yge"]
-[ext_resource type="PackedScene" uid="uid://cfqgnc3vn4pe1" path="res://adversario.tscn" id="5_7mycd"]
-[ext_resource type="PackedScene" uid="uid://cj4bwxp5xka7e" path="res://bola_volei.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://dum6d8o615fk1" path="res://adversario.tscn" id="5_7mycd"]
+[ext_resource type="PackedScene" uid="uid://d125cr8box16d" path="res://bola_volei.tscn" id="6_7mycd"]
 
 [node name="Main" type="Node2D" unique_id=880995638]
 script = ExtResource("1_lquwl")

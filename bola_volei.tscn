@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://cj4bwxp5xka7e"]
+[gd_scene format=3 uid="uid://d125cr8box16d"]
 
-[ext_resource type="Script" uid="uid://32hmfl7q5tfb" path="res://bola_volei.gd" id="1_m227u"]
+[ext_resource type="Script" path="res://bola_volei.gd" id="1_m227u"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kuqgl"]
 friction = 0.1
