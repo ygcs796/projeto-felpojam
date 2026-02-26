@@ -12,6 +12,14 @@ script = ExtResource("1_4flbx")
 offset_right = 12.0
 offset_bottom = 12.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2116356356]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1201161234]
 position = Vector2(6, 6)
 shape = SubResource("CircleShape2D_sh265")
+
+[node name="cabeca" type="Area2D" parent="." unique_id=1578811258]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cabeca" unique_id=2116356356]
+position = Vector2(6, 6)
+shape = SubResource("CircleShape2D_sh265")
+
+[connection signal="body_entered" from="cabeca" to="." method="_on_cabeca_body_entered"]

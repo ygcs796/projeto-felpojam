@@ -1,19 +1,26 @@
 [gd_scene format=3 uid="uid://cxypotqbampln"]
 
-[ext_resource type="PackedScene" path="res://chao.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cgjhi544i8s85" path="res://chao.tscn" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://be7egr0hrlin5" path="res://main.gd" id="1_lquwl"]
-[ext_resource type="PackedScene" path="res://rede_volei.tscn" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://crxhukvu468ac" path="res://rede_volei.tscn" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://ddry44an54yp1" path="res://player.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dum6d8o615fk1" path="res://adversario.tscn" id="5_7mycd"]
 [ext_resource type="PackedScene" uid="uid://d125cr8box16d" path="res://bola_volei.tscn" id="6_7mycd"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mycd"]
+size = Vector2(116, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_272bh"]
+size = Vector2(121, 10)
+
 [node name="Main" type="Node2D" unique_id=880995638]
+process_mode = 3
 script = ExtResource("1_lquwl")
 
 [node name="chao" parent="." unique_id=1193712267 instance=ExtResource("1_0xm2m")]
 
 [node name="rede_volei" parent="." unique_id=1752700843 instance=ExtResource("2_1bvp3")]
-position = Vector2(114, 80)
+position = Vector2(116, 80)
 
 [node name="Player" parent="." unique_id=1497244088 instance=ExtResource("2_h2yge")]
 position = Vector2(31, 108)
@@ -22,4 +29,36 @@ position = Vector2(31, 108)
 position = Vector2(212, 108)
 
 [node name="bola_volei" parent="." unique_id=1832368253 instance=ExtResource("6_7mycd")]
-position = Vector2(40, 56)
+position = Vector2(44, 56)
+
+[node name="zona_player" type="Area2D" parent="." unique_id=768409238]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="zona_player" unique_id=766900100]
+position = Vector2(58, 125)
+shape = SubResource("RectangleShape2D_7mycd")
+
+[node name="zona_adversario" type="Area2D" parent="." unique_id=1687633923]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="zona_adversario" unique_id=562540278]
+position = Vector2(179.5, 125)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="placar" type="CanvasLayer" parent="." unique_id=466599921]
+
+[node name="Label" type="Label" parent="placar" unique_id=259542921]
+offset_right = 55.0
+offset_bottom = 23.0
+text = "Placar: 0 - 0"
+
+[node name="Contagem" type="CanvasLayer" parent="." unique_id=831280858]
+process_mode = 3
+
+[node name="LabelContagem" type="Label" parent="Contagem" unique_id=856860569]
+offset_left = 98.0
+offset_top = 28.0
+offset_right = 138.0
+offset_bottom = 51.0
+horizontal_alignment = 1
+
+[connection signal="body_entered" from="zona_player" to="." method="_on_zona_player_body_entered"]
+[connection signal="body_entered" from="zona_adversario" to="." method="_on_zona_adversario_body_entered"]
