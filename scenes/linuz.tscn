@@ -1,8 +1,13 @@
 [gd_scene format=3 uid="uid://c8ilt6teih73y"]
 
 [ext_resource type="Script" uid="uid://coucjb5m6hyq7" path="res://scripts/linuz.gd" id="1_gawey"]
+[ext_resource type="Texture2D" uid="uid://d358es8fdntid" path="res://assets/linuz_sprites/Na prancha tomando dano.png" id="2_f27oc"]
 [ext_resource type="Texture2D" uid="uid://dxuusflbp2y3" path="res://assets/linuz_sprites/Linuz surfando.png" id="2_gk7fv"]
 [ext_resource type="Texture2D" uid="uid://dibkluhljbnis" path="res://assets/linuz_sprites/Linuz nadando.png" id="3_gk7fv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8nkxe"]
+atlas = ExtResource("2_f27oc")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f27oc"]
 atlas = ExtResource("2_gk7fv")
@@ -38,6 +43,14 @@ region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u1c27"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8nkxe")
+}],
+"loop": true,
+"name": &"damage_surf",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_f27oc")
@@ -82,7 +95,6 @@ script = ExtResource("1_gawey")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=850301619]
 sprite_frames = SubResource("SpriteFrames_u1c27")
 animation = &"surf"
-frame_progress = 0.5633821
 
 [node name="Collision" type="Area2D" parent="." unique_id=1375488654]
 
