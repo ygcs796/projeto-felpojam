@@ -1,7 +1,10 @@
 extends Sprite2D
 
+signal pressed(direction: String)
+signal hit(direction: String)
+signal miss(direction: String)
+
 @onready var falling_keys: PackedScene = preload("res://scenes/falling_keys.tscn")
-@onready var manager: Node = get_parent()
 
 @export var key_name: String = ""
 @export var hit_window: float = 15.0
@@ -9,35 +12,44 @@ extends Sprite2D
 var falling_keys_queue: Array = []
 var active: bool = true
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if not active:
 		return
 
-	# Miss por passar do ponto
+	# Miss automático: passou do ponto sem apertar
 	if falling_keys_queue.size() > 0 and falling_keys_queue.front().has_passed:
 		var missed = falling_keys_queue.pop_front()
 		missed.queue_free()
-		_report_miss()
+		emit_signal("miss", _direction_from_frame())
 
-	# Verifica se apertou o botão
+	# Apertou o botão desta lane
 	if Input.is_action_just_pressed(key_name):
-		_handle_press()
+		var dir := _direction_from_frame()
+		emit_signal("pressed", dir)
+		_handle_press(dir)
 
-func _handle_press() -> void:
+func _handle_press(dir: String) -> void:
+	# >>> NOVO: apertou sem seta = NÃO PUNE (não perde vida)
 	if falling_keys_queue.size() == 0:
-		_report_miss()
 		return
 
 	var key_to_check = falling_keys_queue.pop_front()
-	var distance = abs(key_to_check.pass_threshold - key_to_check.global_position.y)
+	var distance: float = abs(float(key_to_check.pass_threshold) - float(key_to_check.global_position.y))
 	key_to_check.queue_free()
 
 	if distance > hit_window:
-		_report_miss()
+		# Erro de timing (aqui você decide se pune ou não)
+		emit_signal("miss", dir)
+	else:
+		emit_signal("hit", dir)
 
-func _report_miss() -> void:
-	if manager and manager.has_method("lose_life"):
-		manager.lose_life()
+func _direction_from_frame() -> String:
+	match frame:
+		0: return "left"
+		1: return "down"
+		2: return "up"
+		3: return "right"
+		_: return "right"
 
 func spawn_falling_key() -> void:
 	if not active:

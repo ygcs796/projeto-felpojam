@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://dk4ropsbt80y2"]
 
-[ext_resource type="Texture2D" uid="uid://cxgbvh1kcxx6p" path="res://assets/minigame_ritmo/falling_keys_placeholder.png" id="1_m5rbe"]
+[ext_resource type="Texture2D" uid="uid://cjauoj54i2e30" path="res://assets/minigame_ritmo/falling_keys.png" id="1_m5rbe"]
 [ext_resource type="Script" uid="uid://5ys224j2amdc" path="res://scripts/falling_keys.gd" id="2_m5rbe"]
 
 [node name="FallingKeys" type="Sprite2D" unique_id=1753458230]
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_m5rbe")
 hframes = 4
 script = ExtResource("2_m5rbe")
-fall_speed = 2.0
+fall_speed = 90.0
 
 [node name="Timer" type="Timer" parent="." unique_id=188724614]
 wait_time = 5.0
