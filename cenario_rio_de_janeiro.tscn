@@ -3392,17 +3392,17 @@ sprite_frames = SubResource("SpriteFrames_ndy4l")
 autoplay = "default"
 frame_progress = 0.9081105
 
+[node name="NPCGenerico28" type="AnimatedSprite2D" parent="." unique_id=1335441185]
+position = Vector2(177, -26)
+sprite_frames = SubResource("SpriteFrames_ndy4l")
+autoplay = "default"
+frame_progress = 0.58802986
+
 [node name="NPCGenerico12" type="AnimatedSprite2D" parent="." unique_id=1071823557]
 position = Vector2(-7, 235)
 sprite_frames = SubResource("SpriteFrames_ndy4l")
 autoplay = "default"
 frame_progress = 0.9283794
-
-[node name="NPCGenerico12" type="AnimatedSprite2D" parent="NPCGenerico12" unique_id=1335441185]
-position = Vector2(184, -261)
-sprite_frames = SubResource("SpriteFrames_ndy4l")
-autoplay = "default"
-frame_progress = 0.58802986
 
 [node name="NPCGenerico10" type="AnimatedSprite2D" parent="." unique_id=360676909]
 position = Vector2(190, 229)
@@ -3416,23 +3416,23 @@ sprite_frames = SubResource("SpriteFrames_ndy4l")
 autoplay = "default"
 frame_progress = 0.91782373
 
+[node name="NPCGenerico26" type="AnimatedSprite2D" parent="." unique_id=2053552663]
+position = Vector2(-162, 3)
+sprite_frames = SubResource("SpriteFrames_ndy4l")
+autoplay = "default"
+frame_progress = 0.23686033
+
+[node name="NPCGenerico27" type="AnimatedSprite2D" parent="." unique_id=677028895]
+position = Vector2(-31, 176)
+sprite_frames = SubResource("SpriteFrames_ndy4l")
+autoplay = "default"
+frame_progress = 0.96861124
+
 [node name="NPCGenerico2" type="AnimatedSprite2D" parent="." unique_id=322022396]
 position = Vector2(-199, 187)
 sprite_frames = SubResource("SpriteFrames_ndy4l")
 autoplay = "default"
 frame_progress = 0.74260646
-
-[node name="NPCGenerico2" type="AnimatedSprite2D" parent="NPCGenerico2" unique_id=677028895]
-position = Vector2(168, -11)
-sprite_frames = SubResource("SpriteFrames_ndy4l")
-autoplay = "default"
-frame_progress = 0.96861124
-
-[node name="NPCGenerico3" type="AnimatedSprite2D" parent="NPCGenerico2" unique_id=2053552663]
-position = Vector2(37, -184)
-sprite_frames = SubResource("SpriteFrames_ndy4l")
-autoplay = "default"
-frame_progress = 0.23686033
 
 [node name="NPCGenerico3" type="AnimatedSprite2D" parent="." unique_id=1477956492]
 position = Vector2(257, 66)
@@ -3450,7 +3450,7 @@ frame_progress = 0.8031777
 position = Vector2(41, 188)
 sprite_frames = SubResource("SpriteFrames_ndy4l")
 autoplay = "default"
-frame_progress = 0.07046855
+frame_progress = 0.060212668
 
 [node name="NPCGenerico6" type="AnimatedSprite2D" parent="." unique_id=841321114]
 position = Vector2(257, 164)
@@ -3471,15 +3471,15 @@ autoplay = "default"
 frame = 1
 frame_progress = 1.0
 
-[node name="NPCGenerico17" type="AnimatedSprite2D" parent="." unique_id=1117957192]
-position = Vector2(113, 235)
+[node name="NPCGenerico25" type="AnimatedSprite2D" parent="." unique_id=1956969696]
+position = Vector2(190, -21)
 sprite_frames = SubResource("SpriteFrames_cwksn")
 autoplay = "default"
 frame = 1
 frame_progress = 1.0
 
-[node name="NPCGenerico17" type="AnimatedSprite2D" parent="NPCGenerico17" unique_id=1956969696]
-position = Vector2(77, -256)
+[node name="NPCGenerico17" type="AnimatedSprite2D" parent="." unique_id=1117957192]
+position = Vector2(113, 235)
 sprite_frames = SubResource("SpriteFrames_cwksn")
 autoplay = "default"
 frame = 1
@@ -3499,17 +3499,17 @@ autoplay = "default"
 frame = 1
 frame_progress = 1.0
 
+[node name="NPCGenerico24" type="AnimatedSprite2D" parent="." unique_id=1873560881]
+position = Vector2(452, 23)
+sprite_frames = SubResource("SpriteFrames_cwksn")
+autoplay = "default"
+frame_progress = 0.77676725
+
 [node name="NPCGenerico21" type="AnimatedSprite2D" parent="." unique_id=1952844940]
 position = Vector2(-199, 137)
 sprite_frames = SubResource("SpriteFrames_cwksn")
 autoplay = "default"
 frame_progress = 0.89063716
-
-[node name="NPCGenerico21" type="AnimatedSprite2D" parent="NPCGenerico21" unique_id=1873560881]
-position = Vector2(651, -114)
-sprite_frames = SubResource("SpriteFrames_cwksn")
-autoplay = "default"
-frame_progress = 0.77676725
 
 [node name="NPCGenerico15" type="AnimatedSprite2D" parent="." unique_id=927211213]
 position = Vector2(-247, 162)
@@ -3537,17 +3537,17 @@ autoplay = "default"
 frame = 1
 frame_progress = 1.0
 
+[node name="NPCGenerico23" type="AnimatedSprite2D" parent="." unique_id=1777116555]
+position = Vector2(337, 235)
+sprite_frames = SubResource("SpriteFrames_cwksn")
+autoplay = "default"
+frame_progress = 0.81854564
+
 [node name="NPCGenerico1" type="AnimatedSprite2D" parent="." unique_id=1785480615]
 position = Vector2(-79, 138)
 sprite_frames = SubResource("SpriteFrames_cwksn")
 autoplay = "default"
 frame_progress = 0.09595374
-
-[node name="NPCGenerico1" type="AnimatedSprite2D" parent="NPCGenerico1" unique_id=1777116555]
-position = Vector2(416, 97)
-sprite_frames = SubResource("SpriteFrames_cwksn")
-autoplay = "default"
-frame_progress = 0.81854564
 
 [node name="Arvores" type="TileMapLayer" parent="." unique_id=238771211]
 scale = Vector2(0.7, 0.7)
