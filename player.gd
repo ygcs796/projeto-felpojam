@@ -10,9 +10,15 @@ var input_direction = Vector2.ZERO
 var previous_direction = input_direction
 var primeira_perna = true # variável para deixar a animação mais realista
 
+<<<<<<< HEAD
 @onready var ray = $RayCast2D
 @onready var anim = $AnimatedSprite2D
 
+=======
+#@onready var ray = $RayCast2D
+@onready var anim = $AnimatedSprite2D
+#@onready var sprite = $Sprite2D
+>>>>>>> parent of 46fe9dd (sem player)
 func _physics_process(_delta):
 	# Se já estiver andando, não aceita novos comandos
 	if is_moving:
@@ -20,6 +26,7 @@ func _physics_process(_delta):
 
 	# Verifica as teclas (configure "ui_up", "ui_down", etc. no mapa de entrada)
 	input_direction = Vector2.ZERO
+<<<<<<< HEAD
 	if Input.is_key_pressed(KEY_W):
 		input_direction = Vector2.UP
 		previous_direction = input_direction
@@ -34,6 +41,21 @@ func _physics_process(_delta):
 		previous_direction = input_direction
 	
 	
+=======
+	if Input.is_action_pressed("ui_up"):
+		input_direction = Vector2.UP
+		previous_direction = input_direction
+	elif Input.is_action_pressed("ui_down"):
+		input_direction = Vector2.DOWN
+		previous_direction = input_direction
+	elif Input.is_action_pressed("ui_left"):
+		input_direction = Vector2.LEFT
+		previous_direction = input_direction
+	elif Input.is_action_pressed("ui_right"):
+		input_direction = Vector2.RIGHT
+		previous_direction = input_direction
+	
+>>>>>>> parent of 46fe9dd (sem player)
 	# Se houve algum input, tenta mover
 	if input_direction != Vector2.ZERO:
 		move(input_direction, previous_direction)
@@ -47,12 +69,21 @@ func move(dir, prev_dir):
 	
 	# 2. Verifica colisão com RayCast antes de andar
 	# Aponta o raio para onde queremos ir (ex: 160px para a direita)
+<<<<<<< HEAD
 	ray.target_position = dir * (tile_size + 2)
 	ray.force_raycast_update() # Força a atualização imediata do raio
 	#
 	if ray.is_colliding():
 		## Se o raio bateu em algo, não anda!
 		return
+=======
+	#ray.target_position = dir * tile_size
+	#ray.force_raycast_update() # Força a atualização imediata do raio
+	#
+	#if ray.is_colliding():
+		## Se o raio bateu em algo, não anda!
+		#return
+>>>>>>> parent of 46fe9dd (sem player)
 	
 	# 3. Inicia o movimento (Tween)
 	
@@ -63,7 +94,11 @@ func move(dir, prev_dir):
 	
 	var tween = create_tween()
 	# Move da posição atual para (posição atual + 160px na direção)
+<<<<<<< HEAD
 	# Trans.TRANS_SINE deixa o movimento mais suave no início e fim
+=======
+	#Trans.TRANS_SINE deixa o movimento mais suave no início e fim
+>>>>>>> parent of 46fe9dd (sem player)
 	tween.tween_property(self, "position", target_position, move_speed)#.set_trans(Tween.TRANS_SINE)
 	
 	# Quando o tween terminar, libera para andar de novo
