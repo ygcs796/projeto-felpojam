@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://cqlwv0xd5smut" path="res://assets/tiles/Copacabana e areia arcos-sheet.png" id="5_te7vk"]
 [ext_resource type="Texture2D" uid="uid://dy6svju8bcnaq" path="res://assets/tiles/objetos_gerais_praia_sheet.png" id="6_vx1bk"]
 [ext_resource type="PackedScene" uid="uid://ddry44an54yp1" path="res://player.tscn" id="7_vx1bk"]
+[ext_resource type="Texture2D" uid="uid://vxwppn1pw7wi" path="res://assets/NPC's/Lobo guará npc.png" id="8_biqnf"]
+[ext_resource type="Texture2D" uid="uid://bgm2rtwb2cwb1" path="res://assets/NPC's/gato npc (1).png" id="9_cb1w8"]
+[ext_resource type="Texture2D" uid="uid://23epgsxlwcbh" path="res://assets/NPC's/Npc genérico 2.png" id="10_q3oy6"]
+[ext_resource type="Texture2D" uid="uid://cs2uy2ijv52mp" path="res://assets/NPC's/Npc genérico 1.png" id="11_2125b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tvhxd"]
 0:0/0 = 0
@@ -3085,6 +3089,116 @@ texture = ExtResource("6_vx1bk")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_2125b")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vx1bk"]
+size = Vector2(6.5, 468)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlr0e"]
+size = Vector2(896, 28.5)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_wjlnf"]
+a = Vector2(-74, -149)
+b = Vector2(-279, -94)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ml0pv"]
+a = Vector2(-79, -148)
+b = Vector2(280, -153)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_biqnf"]
+a = Vector2(462, -134)
+b = Vector2(278, -153)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_cb1w8"]
+a = Vector2(451, -135)
+b = Vector2(598, -94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1nje"]
+atlas = ExtResource("8_biqnf")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4yxrx"]
+atlas = ExtResource("8_biqnf")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mha3s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d1nje")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4yxrx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mv8p2"]
+atlas = ExtResource("9_cb1w8")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_llnp0"]
+atlas = ExtResource("9_cb1w8")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_klabw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mv8p2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_llnp0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdt1u"]
+atlas = ExtResource("10_q3oy6")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tnb4l"]
+atlas = ExtResource("10_q3oy6")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ndy4l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdt1u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tnb4l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yv7wl"]
+atlas = ExtResource("11_2125b")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqtq0"]
+atlas = ExtResource("11_2125b")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cwksn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yv7wl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqtq0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wjlnf"]
 texture = ExtResource("2_2jt6s")
 6:18/size_in_atlas = Vector2i(6, 7)
@@ -3153,28 +3267,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_wjlnf")
 sources/2 = SubResource("TileSetAtlasSource_q3oy6")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vx1bk"]
-size = Vector2(6.5, 468)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlr0e"]
-size = Vector2(896, 28.5)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_wjlnf"]
-a = Vector2(-74, -149)
-b = Vector2(-279, -94)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_ml0pv"]
-a = Vector2(-79, -148)
-b = Vector2(280, -153)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_biqnf"]
-a = Vector2(462, -134)
-b = Vector2(278, -153)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_cb1w8"]
-a = Vector2(451, -135)
-b = Vector2(598, -94)
-
 [node name="Cenario Rio de Janeiro" type="Node2D" unique_id=840574297]
 
 [node name="Agua" type="TileMapLayer" parent="." unique_id=740081092]
@@ -3209,17 +3301,6 @@ scale = Vector2(1.5, 1.5)
 tile_map_data = PackedByteArray("AAACAAsAAAAMAAIAAAABAAsAAAANAAIAAAAAAA0AAAANAAIAAAAEAA0AAAANAAIAAAAFAA0AAAAOAAIAAAD5/w4AAAAMAAIAAAD1/woAAAAMAAIAAAD2/woAAAANAAIAAAD1/w0AAAANAAIAAAD2/w0AAAAOAAIAAAD7/wwAAAAOAAIAAAD8/wwAAAANAAIAAAD4/wkAAAAMAAIAAAD9/wkAAAAMAAIAAAAHAAsAAAAMAAIAAAALAA0AAAANAAIAAAAMAA0AAAAMAAIAAAALAAoAAAANAAIAAAAPAAgAAAAMAAIAAAASAAkAAAAOAAIAAAAPAAsAAAANAAIAAAASAA4AAAAMAAIAAAATAA4AAAAMAAIAAAD//w0AAAAMAAIAAAD4/wsAAAAOAAIAAAAQAA4AAAAOAAIAAAADAAkAAAANAAIAAAALAAYAAAAMAAIAABATAAwAAAAPAAYAAAAXAA0AAAAOAAUAAAD8/wsAAAANAAUAAAAFAAsAAAANAAYAAAD3/w8AAAANAAYAAAD3/woAAAANAAUAAAAOAAsAAAAOAAUAAAAKAA4AAAANAAYAAAAIAA0AAAALAAcAAAD1/w8AAAALAAcAAAD2/xAAAAAOAAgAAAD2/w8AAAANAAgAAAAJAA4AAAAOAAgAAAAXABAAAAAOAAgAAAAVAA8AAAAOAAgAAAD+/wcAAAANAAgAAAA=")
 tile_set = SubResource("TileSet_d1nje")
 
-[node name="Arvores" type="TileMapLayer" parent="." unique_id=238771211]
-scale = Vector2(0.7, 0.7)
-tile_map_data = PackedByteArray("AAD9/wIAAAAGABIAABAcAAIAAAAGABIAABD+/wYAAAAAABIAABAHAAQAAAAGABIAAAAJAAgAAAAAABIAAAARAAgAAAAGABIAAAAUAAMAAAAAABIAAAA=")
-tile_set = SubResource("TileSet_ml0pv")
-
-[node name="guarda-sois" type="TileMapLayer" parent="." unique_id=210528616]
-position = Vector2(-19, -97)
-scale = Vector2(1.2, 1.2)
-tile_map_data = PackedByteArray("AAAXABEAAgAIAAQAAAACAA4AAgAEAAAAAAAIAA4AAgAAAAAAAAD2/wsAAgAIAAQAAAAOAAwAAgAAAAQAAADz/xEAAgAIAAAAAAD6/w8AAgAEAAQAAAD8/wsAAgAAAAAAAAAOABAAAgAIAAAAAAD//xEAAgAIAAQAAAD3/xIAAgAAAAQAAADz/w0AAgAEAAAAAAASAAoAAgAIAAAAAAATAA4AAgAAAAAAAAAFABAAAgAEAAQAAAAWAAsAAgAEAAAAAAARABEAAgAEAAgAAAD+/w4AAgABAAgAAAAXAAYAAgABAAgAAAD3/wUAAgABAAgAAAACAAcAAgAEAAgAAAA=")
-tile_set = SubResource("TileSet_ml0pv")
-
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1235165479]
 
 [node name="Parede Esquerda" type="CollisionShape2D" parent="StaticBody2D" unique_id=1024831951]
@@ -3252,3 +3333,201 @@ shape = SubResource("SegmentShape2D_cb1w8")
 
 [node name="Player" parent="." unique_id=895579848 instance=ExtResource("7_vx1bk")]
 position = Vector2(-171, 165)
+
+[node name="Lobo NPC" type="AnimatedSprite2D" parent="." unique_id=191364935]
+position = Vector2(443, 181)
+sprite_frames = SubResource("SpriteFrames_mha3s")
+autoplay = "default"
+frame_progress = 0.003575762
+
+[node name="Gato NPC" type="AnimatedSprite2D" parent="." unique_id=1919892081]
+position = Vector2(426, 173)
+sprite_frames = SubResource("SpriteFrames_klabw")
+autoplay = "default"
+frame_progress = 0.8601355
+
+[node name="NPCGenerico8" type="AnimatedSprite2D" parent="." unique_id=381419098]
+position = Vector2(377, 258)
+sprite_frames = SubResource("SpriteFrames_ndy4l")
+autoplay = "default"
+frame_progress = 0.9804191
+
+[node name="NPCGenerico9" type="AnimatedSprite2D" parent="." unique_id=1118686087]
+position = Vector2(425, 138)
+sprite_frames = SubResource("SpriteFrames_ndy4l")
+autoplay = "default"
+frame_progress = 0.86775434
+
+[node name="NPCGenerico11" type="AnimatedSprite2D" parent="." unique_id=1053209323]
+position = Vector2(161, 185)
+sprite_frames = SubResource("SpriteFrames_ndy4l")
+autoplay = "default"
+frame_progress = 0.39560843
+
+[node name="NPCGenerico12" type="AnimatedSprite2D" parent="." unique_id=1071823557]
+position = Vector2(-7, 235)
+sprite_frames = SubResource("SpriteFrames_ndy4l")
+autoplay = "default"
+frame_progress = 0.41587728
+
+[node name="NPCGenerico12" type="AnimatedSprite2D" parent="NPCGenerico12" unique_id=1335441185]
+position = Vector2(184, -261)
+sprite_frames = SubResource("SpriteFrames_ndy4l")
+autoplay = "default"
+frame_progress = 0.075527705
+
+[node name="NPCGenerico10" type="AnimatedSprite2D" parent="." unique_id=360676909]
+position = Vector2(190, 229)
+sprite_frames = SubResource("SpriteFrames_ndy4l")
+autoplay = "default"
+frame_progress = 0.31708005
+
+[node name="NPCGenerico7" type="AnimatedSprite2D" parent="." unique_id=2027798634]
+position = Vector2(281, 234)
+sprite_frames = SubResource("SpriteFrames_ndy4l")
+autoplay = "default"
+frame_progress = 0.4053217
+
+[node name="NPCGenerico2" type="AnimatedSprite2D" parent="." unique_id=322022396]
+position = Vector2(-199, 187)
+sprite_frames = SubResource("SpriteFrames_ndy4l")
+autoplay = "default"
+frame_progress = 0.23010458
+
+[node name="NPCGenerico2" type="AnimatedSprite2D" parent="NPCGenerico2" unique_id=677028895]
+position = Vector2(168, -11)
+sprite_frames = SubResource("SpriteFrames_ndy4l")
+autoplay = "default"
+frame_progress = 0.45610908
+
+[node name="NPCGenerico3" type="AnimatedSprite2D" parent="NPCGenerico2" unique_id=2053552663]
+position = Vector2(37, -184)
+sprite_frames = SubResource("SpriteFrames_ndy4l")
+autoplay = "default"
+frame_progress = 0.7243581
+
+[node name="NPCGenerico3" type="AnimatedSprite2D" parent="." unique_id=1477956492]
+position = Vector2(257, 66)
+sprite_frames = SubResource("SpriteFrames_ndy4l")
+autoplay = "default"
+frame_progress = 0.026541209
+
+[node name="NPCGenerico4" type="AnimatedSprite2D" parent="." unique_id=571250581]
+position = Vector2(89, 235)
+sprite_frames = SubResource("SpriteFrames_ndy4l")
+autoplay = "default"
+frame_progress = 0.29067573
+
+[node name="NPCGenerico5" type="AnimatedSprite2D" parent="." unique_id=1319651393]
+position = Vector2(41, 188)
+sprite_frames = SubResource("SpriteFrames_ndy4l")
+autoplay = "default"
+frame_progress = 0.5579665
+
+[node name="NPCGenerico6" type="AnimatedSprite2D" parent="." unique_id=841321114]
+position = Vector2(257, 164)
+sprite_frames = SubResource("SpriteFrames_ndy4l")
+autoplay = "default"
+frame_progress = 0.3788324
+
+[node name="NPCGenerico19" type="AnimatedSprite2D" parent="." unique_id=917628509]
+position = Vector2(449, 257)
+sprite_frames = SubResource("SpriteFrames_cwksn")
+autoplay = "default"
+frame_progress = 0.45357186
+
+[node name="NPCGenerico18" type="AnimatedSprite2D" parent="." unique_id=516813862]
+position = Vector2(425, 259)
+sprite_frames = SubResource("SpriteFrames_cwksn")
+autoplay = "default"
+frame = 1
+frame_progress = 1.0
+
+[node name="NPCGenerico17" type="AnimatedSprite2D" parent="." unique_id=1117957192]
+position = Vector2(113, 235)
+sprite_frames = SubResource("SpriteFrames_cwksn")
+autoplay = "default"
+frame = 1
+frame_progress = 1.0
+
+[node name="NPCGenerico17" type="AnimatedSprite2D" parent="NPCGenerico17" unique_id=1956969696]
+position = Vector2(77, -256)
+sprite_frames = SubResource("SpriteFrames_cwksn")
+autoplay = "default"
+frame = 1
+frame_progress = 1.0
+
+[node name="NPCGenerico20" type="AnimatedSprite2D" parent="." unique_id=206407299]
+position = Vector2(353, 115)
+sprite_frames = SubResource("SpriteFrames_cwksn")
+autoplay = "default"
+frame = 1
+frame_progress = 1.0
+
+[node name="NPCGenerico16" type="AnimatedSprite2D" parent="." unique_id=2087896854]
+position = Vector2(-247, 233)
+sprite_frames = SubResource("SpriteFrames_cwksn")
+autoplay = "default"
+frame = 1
+frame_progress = 1.0
+
+[node name="NPCGenerico21" type="AnimatedSprite2D" parent="." unique_id=1952844940]
+position = Vector2(-199, 137)
+sprite_frames = SubResource("SpriteFrames_cwksn")
+autoplay = "default"
+frame_progress = 0.3781351
+
+[node name="NPCGenerico21" type="AnimatedSprite2D" parent="NPCGenerico21" unique_id=1873560881]
+position = Vector2(651, -114)
+sprite_frames = SubResource("SpriteFrames_cwksn")
+autoplay = "default"
+frame_progress = 0.26426542
+
+[node name="NPCGenerico15" type="AnimatedSprite2D" parent="." unique_id=927211213]
+position = Vector2(-247, 162)
+sprite_frames = SubResource("SpriteFrames_cwksn")
+autoplay = "default"
+frame_progress = 0.013195475
+
+[node name="NPCGenerico14" type="AnimatedSprite2D" parent="." unique_id=1688945974]
+position = Vector2(65, 138)
+sprite_frames = SubResource("SpriteFrames_cwksn")
+autoplay = "default"
+frame_progress = 0.7463714
+
+[node name="NPCGenerico22" type="AnimatedSprite2D" parent="." unique_id=1389044893]
+position = Vector2(257, 236)
+sprite_frames = SubResource("SpriteFrames_cwksn")
+autoplay = "default"
+frame = 1
+frame_progress = 1.0
+
+[node name="NPCGenerico13" type="AnimatedSprite2D" parent="." unique_id=1797985948]
+position = Vector2(-103, 210)
+sprite_frames = SubResource("SpriteFrames_cwksn")
+autoplay = "default"
+frame = 1
+frame_progress = 1.0
+
+[node name="NPCGenerico1" type="AnimatedSprite2D" parent="." unique_id=1785480615]
+position = Vector2(-79, 138)
+sprite_frames = SubResource("SpriteFrames_cwksn")
+autoplay = "default"
+frame_progress = 0.5834516
+
+[node name="NPCGenerico1" type="AnimatedSprite2D" parent="NPCGenerico1" unique_id=1777116555]
+position = Vector2(416, 97)
+sprite_frames = SubResource("SpriteFrames_cwksn")
+autoplay = "default"
+frame_progress = 0.30604377
+
+[node name="Arvores" type="TileMapLayer" parent="." unique_id=238771211]
+scale = Vector2(0.7, 0.7)
+tile_map_data = PackedByteArray("AAD9/wIAAAAGABIAABAcAAIAAAAGABIAABD+/wYAAAAAABIAABAHAAQAAAAGABIAAAAJAAgAAAAAABIAAAARAAgAAAAGABIAAAAUAAMAAAAAABIAAAA=")
+tile_set = SubResource("TileSet_ml0pv")
+
+[node name="guarda-sois" type="TileMapLayer" parent="." unique_id=210528616]
+position = Vector2(-19, -97)
+scale = Vector2(1.2, 1.2)
+tile_map_data = PackedByteArray("AAAXABEAAgAIAAQAAAACAA4AAgAEAAAAAAAIAA4AAgAAAAAAAAD2/wsAAgAIAAQAAAAOAAwAAgAAAAQAAADz/xEAAgAIAAAAAAD6/w8AAgAEAAQAAAD8/wsAAgAAAAAAAAAOABAAAgAIAAAAAAD//xEAAgAIAAQAAAD3/xIAAgAAAAQAAADz/w0AAgAEAAAAAAASAAoAAgAIAAAAAAATAA4AAgAAAAAAAAAFABAAAgAEAAQAAAAWAAsAAgAEAAAAAAARABEAAgAEAAgAAAD+/w4AAgABAAgAAAAXAAYAAgABAAgAAAD3/wUAAgABAAgAAAACAAcAAgAEAAgAAAA=")
+tile_set = SubResource("TileSet_ml0pv")
