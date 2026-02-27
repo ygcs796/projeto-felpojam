@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c0gfmnqow6pxg"]
+
+[ext_resource type="PackedScene" uid="uid://d02pqyis0c3xx" path="res://npcs_genericos.tscn" id="1_dmuk6"]
+[ext_resource type="Texture2D" uid="uid://0lvv4iqkse5f" path="res://assets/npcs/Npc genérico 2.png" id="2_xa3yf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwhly"]
+atlas = ExtResource("2_xa3yf")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n84d4"]
+atlas = ExtResource("2_xa3yf")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xa3yf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wwhly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n84d4")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}]
+
+[node name="NpcGenericoVerde" unique_id=728492759 instance=ExtResource("1_dmuk6")]
+
+[node name="AnimatedSprite2D" parent="." index="1" unique_id=1196152369]
+sprite_frames = SubResource("SpriteFrames_xa3yf")
+animation = &"idle"
+autoplay = "idle"

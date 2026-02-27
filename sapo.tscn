@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dasumxnqapup0"]
+
+[ext_resource type="PackedScene" uid="uid://b4tp2ikjcofib" path="res://npcs_importantes.tscn" id="1_o41su"]
+[ext_resource type="Texture2D" uid="uid://tyajhaiv0a7v" path="res://assets/npcs/Sapo npc.png" id="2_cac4m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ms1cl"]
+atlas = ExtResource("2_cac4m")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5nvs"]
+atlas = ExtResource("2_cac4m")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cac4m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ms1cl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5nvs")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cac4m"]
+size = Vector2(12, 15)
+
+[node name="Sapo" unique_id=728492759 instance=ExtResource("1_o41su")]
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=1196152369]
+sprite_frames = SubResource("SpriteFrames_cac4m")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=979874286]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_cac4m")

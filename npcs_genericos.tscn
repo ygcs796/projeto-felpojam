@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://d02pqyis0c3xx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fiurp"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fiurp"]
+size = Vector2(12, 16)
+
+[node name="NpcsGenericos" type="CharacterBody2D" unique_id=728492759]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1196152369]
+sprite_frames = SubResource("SpriteFrames_fiurp")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=979874286]
+shape = SubResource("RectangleShape2D_fiurp")

@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://diyk2rbtuuhw3"]
+
+[ext_resource type="PackedScene" uid="uid://b4tp2ikjcofib" path="res://npcs_importantes.tscn" id="1_xcoan"]
+[ext_resource type="Texture2D" uid="uid://be2jo7jndcaiw" path="res://assets/npcs/Hiena npc.png" id="2_h7thd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oefsk"]
+atlas = ExtResource("2_h7thd")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xq022"]
+atlas = ExtResource("2_h7thd")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h7thd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oefsk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xq022")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h7thd"]
+size = Vector2(12, 16)
+
+[node name="Hiena" unique_id=728492759 instance=ExtResource("1_xcoan")]
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=1196152369]
+sprite_frames = SubResource("SpriteFrames_h7thd")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=979874286]
+shape = SubResource("RectangleShape2D_h7thd")

@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://ddry44an54yp1"]
+[gd_scene format=3 uid="uid://rcc6w6h5gued"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://diugrogmqeewf" path="res://player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://dtx8oclkdwvm6" path="res://assets/linuz_sprites/Idle_frente.png" id="2_1jxqw"]
 [ext_resource type="Texture2D" uid="uid://bp0s6r5hoqnpn" path="res://assets/linuz_sprites/Idle_direita.png" id="3_dw050"]
 [ext_resource type="Texture2D" uid="uid://bamd3vdct8nb6" path="res://assets/linuz_sprites/Idle_costas.png" id="4_b26j0"]

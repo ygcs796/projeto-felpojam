@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cd1x2q4ie4d3m"]
+
+[ext_resource type="PackedScene" uid="uid://b4tp2ikjcofib" path="res://npcs_importantes.tscn" id="1_viijf"]
+[ext_resource type="Texture2D" uid="uid://0wsjwpmcru0h" path="res://assets/npcs/npc crocodilo.png" id="2_h7axy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7axy"]
+atlas = ExtResource("2_h7axy")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_spqpo"]
+atlas = ExtResource("2_h7axy")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i3vdx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7axy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_spqpo")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}]
+
+[node name="Jacaré" unique_id=728492759 instance=ExtResource("1_viijf")]
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=1196152369]
+sprite_frames = SubResource("SpriteFrames_i3vdx")

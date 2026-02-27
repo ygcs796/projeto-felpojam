@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://buvkkedyhh1ok"]
+
+[ext_resource type="PackedScene" uid="uid://d02pqyis0c3xx" path="res://npcs_genericos.tscn" id="1_mfggn"]
+[ext_resource type="Texture2D" uid="uid://cx5klx0eqdkk1" path="res://assets/npcs/Nov genérico 4.png" id="2_187oi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5e42"]
+atlas = ExtResource("2_187oi")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pmo2"]
+atlas = ExtResource("2_187oi")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mfggn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s5e42")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6pmo2")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}]
+
+[node name="NpcGenericoRoxo" unique_id=728492759 instance=ExtResource("1_mfggn")]
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=1196152369]
+sprite_frames = SubResource("SpriteFrames_mfggn")
+frame_progress = 0.27547348

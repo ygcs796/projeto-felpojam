@@ -4,7 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://cnwgi1iflo6nr" path="res://assets/tiles/casas_pernambuco.png" id="2_6utbq"]
 [ext_resource type="Texture2D" uid="uid://cx2foqneh7o0h" path="res://assets/tiles/Objetos pernambuco -Sheet.png" id="3_srliv"]
 [ext_resource type="Texture2D" uid="uid://ca5v5p82h56vn" path="res://assets/tiles/Pernambuco2 COM LINHA DE TREM.png" id="3_x6pl0"]
-[ext_resource type="PackedScene" uid="uid://ddry44an54yp1" path="res://player.tscn" id="4_07k0h"]
+[ext_resource type="PackedScene" uid="uid://rcc6w6h5gued" path="res://player.tscn" id="4_07k0h"]
+[ext_resource type="PackedScene" uid="uid://diyk2rbtuuhw3" path="res://hiena.tscn" id="6_3pebh"]
+[ext_resource type="PackedScene" uid="uid://kyd86o128iot" path="res://npc_generico_azul.tscn" id="9_3pebh"]
+[ext_resource type="PackedScene" uid="uid://b82p1sqq1b1fd" path="res://npc_generico_marrom.tscn" id="9_h82bd"]
+[ext_resource type="PackedScene" uid="uid://buvkkedyhh1ok" path="res://npc_generico_roxo.tscn" id="12_3pebh"]
+[ext_resource type="PackedScene" uid="uid://cd1x2q4ie4d3m" path="res://jacaré.tscn" id="12_aqo5y"]
+[ext_resource type="PackedScene" uid="uid://c0gfmnqow6pxg" path="res://npc_generico_verde.tscn" id="12_h82bd"]
+[ext_resource type="PackedScene" uid="uid://dasumxnqapup0" path="res://sapo.tscn" id="12_jcfor"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6utbq"]
 texture = ExtResource("1_gcdmd")
@@ -501,6 +508,12 @@ texture = ExtResource("3_srliv")
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_07k0h")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6pl0"]
+size = Vector2(19.25, 408)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_07k0h"]
+size = Vector2(900, 19)
+
 [node name="cenario_pernambuco" type="Node2D" unique_id=1861073375]
 
 [node name="chao" type="TileMapLayer" parent="." unique_id=2054762125]
@@ -517,6 +530,7 @@ tile_map_data = PackedByteArray("AAACAPn/AAAfAAAAAAAGAPn/AAASAAAAAAAKAPn/AAAMAAA
 tile_set = SubResource("TileSet_07k0h")
 
 [node name="Player" parent="." unique_id=895579848 instance=ExtResource("4_07k0h")]
+position = Vector2(28, 59)
 
 [node name="arvores" type="TileMapLayer" parent="." unique_id=124617667]
 tile_map_data = PackedByteArray("AAADAAkAAQAAAAUAAAAvAP3/AQAAAAUAAAASAP3/AQAGAAUAAAAJAP3/AQAAAAUAAAAyAAkAAQAGAAUAAAAcAAkAAQAGAAUAAAAUAAkAAQAAAAUAAAA=")
@@ -529,6 +543,96 @@ tile_set = SubResource("TileSet_07pc1")
 [node name="luzes" type="TileMapLayer" parent="." unique_id=101595272]
 tile_map_data = PackedByteArray("AAAQAAoAAQAHAAEAAAArAP7/AQAHAAEAAAAYAP7/AQAHAAEAAAAlAAoAAQAHAAEAAAA=")
 tile_set = SubResource("TileSet_07pc1")
+
+[node name="Limites do mapa" type="StaticBody2D" parent="." unique_id=160527389]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites do mapa" unique_id=1907381433]
+position = Vector2(-7.75, 20)
+shape = SubResource("RectangleShape2D_x6pl0")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Limites do mapa" unique_id=378515529]
+position = Vector2(871.625, 11)
+shape = SubResource("RectangleShape2D_x6pl0")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Limites do mapa" unique_id=2109551158]
+position = Vector2(426, 213.5)
+shape = SubResource("RectangleShape2D_07k0h")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Limites do mapa" unique_id=1406689506]
+position = Vector2(432, -181)
+shape = SubResource("RectangleShape2D_07k0h")
+
+[node name="Hiena2" parent="." unique_id=728492759 instance=ExtResource("6_3pebh")]
+position = Vector2(659, -26)
+
+[node name="Sapo" parent="." unique_id=2063653280 instance=ExtResource("12_jcfor")]
+position = Vector2(392, 170)
+
+[node name="Jacaré" parent="." unique_id=1662254907 instance=ExtResource("12_aqo5y")]
+position = Vector2(830, 37)
+
+[node name="NpcGenericoMarrom1" parent="." unique_id=453349758 instance=ExtResource("9_h82bd")]
+position = Vector2(119, -5)
+
+[node name="NpcGenericoMarrom2" parent="NpcGenericoMarrom1" unique_id=1405516666 instance=ExtResource("9_h82bd")]
+position = Vector2(174, 196)
+
+[node name="NpcGenericoMarrom3" parent="NpcGenericoMarrom1" unique_id=284338527 instance=ExtResource("9_h82bd")]
+position = Vector2(232, -8)
+
+[node name="NpcGenericoMarrom4" parent="NpcGenericoMarrom1" unique_id=1409494389 instance=ExtResource("9_h82bd")]
+position = Vector2(338, -28)
+
+[node name="NpcGenericoMarrom5" parent="NpcGenericoMarrom1" unique_id=1465647406 instance=ExtResource("9_h82bd")]
+position = Vector2(398, 189)
+
+[node name="NpcGenericoMarrom6" parent="NpcGenericoMarrom1" unique_id=450998543 instance=ExtResource("9_h82bd")]
+position = Vector2(641, 177)
+
+[node name="NpcGenericoAzul1" parent="." unique_id=1848146254 instance=ExtResource("9_3pebh")]
+position = Vector2(430, -8)
+
+[node name="NpcGenericoAzul2" parent="NpcGenericoAzul1" unique_id=186915050 instance=ExtResource("9_3pebh")]
+position = Vector2(100, -7)
+
+[node name="NpcGenericoAzul3" parent="NpcGenericoAzul1" unique_id=2098877845 instance=ExtResource("9_3pebh")]
+position = Vector2(188, 196)
+
+[node name="NpcGenericoAzul4" parent="NpcGenericoAzul1" unique_id=833404372 instance=ExtResource("9_3pebh")]
+position = Vector2(-248, 179)
+
+[node name="NpcGenericoRoxo1" parent="." unique_id=475324900 instance=ExtResource("12_3pebh")]
+position = Vector2(234, -7)
+
+[node name="NpcGenericoRoxo2" parent="NpcGenericoRoxo1" unique_id=366766693 instance=ExtResource("12_3pebh")]
+position = Vector2(22, 197)
+
+[node name="NpcGenericoRoxo3" parent="NpcGenericoRoxo1" unique_id=811780483 instance=ExtResource("12_3pebh")]
+position = Vector2(362, -1)
+
+[node name="NpcGenericoRoxo4" parent="NpcGenericoRoxo1" unique_id=226140680 instance=ExtResource("12_3pebh")]
+position = Vector2(603, -1)
+
+[node name="NpcGenericoRoxo5" parent="NpcGenericoRoxo1" unique_id=502768025 instance=ExtResource("12_3pebh")]
+position = Vector2(405, 178)
+
+[node name="NpcGenericoVerde1" parent="." unique_id=228167163 instance=ExtResource("12_h82bd")]
+position = Vector2(214, -18)
+
+[node name="NpcGenericoVerde2" parent="NpcGenericoVerde1" unique_id=1091322186 instance=ExtResource("12_h82bd")]
+position = Vector2(203, 12)
+
+[node name="NpcGenericoVerde3" parent="NpcGenericoVerde1" unique_id=914100294 instance=ExtResource("12_h82bd")]
+position = Vector2(-88, 187)
+
+[node name="NpcGenericoVerde4" parent="NpcGenericoVerde1" unique_id=1540637730 instance=ExtResource("12_h82bd")]
+position = Vector2(343, 195)
+
+[node name="NpcGenericoVerde5" parent="NpcGenericoVerde1" unique_id=354582188 instance=ExtResource("12_h82bd")]
+position = Vector2(465, 193)
+
+[node name="NpcGenericoVerde6" parent="NpcGenericoVerde1" unique_id=1190882611 instance=ExtResource("12_h82bd")]
+position = Vector2(608, 9)
 
 [node name="outros objetos" type="TileMapLayer" parent="." unique_id=1005753501]
 tile_map_data = PackedByteArray("AAAgAAAAAQALAAAAAAAPAP//AQAFAAIAAAAaAP7/AQACAAIAAAAoAAAAAQAFAAIAAAAvAAwAAQACAAIAAAA1AAoAAQAFAAIAAAAJAAsAAQALAAAAAAAMAAwAAQARAAEAAAAOAAoAAQATAAEAAAAFAAsAAQARAAEAAAABAAsAAQACAAIAAAAYAAwAAQACAAIAAAAiAAoAAQAFAAIAAAApAAsAAQALAAAAAAA=")

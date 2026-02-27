@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://b82p1sqq1b1fd"]
+
+[ext_resource type="PackedScene" uid="uid://d02pqyis0c3xx" path="res://npcs_genericos.tscn" id="1_bmad6"]
+[ext_resource type="Texture2D" uid="uid://b0pjhr48kt3ng" path="res://assets/npcs/Noc genérico 3.png" id="2_ojeak"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfidh"]
+atlas = ExtResource("2_ojeak")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fm65d"]
+atlas = ExtResource("2_ojeak")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bmad6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfidh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fm65d")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}]
+
+[node name="NpcGenericoMarrom" unique_id=728492759 instance=ExtResource("1_bmad6")]
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=1196152369]
+sprite_frames = SubResource("SpriteFrames_bmad6")
