@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://x63b5w12q82d"]
+
+[ext_resource type="Script" uid="uid://mvta0airg07r" path="res://scripts/spawner.gd" id="1_yp5lu"]
+[ext_resource type="PackedScene" uid="uid://kjpfyewffgst" path="res://scenes/obstacles/obstacle_1.tscn" id="2_4wbs5"]
+[ext_resource type="PackedScene" uid="uid://dyyl4qcfr28o2" path="res://scenes/obstacles/obstacle_2.tscn" id="2_ik2nu"]
+[ext_resource type="PackedScene" uid="uid://b6ihardwajf5s" path="res://scenes/obstacles/obstacle_3.tscn" id="4_30a77"]
+[ext_resource type="PackedScene" uid="uid://c6buagc7pt774" path="res://scenes/obstacles/obstacle_4.tscn" id="5_p5s3f"]
+[ext_resource type="PackedScene" uid="uid://b27fx32ovxiow" path="res://scenes/obstacles/obstacle_5.tscn" id="6_e3f8v"]
+[ext_resource type="PackedScene" uid="uid://c3dgjbm5slyu8" path="res://scenes/obstacles/all_obstacles.tscn" id="7_30a77"]
+
+[node name="Spawner" type="Node2D" unique_id=2042530505]
+script = ExtResource("1_yp5lu")
+obstacle_scenes = Array[PackedScene]([ExtResource("2_4wbs5"), ExtResource("2_ik2nu"), ExtResource("4_30a77"), ExtResource("5_p5s3f"), ExtResource("6_e3f8v")])
+obstacles_parent = NodePath("All Obstacles")
+spawn_timer_path = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="." unique_id=1504617395]
+wait_time = 0.1
+autostart = true
+
+[node name="SpawnPoint1" type="Marker2D" parent="." unique_id=558380398]
+position = Vector2(20, -20)
+
+[node name="SpawnPoint2" type="Marker2D" parent="." unique_id=1952656578]
+position = Vector2(40, -20)
+
+[node name="SpawnPoint3" type="Marker2D" parent="." unique_id=737580766]
+position = Vector2(60, -20)
+
+[node name="SpawnPoint4" type="Marker2D" parent="." unique_id=1756011733]
+position = Vector2(80, -20)
+
+[node name="SpawnPoint5" type="Marker2D" parent="." unique_id=492959305]
+position = Vector2(100, -20)
+
+[node name="SpawnPoint6" type="Marker2D" parent="." unique_id=741098653]
+position = Vector2(120, -20)
+
+[node name="SpawnPoint7" type="Marker2D" parent="." unique_id=2015822084]
+position = Vector2(140, -20)
+
+[node name="SpawnPoint8" type="Marker2D" parent="." unique_id=1006051357]
+position = Vector2(160, -20)
+
+[node name="SpawnPoint9" type="Marker2D" parent="." unique_id=2056147479]
+position = Vector2(180, -20)
+
+[node name="SpawnPoint10" type="Marker2D" parent="." unique_id=1369193266]
+position = Vector2(200, -20)
+
+[node name="SpawnPoint11" type="Marker2D" parent="." unique_id=310783878]
+position = Vector2(220, -20)
+
+[node name="All Obstacles" parent="." unique_id=1792001899 instance=ExtResource("7_30a77")]
+position = Vector2(30, -12)

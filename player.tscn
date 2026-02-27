@@ -242,3 +242,8 @@ shape = SubResource("RectangleShape2D_khis8")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1687945258]
 target_position = Vector2(0, 18)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=343172438]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1419245320]
+shape = SubResource("RectangleShape2D_khis8")

@@ -14,7 +14,6 @@ func _ready() -> void:
 	camera.limit_right = limites_mapa.end.x * tile_size
 	
 
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	get_tree().change_scene_to_file()
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	get_tree().change_scene_to_file("res://scenes/minigame_surf.tscn")
 	pass # Replace with function body.

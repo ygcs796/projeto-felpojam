@@ -1,0 +1,195 @@
+[gd_scene format=4 uid="uid://bvxgdm0wbm120"]
+
+[ext_resource type="Texture2D" uid="uid://bgd2wikuac75r" path="res://assets/tiles/polo sul/ondas-Sheet escuro azul.png" id="2_5vpe1"]
+[ext_resource type="Script" uid="uid://chskkvifcxyb1" path="res://scripts/background.gd" id="3_5vpe1"]
+[ext_resource type="PackedScene" uid="uid://c8ilt6teih73y" path="res://scenes/linuz.tscn" id="3_oeutb"]
+[ext_resource type="PackedScene" uid="uid://x63b5w12q82d" path="res://scenes/spawner.tscn" id="4_qjjgo"]
+[ext_resource type="PackedScene" uid="uid://dm4t4ywyv2lfo" path="res://scenes/obstacles/iceberg.tscn" id="6_7cqgg"]
+[ext_resource type="AudioStream" uid="uid://b48ct8b4immmr" path="res://assets/songs/4polominigameloop.ogg" id="6_jnnuv"]
+[ext_resource type="Script" uid="uid://q7457yphyi4n" path="res://scripts/lives_surf_ui.gd" id="7_7veri"]
+[ext_resource type="Texture2D" uid="uid://bksnsfkdc6n2g" path="res://assets/UI/Vidas/Vida coração-Sheet.png" id="7_jnnuv"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vnrbd"]
+texture = ExtResource("2_5vpe1")
+0:0/animation_columns = 4
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_euhk2"]
+sources/2 = SubResource("TileSetAtlasSource_vnrbd")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnnuv"]
+atlas = ExtResource("7_jnnuv")
+region = Rect2(0, 128, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwgr4"]
+atlas = ExtResource("7_jnnuv")
+region = Rect2(64, 128, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51wwk"]
+atlas = ExtResource("7_jnnuv")
+region = Rect2(128, 128, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70aoo"]
+atlas = ExtResource("7_jnnuv")
+region = Rect2(0, 96, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ucp06"]
+atlas = ExtResource("7_jnnuv")
+region = Rect2(64, 96, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_damrf"]
+atlas = ExtResource("7_jnnuv")
+region = Rect2(128, 96, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pby3"]
+atlas = ExtResource("7_jnnuv")
+region = Rect2(0, 64, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hr71d"]
+atlas = ExtResource("7_jnnuv")
+region = Rect2(64, 64, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iiqvd"]
+atlas = ExtResource("7_jnnuv")
+region = Rect2(128, 64, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qxn84"]
+atlas = ExtResource("7_jnnuv")
+region = Rect2(0, 32, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhhi3"]
+atlas = ExtResource("7_jnnuv")
+region = Rect2(64, 32, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kjnm"]
+atlas = ExtResource("7_jnnuv")
+region = Rect2(128, 32, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7veri"]
+atlas = ExtResource("7_jnnuv")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4x8p"]
+atlas = ExtResource("7_jnnuv")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txcn1"]
+atlas = ExtResource("7_jnnuv")
+region = Rect2(128, 0, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7cqgg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jnnuv")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_nwgr4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_51wwk")
+}],
+"loop": false,
+"name": &"life_1",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70aoo")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_ucp06")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_damrf")
+}],
+"loop": false,
+"name": &"life_2",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6pby3")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_hr71d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iiqvd")
+}],
+"loop": false,
+"name": &"life_3",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qxn84")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_qhhi3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kjnm")
+}],
+"loop": false,
+"name": &"life_4",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7veri")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_v4x8p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_txcn1")
+}],
+"loop": false,
+"name": &"life_5",
+"speed": 7.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=2141356398]
+
+[node name="Background" type="TileMapLayer" parent="." unique_id=140308396]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAAAAAIAAgAAAAAAAAABAAIAAgAAAAAAAAACAAIAAgAAAAAAAAADAAIAAgAAAAAAAAD//wIAAgAAAAAAAAD+/wIAAgAAAAAAAAD9/wIAAgAAAAAAAAAEAAIAAgAAAAAAAAAFAAIAAgAAAAAAAAAGAAIAAgAAAAAAAAAHAAIAAgAAAAAAAAAIAAIAAgAAAAAAAAAJAAIAAgAAAAAAAAAKAAIAAgAAAAAAAAALAAIAAgAAAAAAAAAMAAIAAgAAAAAAAAANAAIAAgAAAAAAAAAOAAIAAgAAAAAAAAAOAAEAAgAAAAAAAAAOAAAAAgAAAAAAAAANAAAAAgAAAAAAAAAMAAEAAgAAAAAAAAALAAEAAgAAAAAAAAAKAAEAAgAAAAAAAAAJAAEAAgAAAAAAAAAIAAEAAgAAAAAAAAAHAAEAAgAAAAAAAAAGAAAAAgAAAAAAAAAFAAAAAgAAAAAAAAAEAAAAAgAAAAAAAAADAAAAAgAAAAAAAAACAAAAAgAAAAAAAAABAAAAAgAAAAAAAAD9/wAAAgAAAAAAAAD9/wEAAgAAAAAAAAD+/wAAAgAAAAAAAAD//wAAAgAAAAAAAAAAAAAAAgAAAAAAAAAHAAAAAgAAAAAAAAAIAAAAAgAAAAAAAAAJAAAAAgAAAAAAAAAKAAAAAgAAAAAAAAALAAAAAgAAAAAAAAAMAAAAAgAAAAAAAAANAAEAAgAAAAAAAAD+/wEAAgAAAAAAAAD//wEAAgAAAAAAAAAAAAEAAgAAAAAAAAABAAEAAgAAAAAAAAACAAEAAgAAAAAAAAADAAEAAgAAAAAAAAAEAAEAAgAAAAAAAAAFAAEAAgAAAAAAAAAGAAEAAgAAAAAAAAD9/wMAAgAAAAAAAAD9/wQAAgAAAAAAAAD9/wUAAgAAAAAAAAD9/wYAAgAAAAAAAAD9/wcAAgAAAAAAAAD9/wgAAgAAAAAAAAD9/wkAAgAAAAAAAAD+/wMAAgAAAAAAAAD+/wQAAgAAAAAAAAD+/wUAAgAAAAAAAAD+/wYAAgAAAAAAAAD+/wcAAgAAAAAAAAD+/wgAAgAAAAAAAAD+/wkAAgAAAAAAAAD//wMAAgAAAAAAAAD//wQAAgAAAAAAAAD//wUAAgAAAAAAAAD//wYAAgAAAAAAAAD//wcAAgAAAAAAAAD//wgAAgAAAAAAAAD//wkAAgAAAAAAAAAAAAMAAgAAAAAAAAAAAAQAAgAAAAAAAAAAAAUAAgAAAAAAAAAAAAYAAgAAAAAAAAAAAAcAAgAAAAAAAAAAAAgAAgAAAAAAAAAAAAkAAgAAAAAAAAABAAMAAgAAAAAAAAABAAQAAgAAAAAAAAABAAUAAgAAAAAAAAABAAYAAgAAAAAAAAABAAcAAgAAAAAAAAABAAgAAgAAAAAAAAABAAkAAgAAAAAAAAACAAMAAgAAAAAAAAACAAQAAgAAAAAAAAACAAUAAgAAAAAAAAACAAYAAgAAAAAAAAACAAcAAgAAAAAAAAACAAgAAgAAAAAAAAACAAkAAgAAAAAAAAADAAMAAgAAAAAAAAADAAQAAgAAAAAAAAADAAUAAgAAAAAAAAADAAYAAgAAAAAAAAADAAcAAgAAAAAAAAADAAgAAgAAAAAAAAADAAkAAgAAAAAAAAAEAAMAAgAAAAAAAAAEAAQAAgAAAAAAAAAEAAUAAgAAAAAAAAAEAAYAAgAAAAAAAAAEAAcAAgAAAAAAAAAEAAgAAgAAAAAAAAAEAAkAAgAAAAAAAAAFAAMAAgAAAAAAAAAFAAQAAgAAAAAAAAAFAAUAAgAAAAAAAAAFAAYAAgAAAAAAAAAFAAcAAgAAAAAAAAAFAAgAAgAAAAAAAAAFAAkAAgAAAAAAAAAGAAMAAgAAAAAAAAAGAAQAAgAAAAAAAAAGAAUAAgAAAAAAAAAGAAYAAgAAAAAAAAAGAAcAAgAAAAAAAAAGAAgAAgAAAAAAAAAGAAkAAgAAAAAAAAAHAAMAAgAAAAAAAAAHAAQAAgAAAAAAAAAHAAUAAgAAAAAAAAAHAAYAAgAAAAAAAAAHAAcAAgAAAAAAAAAHAAgAAgAAAAAAAAAHAAkAAgAAAAAAAAAIAAMAAgAAAAAAAAAIAAQAAgAAAAAAAAAIAAUAAgAAAAAAAAAIAAYAAgAAAAAAAAAIAAcAAgAAAAAAAAAIAAgAAgAAAAAAAAAIAAkAAgAAAAAAAAAJAAMAAgAAAAAAAAAJAAQAAgAAAAAAAAAJAAUAAgAAAAAAAAAJAAYAAgAAAAAAAAAJAAcAAgAAAAAAAAAJAAgAAgAAAAAAAAAJAAkAAgAAAAAAAAAKAAMAAgAAAAAAAAAKAAQAAgAAAAAAAAAKAAUAAgAAAAAAAAAKAAYAAgAAAAAAAAAKAAcAAgAAAAAAAAAKAAgAAgAAAAAAAAAKAAkAAgAAAAAAAAALAAMAAgAAAAAAAAALAAQAAgAAAAAAAAALAAUAAgAAAAAAAAALAAYAAgAAAAAAAAALAAcAAgAAAAAAAAALAAgAAgAAAAAAAAALAAkAAgAAAAAAAAAMAAMAAgAAAAAAAAAMAAQAAgAAAAAAAAAMAAUAAgAAAAAAAAAMAAYAAgAAAAAAAAAMAAcAAgAAAAAAAAAMAAgAAgAAAAAAAAAMAAkAAgAAAAAAAAANAAMAAgAAAAAAAAANAAQAAgAAAAAAAAANAAUAAgAAAAAAAAANAAYAAgAAAAAAAAANAAcAAgAAAAAAAAANAAgAAgAAAAAAAAANAAkAAgAAAAAAAAAOAAMAAgAAAAAAAAAOAAQAAgAAAAAAAAAOAAUAAgAAAAAAAAAOAAYAAgAAAAAAAAAOAAcAAgAAAAAAAAAOAAgAAgAAAAAAAAAOAAkAAgAAAAAAAAAPAAAAAgAAAAAAAAAPAAEAAgAAAAAAAAAPAAIAAgAAAAAAAAAPAAMAAgAAAAAAAAAPAAQAAgAAAAAAAAAPAAUAAgAAAAAAAAAPAAYAAgAAAAAAAAAPAAcAAgAAAAAAAAAPAAgAAgAAAAAAAAAPAAkAAgAAAAAAAAAQAAAAAgAAAAAAAAAQAAEAAgAAAAAAAAAQAAIAAgAAAAAAAAAQAAMAAgAAAAAAAAAQAAQAAgAAAAAAAAAQAAUAAgAAAAAAAAAQAAYAAgAAAAAAAAAQAAcAAgAAAAAAAAAQAAgAAgAAAAAAAAAQAAkAAgAAAAAAAAARAAAAAgAAAAAAAAARAAEAAgAAAAAAAAARAAIAAgAAAAAAAAARAAMAAgAAAAAAAAARAAQAAgAAAAAAAAARAAUAAgAAAAAAAAARAAYAAgAAAAAAAAARAAcAAgAAAAAAAAARAAgAAgAAAAAAAAARAAkAAgAAAAAAAAD9/woAAgAAAAAAAAD+/woAAgAAAAAAAAD//woAAgAAAAAAAAAAAAoAAgAAAAAAAAABAAoAAgAAAAAAAAACAAoAAgAAAAAAAAADAAoAAgAAAAAAAAAEAAoAAgAAAAAAAAAFAAoAAgAAAAAAAAAGAAoAAgAAAAAAAAAHAAoAAgAAAAAAAAAIAAoAAgAAAAAAAAAJAAoAAgAAAAAAAAAKAAoAAgAAAAAAAAALAAoAAgAAAAAAAAAMAAoAAgAAAAAAAAANAAoAAgAAAAAAAAAOAAoAAgAAAAAAAAAPAAoAAgAAAAAAAAAQAAoAAgAAAAAAAAARAAoAAgAAAAAAAAD9////AgAAAAAAAAD+////AgAAAAAAAAD/////AgAAAAAAAAAAAP//AgAAAAAAAAABAP//AgAAAAAAAAACAP//AgAAAAAAAAADAP//AgAAAAAAAAAEAP//AgAAAAAAAAAFAP//AgAAAAAAAAAGAP//AgAAAAAAAAAHAP//AgAAAAAAAAAIAP//AgAAAAAAAAAJAP//AgAAAAAAAAAKAP//AgAAAAAAAAALAP//AgAAAAAAAAAMAP//AgAAAAAAAAANAP//AgAAAAAAAAAOAP//AgAAAAAAAAAPAP//AgAAAAAAAAAQAP//AgAAAAAAAAARAP//AgAAAAAAAAA=")
+tile_set = SubResource("TileSet_euhk2")
+script = ExtResource("3_5vpe1")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1931141083]
+anchor_mode = 0
+
+[node name="Linuz" parent="." unique_id=895579848 instance=ExtResource("3_oeutb")]
+position = Vector2(120, 147)
+
+[node name="Spawner" parent="." unique_id=2042530505 instance=ExtResource("4_qjjgo")]
+iceberg_scene = ExtResource("6_7cqgg")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=473049225]
+stream = ExtResource("6_jnnuv")
+autoplay = true
+
+[node name="PhaseTimer" type="Timer" parent="." unique_id=834679166]
+wait_time = 30.0
+one_shot = true
+autostart = true
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=403138552]
+script = ExtResource("7_7veri")
+
+[node name="Lives" type="AnimatedSprite2D" parent="UI" unique_id=1599370092]
+position = Vector2(35, 16)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_7cqgg")
+animation = &"life_2"
+frame = 2
+frame_progress = 1.0
+
+[connection signal="timeout" from="PhaseTimer" to="." method="_on_phase_timer_timeout"]
+[connection signal="timeout" from="PhaseTimer" to="Spawner" method="_on_phase_timer_timeout"]

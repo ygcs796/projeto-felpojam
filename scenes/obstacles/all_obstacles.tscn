@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c3dgjbm5slyu8"]
+
+[ext_resource type="PackedScene" uid="uid://kjpfyewffgst" path="res://scenes/obstacles/obstacle_1.tscn" id="1_r0r4f"]
+[ext_resource type="PackedScene" uid="uid://dyyl4qcfr28o2" path="res://scenes/obstacles/obstacle_2.tscn" id="2_g3cl0"]
+[ext_resource type="PackedScene" uid="uid://b6ihardwajf5s" path="res://scenes/obstacles/obstacle_3.tscn" id="3_86ro1"]
+[ext_resource type="Script" uid="uid://cttbh383ph28j" path="res://scripts/obstacles.gd" id="4_g3cl0"]
+[ext_resource type="PackedScene" uid="uid://c6buagc7pt774" path="res://scenes/obstacles/obstacle_4.tscn" id="4_si7ma"]
+[ext_resource type="PackedScene" uid="uid://b27fx32ovxiow" path="res://scenes/obstacles/obstacle_5.tscn" id="5_lrclq"]
+
+[node name="All Obstacles" type="Node2D" unique_id=1792001899]
+
+[node name="Obstacle1" parent="." unique_id=1185941702 instance=ExtResource("1_r0r4f")]
+
+[node name="Obstacle2" parent="." unique_id=1937868002 instance=ExtResource("2_g3cl0")]
+
+[node name="Obstacle3" parent="." unique_id=1854125807 instance=ExtResource("3_86ro1")]
+script = ExtResource("4_g3cl0")
+
+[node name="Obstacle4" parent="." unique_id=1673971433 instance=ExtResource("4_si7ma")]
+script = ExtResource("4_g3cl0")
+
+[node name="Obstacle5" parent="." unique_id=294121714 instance=ExtResource("5_lrclq")]
+script = ExtResource("4_g3cl0")
