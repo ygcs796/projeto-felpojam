@@ -12,6 +12,19 @@
 
 [sub_resource type="Theme" id="Theme_agyn7"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d5kfe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e7irn"]
+bg_color = Color(0, 0, 0, 0.23529412)
+corner_radius_top_left = 175
+corner_radius_top_right = 175
+corner_radius_bottom_right = 175
+corner_radius_bottom_left = 175
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e7irn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_irewv"]
+
 [node name="menu_celular" type="Control" unique_id=1213116894]
 layout_mode = 3
 anchors_preset = 15
@@ -43,106 +56,163 @@ theme = SubResource("Theme_agyn7")
 texture = ExtResource("3_agyn7")
 expand_mode = 5
 
-[node name="start" type="Button" parent="." unique_id=1212958534]
+[node name="imagem_start" type="TextureRect" parent="." unique_id=1008364092]
 layout_mode = 0
-offset_left = 77.00001
+offset_left = 77.0
 offset_top = 32.0
 offset_right = 1157.0
 offset_bottom = 1112.0
 scale = Vector2(0.03, 0.03)
-theme = ExtResource("1_nqadt")
-theme_override_font_sizes/font_size = 16
-icon = ExtResource("4_a0241")
+texture = ExtResource("4_a0241")
 
-[node name="Label" type="Label" parent="." unique_id=1726929053]
+[node name="start" type="Button" parent="." unique_id=1212958534]
 layout_mode = 0
-offset_left = 88.0
+offset_left = 85.0
+offset_top = 40.0
+offset_right = 618.33325
+offset_bottom = 573.3334
+scale = Vector2(0.03, 0.03)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_d5kfe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e7irn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_e7irn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_irewv")
+
+[node name="texto_start" type="Label" parent="." unique_id=1726929053]
+layout_mode = 0
+offset_left = 85.0
 offset_top = 55.0
-offset_right = 98.0
-offset_bottom = 59.0
+offset_right = 100.0
+offset_bottom = 60.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 2
+theme_override_font_sizes/font_size = 3
 text = "COMEÇAR"
 
-[node name="settings" type="Button" parent="." unique_id=1768405919]
+[node name="imagem_settings" type="TextureRect" parent="." unique_id=1702955213]
 layout_mode = 0
-offset_left = 100.00001
+offset_left = 100.0
 offset_top = 32.0
 offset_right = 1180.0
 offset_bottom = 1112.0
 scale = Vector2(0.03, 0.03)
-theme = ExtResource("1_nqadt")
-theme_override_font_sizes/font_size = 16
-icon = ExtResource("5_d5kfe")
+texture = ExtResource("5_d5kfe")
 
-[node name="Label3" type="Label" parent="." unique_id=704483898]
+[node name="settings" type="Button" parent="." unique_id=445836215]
 layout_mode = 0
-offset_left = 107.0
+offset_left = 108.0
+offset_top = 40.0
+offset_right = 641.33325
+offset_bottom = 573.3334
+scale = Vector2(0.03, 0.03)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_d5kfe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e7irn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_e7irn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_irewv")
+
+[node name="texto_settings" type="Label" parent="." unique_id=704483898]
+layout_mode = 0
+offset_left = 103.0
 offset_top = 55.0
-offset_right = 124.0
-offset_bottom = 59.0
-theme_override_font_sizes/font_size = 2
+offset_right = 129.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 3
 text = "CONFIGURAÇÕES"
 
-[node name="Button3" type="Button" parent="." unique_id=879265031]
-layout_mode = 0
-offset_left = 77.0
-offset_top = 58.0
-offset_right = 1157.0
-offset_bottom = 1138.0
-scale = Vector2(0.03, 0.03)
-theme = ExtResource("1_nqadt")
-theme_override_font_sizes/font_size = 16
-icon = ExtResource("6_pfd2s")
-
-[node name="Label2" type="Label" parent="." unique_id=780586054]
-layout_mode = 0
-offset_left = 87.0
-offset_top = 81.0
-offset_right = 98.0
-offset_bottom = 85.0
-theme_override_font_sizes/font_size = 2
-text = "VERMELHO"
-
-[node name="credit" type="Button" parent="." unique_id=2006293397]
+[node name="imagem_creditos" type="TextureRect" parent="." unique_id=474030119]
 layout_mode = 0
 offset_left = 122.0
 offset_top = 32.0
 offset_right = 1202.0
 offset_bottom = 1112.0
 scale = Vector2(0.03, 0.03)
-theme = ExtResource("1_nqadt")
-theme_override_font_sizes/font_size = 16
-icon = ExtResource("7_a0241")
+texture = ExtResource("7_a0241")
 
-[node name="Label4" type="Label" parent="." unique_id=1863034211]
+[node name="creditos" type="Button" parent="." unique_id=1206865229]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 40.0
+offset_right = 663.33325
+offset_bottom = 573.3334
+scale = Vector2(0.03, 0.03)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_d5kfe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e7irn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_e7irn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_irewv")
+
+[node name="texto_creditos" type="Label" parent="." unique_id=1863034211]
 layout_mode = 0
 offset_left = 133.0
 offset_top = 55.0
 offset_right = 143.0
 offset_bottom = 59.0
-theme_override_font_sizes/font_size = 2
+theme_override_font_sizes/font_size = 3
 text = "CRÉDITOS"
 
-[node name="Button5" type="Button" parent="." unique_id=2134020045]
+[node name="imagem_controles" type="TextureRect" parent="." unique_id=1986100458]
 layout_mode = 0
-offset_left = 100.0
+offset_left = 77.0
 offset_top = 58.0
+offset_right = 1157.0
+offset_bottom = 1138.0
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("6_pfd2s")
+
+[node name="controles" type="Button" parent="." unique_id=1079819060]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 66.0
+offset_right = 618.33325
+offset_bottom = 599.3334
+scale = Vector2(0.03, 0.03)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_d5kfe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e7irn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_e7irn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_irewv")
+
+[node name="texto_controles" type="Label" parent="." unique_id=780586054]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 81.0
+offset_right = 103.0
+offset_bottom = 86.0
+theme_override_font_sizes/font_size = 3
+text = "CONTROLES "
+
+[node name="imagem_carimbos" type="TextureRect" parent="." unique_id=1040522329]
+layout_mode = 0
+offset_left = 100.00001
+offset_top = 58.000004
 offset_right = 1180.0
 offset_bottom = 1138.0
 scale = Vector2(0.03, 0.03)
-theme = ExtResource("1_nqadt")
+texture = ExtResource("8_d5kfe")
+
+[node name="carimbos" type="Button" parent="." unique_id=932972634]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 66.0
+offset_right = 641.33325
+offset_bottom = 599.3334
+scale = Vector2(0.03, 0.03)
 theme_override_font_sizes/font_size = 16
-icon = ExtResource("8_d5kfe")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_d5kfe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e7irn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_e7irn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_irewv")
 
 [node name="Label5" type="Label" parent="." unique_id=170674868]
 layout_mode = 0
-offset_left = 110.0
+offset_left = 108.0
 offset_top = 81.0
-offset_right = 121.0
-offset_bottom = 85.0
-theme_override_font_sizes/font_size = 2
+offset_right = 125.0
+offset_bottom = 86.0
+theme_override_font_sizes/font_size = 3
 text = "CARIMBOS "
 
 [connection signal="pressed" from="start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="credit" to="." method="_on_credit_pressed"]
+[connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="controles" to="." method="_on_controles_pressed"]

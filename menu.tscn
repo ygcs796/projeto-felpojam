@@ -35,6 +35,12 @@ scale = Vector2(1.8749999, 2.5)
 sprite_frames = SubResource("SpriteFrames_4hy44")
 autoplay = "default"
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1030931011]
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 160.0
+color = Color(0, 0, 0, 0.42745098)
+
 [node name="menu_celular" parent="." unique_id=1213116894 instance=ExtResource("3_mae5d")]
 layout_mode = 1
 offset_left = -1.0
@@ -45,8 +51,9 @@ scale = Vector2(1.5, 1.5)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1371251319]
 layout_mode = 0
-offset_top = 8.999999
-offset_right = 129.0
+offset_left = -3.0
+offset_top = 9.0
+offset_right = 135.0
 offset_bottom = 90.0
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("4_4hy44")

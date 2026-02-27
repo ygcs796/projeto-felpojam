@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://c0mhga5vsdp8g"]
+
+[ext_resource type="Script" uid="uid://g5elneub5jm5" path="res://controles.gd" id="1_8cv2j"]
+
+[sub_resource type="Theme" id="Theme_ilafw"]
+
+[node name="controles" type="Control" unique_id=1222433266]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8cv2j")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1300020917]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13725491, 0.13333334, 0.45490196, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1519069734]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1640854771]
+layout_mode = 2
+text = "CONTROLES"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="VBoxContainer" unique_id=497014794]
+layout_mode = 2
+theme = SubResource("Theme_ilafw")
+theme_override_font_sizes/font_size = 8
+text = "Movimentação: WASD"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer" unique_id=1454890292]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Interação: \"E\""
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="VBoxContainer" unique_id=900159562]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Abrir menu: \"Esc\""
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="VBoxContainer" unique_id=349623738]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Navegação do Menu: Mouse"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="VBoxContainer" unique_id=1588469129]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Minigames: WASD ou Setas"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1612673617]
+layout_mode = 0
+offset_left = 228.0
+offset_top = 3.0
+offset_right = 246.0
+offset_bottom = 34.0
+scale = Vector2(0.5, 0.5)
+text = "X"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
