@@ -240,3 +240,6 @@ frame_progress = 0.33473706
 shape = SubResource("RectangleShape2D_khis8")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=954808196]
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1687945258]
+target_position = Vector2(0, 18)
