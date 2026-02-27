@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 # Configurações
 var tile_size = 16  # O tamanho do seu passo (conforme você pediu)
-var move_speed = 0.3 # Tempo em segundos para dar um passo (quanto menor, mais rápido)
+var move_speed = 0.28 # Tempo em segundos para dar um passo (quanto menor, mais rápido)
 
 # Variáveis de controle
 var is_moving = false # Trava o input enquanto o boneco anda
@@ -10,9 +10,8 @@ var input_direction = Vector2.ZERO
 var previous_direction = input_direction
 var primeira_perna = true # variável para deixar a animação mais realista
 
-#@onready var ray = $RayCast2D
+@onready var ray = $RayCast2D
 @onready var anim = $AnimatedSprite2D
-#@onready var sprite = $Sprite2D
 
 func _physics_process(_delta):
 	# Se já estiver andando, não aceita novos comandos
@@ -21,16 +20,16 @@ func _physics_process(_delta):
 
 	# Verifica as teclas (configure "ui_up", "ui_down", etc. no mapa de entrada)
 	input_direction = Vector2.ZERO
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_key_pressed(KEY_W):
 		input_direction = Vector2.UP
 		previous_direction = input_direction
-	elif Input.is_action_pressed("ui_down"):
+	elif Input.is_key_pressed(KEY_S):
 		input_direction = Vector2.DOWN
 		previous_direction = input_direction
-	elif Input.is_action_pressed("ui_left"):
+	elif Input.is_key_pressed(KEY_A):
 		input_direction = Vector2.LEFT
 		previous_direction = input_direction
-	elif Input.is_action_pressed("ui_right"):
+	elif Input.is_key_pressed(KEY_D):
 		input_direction = Vector2.RIGHT
 		previous_direction = input_direction
 	
@@ -48,12 +47,12 @@ func move(dir, prev_dir):
 	
 	# 2. Verifica colisão com RayCast antes de andar
 	# Aponta o raio para onde queremos ir (ex: 160px para a direita)
-	#ray.target_position = dir * tile_size
-	#ray.force_raycast_update() # Força a atualização imediata do raio
+	ray.target_position = dir * (tile_size + 2)
+	ray.force_raycast_update() # Força a atualização imediata do raio
 	#
-	#if ray.is_colliding():
+	if ray.is_colliding():
 		## Se o raio bateu em algo, não anda!
-		#return
+		return
 	
 	# 3. Inicia o movimento (Tween)
 	
