@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://b368yaigqfkw3"]
+
+[ext_resource type="Script" uid="uid://bp7p4b61qg47b" path="res://menu_celular.gd" id="1_d5kfe"]
+[ext_resource type="Theme" uid="uid://ddioevj7d4e8t" path="res://tema_botao.tres" id="1_nqadt"]
+[ext_resource type="Texture2D" uid="uid://c8flxc26q7i8" path="res://assets/design_menu/foto de fundocelular.png" id="2_pfd2s"]
+[ext_resource type="Texture2D" uid="uid://diaapbopu545f" path="res://assets/design_menu/celularmenu.png" id="3_agyn7"]
+[ext_resource type="Texture2D" uid="uid://o2312l7tl2u" path="res://assets/design_menu/botãoplay.png" id="4_a0241"]
+[ext_resource type="Texture2D" uid="uid://mp28t0530a0u" path="res://assets/design_menu/botãoconfiguração.png" id="5_d5kfe"]
+[ext_resource type="Texture2D" uid="uid://bxvvgihk72ynl" path="res://assets/design_menu/botãocompania.png" id="6_pfd2s"]
+[ext_resource type="Texture2D" uid="uid://w0yx3d60f2ok" path="res://assets/design_menu/botãocontato.png" id="7_a0241"]
+[ext_resource type="Texture2D" uid="uid://ds2b01q0u86ti" path="res://assets/design_menu/botãocarrimbo.png" id="8_d5kfe"]
+
+[sub_resource type="Theme" id="Theme_agyn7"]
+
+[node name="menu_celular" type="Control" unique_id=1213116894]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d5kfe")
+
+[node name="papel_de_parede" type="TextureRect" parent="." unique_id=1698833049]
+layout_mode = 0
+offset_left = 61.0
+offset_top = -21.0
+offset_right = 101.0
+offset_bottom = 50.111115
+scale = Vector2(2.8, 2.8)
+theme = ExtResource("1_nqadt")
+texture = ExtResource("2_pfd2s")
+expand_mode = 5
+
+[node name="celular" type="TextureRect" parent="." unique_id=1862529299]
+layout_mode = 0
+offset_left = 62.999996
+offset_top = -16.0
+offset_right = 103.0
+offset_bottom = 55.111115
+scale = Vector2(2.7, 2.7)
+theme = SubResource("Theme_agyn7")
+texture = ExtResource("3_agyn7")
+expand_mode = 5
+
+[node name="start" type="Button" parent="." unique_id=1212958534]
+layout_mode = 0
+offset_left = 77.00001
+offset_top = 32.0
+offset_right = 1157.0
+offset_bottom = 1112.0
+scale = Vector2(0.03, 0.03)
+theme = ExtResource("1_nqadt")
+theme_override_font_sizes/font_size = 16
+icon = ExtResource("4_a0241")
+
+[node name="Label" type="Label" parent="." unique_id=1726929053]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 55.0
+offset_right = 98.0
+offset_bottom = 59.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 2
+text = "COMEÇAR"
+
+[node name="settings" type="Button" parent="." unique_id=1768405919]
+layout_mode = 0
+offset_left = 100.00001
+offset_top = 32.0
+offset_right = 1180.0
+offset_bottom = 1112.0
+scale = Vector2(0.03, 0.03)
+theme = ExtResource("1_nqadt")
+theme_override_font_sizes/font_size = 16
+icon = ExtResource("5_d5kfe")
+
+[node name="Label3" type="Label" parent="." unique_id=704483898]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 55.0
+offset_right = 124.0
+offset_bottom = 59.0
+theme_override_font_sizes/font_size = 2
+text = "CONFIGURAÇÕES"
+
+[node name="Button3" type="Button" parent="." unique_id=879265031]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 58.0
+offset_right = 1157.0
+offset_bottom = 1138.0
+scale = Vector2(0.03, 0.03)
+theme = ExtResource("1_nqadt")
+theme_override_font_sizes/font_size = 16
+icon = ExtResource("6_pfd2s")
+
+[node name="Label2" type="Label" parent="." unique_id=780586054]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 81.0
+offset_right = 98.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 2
+text = "VERMELHO"
+
+[node name="credit" type="Button" parent="." unique_id=2006293397]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 32.0
+offset_right = 1202.0
+offset_bottom = 1112.0
+scale = Vector2(0.03, 0.03)
+theme = ExtResource("1_nqadt")
+theme_override_font_sizes/font_size = 16
+icon = ExtResource("7_a0241")
+
+[node name="Label4" type="Label" parent="." unique_id=1863034211]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 55.0
+offset_right = 143.0
+offset_bottom = 59.0
+theme_override_font_sizes/font_size = 2
+text = "CRÉDITOS"
+
+[node name="Button5" type="Button" parent="." unique_id=2134020045]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 58.0
+offset_right = 1180.0
+offset_bottom = 1138.0
+scale = Vector2(0.03, 0.03)
+theme = ExtResource("1_nqadt")
+theme_override_font_sizes/font_size = 16
+icon = ExtResource("8_d5kfe")
+
+[node name="Label5" type="Label" parent="." unique_id=170674868]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 81.0
+offset_right = 121.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 2
+text = "CARIMBOS "
+
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="credit" to="." method="_on_credit_pressed"]
