@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://diyk2rbtuuhw3"]
+[gd_scene format=3 uid="uid://b3ff6dw6aeol6"]
 
 [ext_resource type="PackedScene" uid="uid://b4tp2ikjcofib" path="res://npcs_importantes.tscn" id="1_xcoan"]
 [ext_resource type="Texture2D" uid="uid://be2jo7jndcaiw" path="res://assets/npcs/Hiena npc.png" id="2_h7thd"]
@@ -26,7 +26,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h7thd"]
-size = Vector2(12, 16)
+size = Vector2(12, 18)
 
 [node name="Hiena" unique_id=728492759 instance=ExtResource("1_xcoan")]
 
