@@ -3,23 +3,28 @@
 [ext_resource type="Script" uid="uid://cwu7ualyh0q5k" path="res://polo_sul.gd" id="1_c6vhw"]
 [ext_resource type="PackedScene" uid="uid://bbt6f3mldvv1n" path="res://cenario_polo_sul.tscn" id="1_mqpvk"]
 [ext_resource type="PackedScene" uid="uid://ddry44an54yp1" path="res://player.tscn" id="2_c6vhw"]
+[ext_resource type="PackedScene" uid="uid://coea13jga18gc" path="res://transicao_circulo.tscn" id="4_566rb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c6vhw"]
-size = Vector2(685, 65)
+size = Vector2(687.5, 65)
 
 [node name="polo_sul" type="Node2D" unique_id=31709391]
 script = ExtResource("1_c6vhw")
 
 [node name="cenario_polo_sul" parent="." unique_id=733751591 instance=ExtResource("1_mqpvk")]
+position = Vector2(65, -7)
 
 [node name="Player" parent="." unique_id=895579848 instance=ExtResource("2_c6vhw")]
-position = Vector2(134, 108)
+process_mode = 1
+position = Vector2(120, 79)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=372103593]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1177934701]
-position = Vector2(167.5, -174.5)
+position = Vector2(233.25, -180)
 shape = SubResource("RectangleShape2D_c6vhw")
+
+[node name="transicao_circulo" parent="." unique_id=790840408 instance=ExtResource("4_566rb")]
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
