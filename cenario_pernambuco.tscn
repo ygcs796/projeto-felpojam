@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cnwgi1iflo6nr" path="res://assets/tiles/casas_pernambuco.png" id="2_6utbq"]
 [ext_resource type="Texture2D" uid="uid://cx2foqneh7o0h" path="res://assets/tiles/Objetos pernambuco -Sheet.png" id="3_srliv"]
 [ext_resource type="Texture2D" uid="uid://ca5v5p82h56vn" path="res://assets/tiles/Pernambuco2 COM LINHA DE TREM.png" id="3_x6pl0"]
+[ext_resource type="PackedScene" uid="uid://ddry44an54yp1" path="res://player.tscn" id="4_07k0h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6utbq"]
 texture = ExtResource("1_gcdmd")
@@ -470,19 +471,25 @@ sources/0 = SubResource("TileSetAtlasSource_x6pl0")
 texture = ExtResource("3_srliv")
 11:0/size_in_atlas = Vector2i(4, 4)
 11:0/0 = 0
+11:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -5.8454075, -8, -18.43552, -6.6547737, -24.730576, -5.935337, -19.69453, 7.3742085, -5.305834, 13.129688, 8, 8, 14.478627, -6.115198)
 7:1/size_in_atlas = Vector2i(4, 4)
 7:1/0 = 0
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9.442583, 3.057599, -5.8454094, 3.057599, -4.7662563, 20.324036, -2.6079502, 28.05796, -13.039757, 27.878101, -11.061312, 20.503895)
 5:2/size_in_atlas = Vector2i(2, 2)
 5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-11.960605, -7.5540667, 2.0683746, -8, 6.205126, 1.2590113, 4.7662563, 3.956892, -2.428093, 3.7770333, -8, 0.53957653)
 2:2/size_in_atlas = Vector2i(2, 2)
 2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -5.6655483, -8, -10.881453, 2.1583042, -6.384983, 3.956892, 0.4496479, 2.877739, 5.305834, -1.978446)
 15:1/size_in_atlas = Vector2i(2, 3)
 15:1/0 = 0
 15:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-11.061312, -4.3166084, 8, -4.4964676, 6.564844, 8, -2.9676685, 8, -9.802301, 8.093643, -9.289588, 5.0762777, -12.68004, 0.17985821)
 17:1/size_in_atlas = Vector2i(2, 3)
 17:1/0 = 0
+17:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(4.2266808, -3.7770348, -5.6655483, -4.4964685, -13.399474, -1.0791531, -13.7591915, 3.2374573, -11.421028, 10.072088, -4.226679, 8, 2.2482357, 8, 1.1690826, 4.6763268, 4.586399, 0.5395756)
 19:1/size_in_atlas = Vector2i(2, 3)
 19:1/0 = 0
+19:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.62950706, -3.956892, -5.6655483, -4.4964685, -16.816792, -0.71943474, -16.277214, 7.5540657, -13.579333, 10.611664, -4.226679, 8, 5.305834, 10.971382, 8, 6.4749126, 8, 0.35971642)
 6:5/size_in_atlas = Vector2i(6, 6)
 6:5/0 = 0
 6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-11.42103, 26.439234, 17.536224, 26.79895, 18.43552, 42.446663, 0.8093643, 47.662563, -11.600889, 44.065388, -11.780746, 40.108498)
@@ -508,6 +515,8 @@ tile_set = SubResource("TileSet_qjab6")
 [node name="predios" type="TileMapLayer" parent="." unique_id=1934578066]
 tile_map_data = PackedByteArray("AAACAPn/AAAfAAAAAAAGAPn/AAASAAAAAAAKAPn/AAAMAAAAAAAOAPn/AAAGAAAAAAAUAPn/AAAfAAAAAAAYAPn/AAAAAAAAAAAdAPn/AAAYAAAAAAAiAPn/AAASAAAAAAAmAPn/AAAGAAAAAAArAPn/AAAYAAAAAAAwAPn/AAAMAAAAAAA0APn/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_07k0h")
+
+[node name="Player" parent="." unique_id=895579848 instance=ExtResource("4_07k0h")]
 
 [node name="arvores" type="TileMapLayer" parent="." unique_id=124617667]
 tile_map_data = PackedByteArray("AAADAAkAAQAAAAUAAAAvAP3/AQAAAAUAAAASAP3/AQAGAAUAAAAJAP3/AQAAAAUAAAAyAAkAAQAGAAUAAAAcAAkAAQAGAAUAAAAUAAkAAQAAAAUAAAA=")
