@@ -32,7 +32,6 @@ func _physics_process(_delta):
 	elif Input.is_action_pressed("ui_right"):
 		input_direction = Vector2.RIGHT
 		previous_direction = input_direction
-	if 
 	
 	# Se houve algum input, tenta mover
 	if input_direction != Vector2.ZERO:
@@ -63,7 +62,7 @@ func move(dir, prev_dir):
 	
 	var tween = create_tween()
 	# Move da posição atual para (posição atual + 160px na direção)
-	# Trans.TRANS_SINE deixa o movimento mais suave no início e fim
+	#Trans.TRANS_SINE deixa o movimento mais suave no início e fim
 	tween.tween_property(self, "position", target_position, move_speed)#.set_trans(Tween.TRANS_SINE)
 	
 	# Quando o tween terminar, libera para andar de novo
