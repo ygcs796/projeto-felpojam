@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ddry44an54yp1"]
 
-[ext_resource type="Script" uid="uid://7dejnewug0p5" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://7dejnewug0p5" path="res://linuz_jogando.gd" id="1_4flbx"]
 [ext_resource type="Texture2D" uid="uid://x2bpdum5puq4" path="res://assets/andando_direita.png" id="2_onrkg"]
 [ext_resource type="Texture2D" uid="uid://m0pl5vo0iivi" path="res://assets/linuz_pulando.png" id="3_i3pqv"]
 

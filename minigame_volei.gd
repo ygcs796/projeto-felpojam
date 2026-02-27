@@ -7,6 +7,9 @@ var pontos_adversario = 0
 @onready var placar = $placar/Label
 @onready var player = $Player
 @onready var adversario = $adversario
+@onready var placar_vermelho = $placar/vermelho
+@onready var placar_azul = $placar/azul
+@onready var apito = $apito
 
 func _ready() -> void:
 	label_contagem.text = ""
@@ -29,7 +32,9 @@ func _on_zona_adversario_body_entered(body: Node2D) -> void:
 	pass # Replace with function body.
 	
 func atualizar_placar():
-	placar.text = "Placar: " + str(pontos_player) + " - " + str(pontos_adversario)
+	#placar.text = "Placar: " + str(pontos_player) + " - " + str(pontos_adversario)
+	placar_azul.play(str(pontos_player))
+	placar_vermelho.play(str(pontos_adversario))
 	pass
 
 func resetar_partida_bola_do_player():
@@ -58,6 +63,7 @@ func comecar_contador():
 	await get_tree().create_timer(1.0).timeout
 	
 	label_contagem.text = "VAI"
+	apito.play()
 	await get_tree().create_timer(0.5).timeout
 	
 	label_contagem.text = ""
