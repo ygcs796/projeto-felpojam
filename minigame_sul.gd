@@ -1,44 +1,62 @@
 extends Node2D
 
-var score = 0
-var vidas = 3
+@export var max_good := 5 # quantas certas até ganhar 
+@export var max_bad := 5  # quantas erradas até perder 
 
-# Called when the node enters the scene tree for the first time.
+var score := 0     # quantas certas
+var erros := 0     # quantas erradas
+
+@onready var hud: CanvasLayer = $CanvasLayer
+
 func _ready() -> void:
-	atualizar_placar()
-	pass # Replace with function body.
+	_atualizar_hud_inicial()
 
-func registrar_galinha(nova_galinha):
+func registrar_galinha(nova_galinha) -> void:
 	nova_galinha.coletada.connect(_on_galinha_coletada)
 
-func _on_galinha_coletada(tipo):
-	
-	# verificando o tipo e fazendo as mudanças necessárias
+func _on_galinha_coletada(tipo: String) -> void:
+	# "branca" = certa; qualquer outra = errada
 	if tipo == "branca":
-		score += 1
+		score = clamp(score + 1, 0, max_good)
+		# atualiza a barra de cima
+		if hud.has_method("set_good"):
+			hud.set_good(score)
 		verificar_vitoria()
 	else:
-		vidas -= 1
+		erros = clamp(erros + 1, 0, max_bad)
+		# atualiza a barra de baixo
+		if hud.has_method("set_bad"):
+			hud.set_bad(erros)
 		verificar_gameover()
-	
-	# atualizando a HUD do placar
+
 	atualizar_placar()
 
-func verificar_vitoria():
-	if score >= 5:
-		# colocar a tela de vitoria aqui
-		#get_tree().change_scene_to_file()
+func verificar_vitoria() -> void:
+	if score >= max_good:
 		pass
 
-func verificar_gameover():
-	if vidas <= 0:
-		# colocar a tela de game over aqui
-		#get_tree().change_scene_to_file()
+func verificar_gameover() -> void:
+	if erros >= max_bad:
 		pass
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-	
-func atualizar_placar():
-	$CanvasLayer/score_label.text = "Score: " + str(score) + " | " + "Vidas: " + str(vidas)
+func atualizar_placar() -> void:
+	if hud.has_method("update_score_text"):
+		hud.update_score_text(score, erros, max_bad)
+
+func _atualizar_hud_inicial() -> void:
+	score = 0
+	erros = 0
+
+	# mostra good_1 parado como estado inicial
+	if hud.has_method("_show_static_good"):
+		hud._show_static_good(1)
+	elif has_node("CanvasLayer/BarGood"):
+		$CanvasLayer/BarGood.play("good_1")
+		$CanvasLayer/BarGood.frame = 0
+		$CanvasLayer/BarGood.pause()
+
+	# BarBad ficar escondida até pegar 1 galinha errada
+	if has_node("CanvasLayer/BarBad"):
+		$CanvasLayer/BarBad.hide()
+
+	atualizar_placar()
