@@ -11,9 +11,15 @@ var previous_direction = input_direction
 var primeira_perna = true # variável para deixar a animação mais realista
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 @onready var ray = $RayCast2D
 @onready var anim = $AnimatedSprite2D
 
+=======
+#@onready var ray = $RayCast2D
+@onready var anim = $AnimatedSprite2D
+#@onready var sprite = $Sprite2D
+>>>>>>> parent of 46fe9dd (sem player)
 =======
 #@onready var ray = $RayCast2D
 @onready var anim = $AnimatedSprite2D
@@ -26,6 +32,7 @@ func _physics_process(_delta):
 
 	# Verifica as teclas (configure "ui_up", "ui_down", etc. no mapa de entrada)
 	input_direction = Vector2.ZERO
+<<<<<<< HEAD
 <<<<<<< HEAD
 	if Input.is_key_pressed(KEY_W):
 		input_direction = Vector2.UP
@@ -42,6 +49,8 @@ func _physics_process(_delta):
 	
 	
 =======
+=======
+>>>>>>> parent of 46fe9dd (sem player)
 	if Input.is_action_pressed("ui_up"):
 		input_direction = Vector2.UP
 		previous_direction = input_direction
@@ -55,6 +64,9 @@ func _physics_process(_delta):
 		input_direction = Vector2.RIGHT
 		previous_direction = input_direction
 	
+<<<<<<< HEAD
+>>>>>>> parent of 46fe9dd (sem player)
+=======
 >>>>>>> parent of 46fe9dd (sem player)
 	# Se houve algum input, tenta mover
 	if input_direction != Vector2.ZERO:
@@ -70,6 +82,7 @@ func move(dir, prev_dir):
 	# 2. Verifica colisão com RayCast antes de andar
 	# Aponta o raio para onde queremos ir (ex: 160px para a direita)
 <<<<<<< HEAD
+<<<<<<< HEAD
 	ray.target_position = dir * (tile_size + 2)
 	ray.force_raycast_update() # Força a atualização imediata do raio
 	#
@@ -77,12 +90,17 @@ func move(dir, prev_dir):
 		## Se o raio bateu em algo, não anda!
 		return
 =======
+=======
+>>>>>>> parent of 46fe9dd (sem player)
 	#ray.target_position = dir * tile_size
 	#ray.force_raycast_update() # Força a atualização imediata do raio
 	#
 	#if ray.is_colliding():
 		## Se o raio bateu em algo, não anda!
 		#return
+<<<<<<< HEAD
+>>>>>>> parent of 46fe9dd (sem player)
+=======
 >>>>>>> parent of 46fe9dd (sem player)
 	
 	# 3. Inicia o movimento (Tween)
@@ -95,7 +113,11 @@ func move(dir, prev_dir):
 	var tween = create_tween()
 	# Move da posição atual para (posição atual + 160px na direção)
 <<<<<<< HEAD
+<<<<<<< HEAD
 	# Trans.TRANS_SINE deixa o movimento mais suave no início e fim
+=======
+	#Trans.TRANS_SINE deixa o movimento mais suave no início e fim
+>>>>>>> parent of 46fe9dd (sem player)
 =======
 	#Trans.TRANS_SINE deixa o movimento mais suave no início e fim
 >>>>>>> parent of 46fe9dd (sem player)

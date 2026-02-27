@@ -225,8 +225,13 @@ animations = [{
 }]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_khis8"]
 size = Vector2(17, 23)
+=======
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1jxqw"]
+size = Vector2(14, 16)
+>>>>>>> parent of 46fe9dd (sem player)
 =======
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1jxqw"]
 size = Vector2(14, 16)
@@ -241,6 +246,7 @@ animation = &"idle_up"
 frame_progress = 0.33473706
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1900854712]
 shape = SubResource("RectangleShape2D_khis8")
 
@@ -249,8 +255,13 @@ shape = SubResource("RectangleShape2D_khis8")
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1687945258]
 target_position = Vector2(0, 18)
 =======
+=======
+>>>>>>> parent of 46fe9dd (sem player)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=954808196]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1850980048]
 shape = SubResource("RectangleShape2D_1jxqw")
+<<<<<<< HEAD
+>>>>>>> parent of 46fe9dd (sem player)
+=======
 >>>>>>> parent of 46fe9dd (sem player)
