@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://dnxu13yjhv6jl"]
+[gd_scene format=3 uid="uid://bxtkmn7mlomn8"]
 
 [ext_resource type="PackedScene" uid="uid://vqhc52fmlbap" path="res://scenes/npc.tscn" id="1_q8bo2"]
+[ext_resource type="Script" uid="uid://755ipw5c0hne" path="res://scripts/npc_follow.gd" id="2_wnnrw"]
 [ext_resource type="Texture2D" uid="uid://byikgsm2graov" path="res://assets/characters/Carlos Eduardo/Idle de frente (espaçado).png" id="2_wvaoq"]
 [ext_resource type="Texture2D" uid="uid://bood7uloqgiwg" path="res://assets/characters/Carlos Eduardo/Andando olhando pra esquerda.png" id="2_xy51j"]
 [ext_resource type="Texture2D" uid="uid://bd82mktwgimsv" path="res://assets/characters/Carlos Eduardo/Idle de costas (espaçado).png" id="3_3t4yg"]
@@ -291,13 +292,16 @@ animations = [{
 }]
 
 [node name="Carlos Eduardo" unique_id=2088960319 instance=ExtResource("1_q8bo2")]
+script = ExtResource("2_wnnrw")
+use_side_front_back = true
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1241614585]
 scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_uvlje")
-animation = &"idle_down"
+animation = &"walk_up"
 autoplay = "idle_down"
 flip_h = false
 
 [node name="Actionable" parent="." index="2" unique_id=1295379747]
 dialogue_resource = ExtResource("11_bymnl")
+join_party_on_end = true

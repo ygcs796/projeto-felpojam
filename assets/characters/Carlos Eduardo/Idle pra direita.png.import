@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:assets/linuz_sprites/Andando_direita.png.import
-uid="uid://cohif3gfsxl5u"
-path="res://.godot/imported/Andando_direita.png-06ee564986df20fd18981b4729957e1f.ctex"
-========
 uid="uid://cmwvdy1phbqy"
 path="res://.godot/imported/Idle pra direita.png-3694996acc93c10755c7ec3c753c1d93.ctex"
->>>>>>>> npcs:assets/characters/Carlos Eduardo/Idle pra direita.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:assets/linuz_sprites/Andando_direita.png.import
-source_file="res://assets/linuz_sprites/Andando_direita.png"
-dest_files=["res://.godot/imported/Andando_direita.png-06ee564986df20fd18981b4729957e1f.ctex"]
-========
 source_file="res://assets/characters/Carlos Eduardo/Idle pra direita.png"
 dest_files=["res://.godot/imported/Idle pra direita.png-3694996acc93c10755c7ec3c753c1d93.ctex"]
->>>>>>>> npcs:assets/characters/Carlos Eduardo/Idle pra direita.png.import
 
 [params]
 

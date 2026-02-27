@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:assets/linuz_sprites/Idle_costas.png.import
-uid="uid://bamd3vdct8nb6"
-path="res://.godot/imported/Idle_costas.png-fb24b6acda2821af3d05b00a2d9559e9.ctex"
-========
-uid="uid://6gr5qng4yb4"
+uid="uid://ccmum7ssv7eye"
 path="res://.godot/imported/Idle_frente.png-3c2eba963829e3236f1965a580212a72.ctex"
->>>>>>>> npcs:assets/characters/Linuz/Idle_frente.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:assets/linuz_sprites/Idle_costas.png.import
-source_file="res://assets/linuz_sprites/Idle_costas.png"
-dest_files=["res://.godot/imported/Idle_costas.png-fb24b6acda2821af3d05b00a2d9559e9.ctex"]
-========
 source_file="res://assets/characters/Linuz/Idle_frente.png"
 dest_files=["res://.godot/imported/Idle_frente.png-3c2eba963829e3236f1965a580212a72.ctex"]
->>>>>>>> npcs:assets/characters/Linuz/Idle_frente.png.import
 
 [params]
 

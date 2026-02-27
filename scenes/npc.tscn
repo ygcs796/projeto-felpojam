@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://vqhc52fmlbap"]
 
 [ext_resource type="PackedScene" uid="uid://duo2juc43qec8" path="res://scenes/actionable.tscn" id="2_abqhh"]
-[ext_resource type="Resource" uid="uid://bmrvbay8g4e1i" path="res://dialogues/test_dialogue.dialogue" id="3_rv78h"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_abqhh"]
 animations = [{
@@ -38,7 +37,6 @@ shape = SubResource("CapsuleShape2D_rv78h")
 [node name="Actionable" parent="." unique_id=1295379747 instance=ExtResource("2_abqhh")]
 collision_layer = 1
 collision_mask = 2
-dialogue_resource = ExtResource("3_rv78h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable" unique_id=1835676534]
 position = Vector2(0, 1)

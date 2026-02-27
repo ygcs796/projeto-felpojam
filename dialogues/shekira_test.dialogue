@@ -1,4 +1,13 @@
 ~ start
 Shekira: Olá.
 Shekira: Eu sou Shekira Tarn.
+
+~ recrutar
+Shekira: Você quer que eu vá com você?
+- Sim => recrutar_ok
+- Não => END
+
+~ recrutar_ok
+do PartyManager.recruit_pending()
+Shekira: Beleza. Vou com você.
 => END

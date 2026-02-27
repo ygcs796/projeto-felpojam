@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:assets/linuz_sprites/Andando_costas.png.import
-uid="uid://c7xvd43riyvks"
-path="res://.godot/imported/Andando_costas.png-be66ddc50946f8e1e0ed263e09e2ac63.ctex"
-========
 uid="uid://lkpqxppobevv"
 path="res://.godot/imported/dialogue_box_placeholder.png-197d42a96ca09f8b0defa2b72433c28b.ctex"
->>>>>>>> npcs:assets/dialogue_box_placeholder.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:assets/linuz_sprites/Andando_costas.png.import
-source_file="res://assets/linuz_sprites/Andando_costas.png"
-dest_files=["res://.godot/imported/Andando_costas.png-be66ddc50946f8e1e0ed263e09e2ac63.ctex"]
-========
 source_file="res://assets/dialogue_box_placeholder.png"
 dest_files=["res://.godot/imported/dialogue_box_placeholder.png-197d42a96ca09f8b0defa2b72433c28b.ctex"]
->>>>>>>> npcs:assets/dialogue_box_placeholder.png.import
 
 [params]
 

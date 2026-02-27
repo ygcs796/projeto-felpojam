@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://rxxqwa7hkmuc"]
+[gd_scene format=3 uid="uid://bci23roqlk8nw"]
 
 [ext_resource type="PackedScene" uid="uid://vqhc52fmlbap" path="res://scenes/npc.tscn" id="1_un4vw"]
+[ext_resource type="Script" uid="uid://755ipw5c0hne" path="res://scripts/npc_follow.gd" id="2_dadin"]
 [ext_resource type="Texture2D" uid="uid://lu24wjmjwkst" path="res://assets/characters/Shekira Tarn/Idle de frente.png" id="2_vmi4p"]
 [ext_resource type="Texture2D" uid="uid://cpsxvyq6bogya" path="res://assets/characters/Shekira Tarn/Idle de lado.png" id="3_20l3y"]
 [ext_resource type="Texture2D" uid="uid://iargqv482gsl" path="res://assets/characters/Shekira Tarn/Idle de costas.png" id="4_r8dg7"]
@@ -211,13 +212,15 @@ animations = [{
 }]
 
 [node name="Shekira Tarn" unique_id=2088960319 instance=ExtResource("1_un4vw")]
+script = ExtResource("2_dadin")
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1241614585]
 scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_vnfxj")
-animation = &"walk_up"
+animation = &"walk_right"
 autoplay = "idle_down"
 flip_h = false
 
 [node name="Actionable" parent="." index="2" unique_id=1295379747]
 dialogue_resource = ExtResource("8_ifmxk")
+join_party_on_end = true

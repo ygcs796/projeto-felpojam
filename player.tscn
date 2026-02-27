@@ -1,12 +1,12 @@
-[gd_scene format=3 uid="uid://ddry44an54yp1"]
+[gd_scene format=3 uid="uid://d21636iyjvrux"]
 
-[ext_resource type="Script" uid="uid://dqvab5udb1gji" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://dqvab5udb1gji" path="res://scripts/player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://dtx8oclkdwvm6" path="res://assets/linuz_sprites/Idle_frente.png" id="2_1jxqw"]
 [ext_resource type="Texture2D" uid="uid://bp0s6r5hoqnpn" path="res://assets/linuz_sprites/Idle_direita.png" id="3_dw050"]
-[ext_resource type="Texture2D" uid="uid://bamd3vdct8nb6" path="res://assets/linuz_sprites/Idle_costas.png" id="4_b26j0"]
+[ext_resource type="Texture2D" uid="uid://dx0lfsvbjft4i" path="res://assets/linuz_sprites/Idle_costas.png" id="4_b26j0"]
 [ext_resource type="Texture2D" uid="uid://bivnmwkom1m8v" path="res://assets/linuz_sprites/Andando_frente.png" id="5_n7ghd"]
-[ext_resource type="Texture2D" uid="uid://cohif3gfsxl5u" path="res://assets/linuz_sprites/Andando_direita.png" id="6_nvl01"]
-[ext_resource type="Texture2D" uid="uid://c7xvd43riyvks" path="res://assets/linuz_sprites/Andando_costas.png" id="7_ivps1"]
+[ext_resource type="Texture2D" uid="uid://30p7q56f660x" path="res://assets/linuz_sprites/Andando_direita.png" id="6_nvl01"]
+[ext_resource type="Texture2D" uid="uid://c3jus3w4e7tfd" path="res://assets/linuz_sprites/Andando_costas.png" id="7_ivps1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_urp6f"]
 atlas = ExtResource("2_1jxqw")
@@ -227,7 +227,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_khis8"]
 size = Vector2(17, 23)
 
-[node name="Player" type="CharacterBody2D" unique_id=895579848]
+[sub_resource type="CircleShape2D" id="CircleShape2D_1jxqw"]
+
+[node name="Player" type="CharacterBody2D" unique_id=895579848 groups=["player"]]
 script = ExtResource("1_onrkg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=850301619]
@@ -239,3 +241,13 @@ frame_progress = 0.33473706
 shape = SubResource("RectangleShape2D_khis8")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=954808196]
+
+[node name="Direction" type="Marker2D" parent="." unique_id=1741882785]
+
+[node name="ActionableFinder" type="Area2D" parent="Direction" unique_id=1596174076]
+collision_layer = 2
+priority = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActionableFinder" unique_id=1563126837]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_1jxqw")

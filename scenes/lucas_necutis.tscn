@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://bxg7pwqp1vtpw"]
+[gd_scene format=3 uid="uid://dj4eu3fc1w0s1"]
 
 [ext_resource type="PackedScene" uid="uid://vqhc52fmlbap" path="res://scenes/npc.tscn" id="1_hliyp"]
+[ext_resource type="Script" uid="uid://755ipw5c0hne" path="res://scripts/npc_follow.gd" id="2_my2la"]
 [ext_resource type="Texture2D" uid="uid://ni8nnpn5hk36" path="res://assets/characters/Lucas Necutis/Idle pra frente.png" id="2_oophc"]
 [ext_resource type="Texture2D" uid="uid://cwpe15ivdubwp" path="res://assets/characters/Lucas Necutis/Idle pro lado.png" id="3_os8lw"]
 [ext_resource type="Texture2D" uid="uid://bws40vgj60aia" path="res://assets/characters/Lucas Necutis/Idle pra trás.png" id="4_relk5"]
@@ -211,6 +212,7 @@ animations = [{
 }]
 
 [node name="Lucas Necutis" unique_id=2088960319 instance=ExtResource("1_hliyp")]
+script = ExtResource("2_my2la")
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1241614585]
 scale = Vector2(1, 1)
@@ -221,3 +223,4 @@ flip_h = false
 
 [node name="Actionable" parent="." index="2" unique_id=1295379747]
 dialogue_resource = ExtResource("8_xfsut")
+join_party_on_end = true

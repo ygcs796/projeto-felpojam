@@ -1,4 +1,13 @@
 ~ start
 Carlos: Olá.
 Carlos: Eu sou Carlos Eduardo
+
+~ recrutar
+Carlos: Você quer que eu vá com você?
+- Sim => recrutar_ok
+- Não => END
+
+~ recrutar_ok
+do PartyManager.recruit_pending()
+Carlos: Beleza. Vou com você.
 => END
