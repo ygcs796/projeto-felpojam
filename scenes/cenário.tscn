@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://b5sghocrqjrxd"]
+
+[ext_resource type="Texture2D" uid="uid://crf2ew7qky0ks" path="res://assets/minigame_ritmo/Cenário de pernambuco para a capoeira (espaçado).png" id="1_1o08e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yj1sm"]
+atlas = ExtResource("1_1o08e")
+region = Rect2(0, 0, 129, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3oq2"]
+atlas = ExtResource("1_1o08e")
+region = Rect2(129, 0, 129, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vqry"]
+atlas = ExtResource("1_1o08e")
+region = Rect2(258, 0, 129, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_014ah"]
+atlas = ExtResource("1_1o08e")
+region = Rect2(387, 0, 129, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hycg5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yj1sm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3oq2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vqry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_014ah")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Cenário" type="Node2D" unique_id=179273170]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=48316650]
+sprite_frames = SubResource("SpriteFrames_hycg5")
+autoplay = "default"
+frame_progress = 0.798026
