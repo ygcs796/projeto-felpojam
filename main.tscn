@@ -20,15 +20,15 @@ script = ExtResource("1_lquwl")
 [node name="chao" parent="." unique_id=1193712267 instance=ExtResource("1_0xm2m")]
 
 [node name="rede_volei" parent="." unique_id=1752700843 instance=ExtResource("2_1bvp3")]
-position = Vector2(116, 80)
+position = Vector2(116, 88)
 
 [node name="Player" parent="." unique_id=1497244088 instance=ExtResource("2_h2yge")]
 process_mode = 1
-position = Vector2(47, 109)
+position = Vector2(47, 115)
 
 [node name="adversario" parent="." unique_id=1436166508 instance=ExtResource("5_7mycd")]
 process_mode = 1
-position = Vector2(207, 108)
+position = Vector2(207, 116)
 
 [node name="bola_volei" parent="." unique_id=1832368253 instance=ExtResource("6_7mycd")]
 process_mode = 1
@@ -39,13 +39,13 @@ linear_damp = 0.0
 [node name="zona_player" type="Area2D" parent="." unique_id=768409238]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="zona_player" unique_id=766900100]
-position = Vector2(58, 125)
+position = Vector2(58, 133)
 shape = SubResource("RectangleShape2D_7mycd")
 
 [node name="zona_adversario" type="Area2D" parent="." unique_id=1687633923]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="zona_adversario" unique_id=562540278]
-position = Vector2(179.5, 125)
+position = Vector2(179.5, 133)
 shape = SubResource("RectangleShape2D_272bh")
 
 [node name="placar" type="CanvasLayer" parent="." unique_id=466599921]

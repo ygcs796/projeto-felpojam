@@ -8,7 +8,13 @@ size = Vector2(3, 40)
 [node name="ColorRect" type="ColorRect" parent="." unique_id=884514478]
 offset_right = 3.0
 offset_bottom = 40.0
-color = Color(0, 0, 1, 1)
+color = Color(0.85163134, 0.6142479, 0.05690433, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect" unique_id=878344458]
+layout_mode = 0
+offset_right = 3.0
+offset_bottom = 3.0
+color = Color(0.3232125, 0.3232125, 0.3232125, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1431260355]
 position = Vector2(1.5, 20)
