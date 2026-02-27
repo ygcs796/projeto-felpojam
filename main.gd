@@ -5,6 +5,8 @@ var pontos_adversario = 0
 @onready var label_contagem = $Contagem/LabelContagem
 @onready var bola = $bola_volei
 @onready var placar = $placar/Label
+@onready var player = $Player
+@onready var adversario = $adversario
 
 func _ready() -> void:
 	label_contagem.text = ""

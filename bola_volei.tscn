@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://d125cr8box16d"]
 
 [ext_resource type="Script" uid="uid://32hmfl7q5tfb" path="res://bola_volei.gd" id="1_m227u"]
+[ext_resource type="Texture2D" uid="uid://b5o7d74xl2e3n" path="res://assets/BOLA.png" id="2_1ysbe"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kuqgl"]
 friction = 0.1
 bounce = 0.9
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m227u"]
-radius = 6.0
 
 [node name="bola_volei" type="RigidBody2D" unique_id=1832368253]
 mass = 0.01
@@ -16,11 +16,9 @@ gravity_scale = 0.15
 linear_damp = 0.5
 script = ExtResource("1_m227u")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1894827324]
-offset_right = 8.0
-offset_bottom = 8.0
-color = Color(0.9764706, 0.38039216, 0.07058824, 1)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=688174843]
+scale = Vector2(0.5078125, 0.5078125)
+texture = ExtResource("2_1ysbe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1346140421]
-position = Vector2(4, 4)
 shape = SubResource("CircleShape2D_m227u")

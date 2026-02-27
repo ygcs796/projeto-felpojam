@@ -1,9 +1,8 @@
 extends CharacterBody2D
 
-
 const SPEED = 100.0
 const JUMP_VELOCITY = -250.0
-const forca_cabecada = 0.1
+const forca_cabecada = 0.2
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -23,7 +22,25 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-
+	
+	atualizar_animacao()
+	
+func atualizar_animacao():
+	
+	if not is_on_floor():
+		$AnimatedSprite2D.play("pulando")
+		
+	elif velocity.x != 0:
+		$AnimatedSprite2D.play("andando_direita")
+	
+	else:
+		$AnimatedSprite2D.play("parado")
+		
+	if velocity.x > 0:
+		$AnimatedSprite2D.flip_h = false
+	elif velocity.x < 0:
+		$AnimatedSprite2D.flip_h = true
+	
 
 func _on_cabeca_body_entered(body: Node2D) -> void:
 	if body is RigidBody2D:

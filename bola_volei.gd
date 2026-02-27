@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 var posicao_inicial : Vector2
-var posicao_adversario = Vector2(200, 56)
+var posicao_adversario = Vector2(200, 29)
 var deve_resetar = false # flag para resetar a posição da bolinha
 var quem_joga = "player"
 

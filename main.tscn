@@ -23,13 +23,17 @@ script = ExtResource("1_lquwl")
 position = Vector2(116, 80)
 
 [node name="Player" parent="." unique_id=1497244088 instance=ExtResource("2_h2yge")]
-position = Vector2(31, 108)
+process_mode = 1
+position = Vector2(47, 109)
 
 [node name="adversario" parent="." unique_id=1436166508 instance=ExtResource("5_7mycd")]
-position = Vector2(212, 108)
+process_mode = 1
+position = Vector2(207, 108)
 
 [node name="bola_volei" parent="." unique_id=1832368253 instance=ExtResource("6_7mycd")]
-position = Vector2(44, 56)
+process_mode = 1
+position = Vector2(42, 29)
+mass = 0.005
 linear_damp = 0.0
 
 [node name="zona_player" type="Area2D" parent="." unique_id=768409238]
