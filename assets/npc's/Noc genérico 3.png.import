@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3q1kgew3xdd4"
-path="res://.godot/imported/Noc genérico 3.png-131b75a54d79b79598f9506c0a8a3f6d.ctex"
+path="res://.godot/imported/Noc genérico 3.png-bdcbb42b201bce4089ca49ba4929f95a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NPC's/Noc genérico 3.png"
-dest_files=["res://.godot/imported/Noc genérico 3.png-131b75a54d79b79598f9506c0a8a3f6d.ctex"]
+source_file="res://assets/npc's/Noc genérico 3.png"
+dest_files=["res://.godot/imported/Noc genérico 3.png-bdcbb42b201bce4089ca49ba4929f95a.ctex"]
 
 [params]
 

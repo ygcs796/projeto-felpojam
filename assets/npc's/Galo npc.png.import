@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4fw7acjxou58"
-path="res://.godot/imported/Galo npc.png-91fa19e69e0404af10c3f62932da373f.ctex"
+path="res://.godot/imported/Galo npc.png-e07ffdcc01d700ee5c444ec2f4fc6b89.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NPC's/Galo npc.png"
-dest_files=["res://.godot/imported/Galo npc.png-91fa19e69e0404af10c3f62932da373f.ctex"]
+source_file="res://assets/npc's/Galo npc.png"
+dest_files=["res://.godot/imported/Galo npc.png-e07ffdcc01d700ee5c444ec2f4fc6b89.ctex"]
 
 [params]
 

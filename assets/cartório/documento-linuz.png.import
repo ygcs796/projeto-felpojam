@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsv82n5fqba0h"
-path="res://.godot/imported/Nov genérico 4.png-2d712f2fb119d04f5546fe43435fc7dd.ctex"
+uid="uid://o6glmai5cdtg"
+path="res://.godot/imported/documento-linuz.png-cbb83def3f61e09775d88d4d7863d7b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/npc's/Nov genérico 4.png"
-dest_files=["res://.godot/imported/Nov genérico 4.png-2d712f2fb119d04f5546fe43435fc7dd.ctex"]
+source_file="res://assets/cartório/documento-linuz.png"
+dest_files=["res://.godot/imported/documento-linuz.png-cbb83def3f61e09775d88d4d7863d7b4.ctex"]
 
 [params]
 

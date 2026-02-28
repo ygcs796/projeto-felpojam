@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://eqlfnvs5dmif"]
+[gd_scene format=3 uid="uid://8pygw1g244bv"]
 
 [ext_resource type="Script" uid="uid://cid4gql8w75q2" path="res://galinha_move.gd" id="1_h0d8n"]
 [ext_resource type="Texture2D" uid="uid://e3pqvt4ofmsj" path="res://assets/bichos/galinhas cinza ou azul (espaçadas).png" id="2_rb1o7"]
@@ -35,7 +35,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_3jaak")
 }],
 "loop": true,
-"name": &"default",
+"name": &"walk",
 "speed": 5.0
 }]
 
@@ -47,6 +47,7 @@ script = ExtResource("1_h0d8n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1807235222]
 sprite_frames = SubResource("SpriteFrames_fpbju")
+animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=624735734]
 position = Vector2(0.5, 0)

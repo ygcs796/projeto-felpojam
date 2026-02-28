@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chhet3pegcxm2"
-path="res://.godot/imported/Npc genérico 2.png-9328885f051f960accb66c41fbc79eb1.ctex"
+path="res://.godot/imported/Npc genérico 2.png-7157b46eb8861473d22ed49fe1cea2e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NPC's/Npc genérico 2.png"
-dest_files=["res://.godot/imported/Npc genérico 2.png-9328885f051f960accb66c41fbc79eb1.ctex"]
+source_file="res://assets/npc's/Npc genérico 2.png"
+dest_files=["res://.godot/imported/Npc genérico 2.png-7157b46eb8861473d22ed49fe1cea2e5.ctex"]
 
 [params]
 

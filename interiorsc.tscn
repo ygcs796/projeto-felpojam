@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://cuxsyl461kq63"]
+[gd_scene format=4 uid="uid://dyfamh7bhekql"]
 
 [ext_resource type="Texture2D" uid="uid://b2iyu5pih1rfs" path="res://assets/tiles/Santa catarina pisos -sheet.png" id="1_4xe5d"]
 [ext_resource type="Script" uid="uid://dgaafkn01hcth" path="res://interiorsc.gd" id="1_uxaa3"]
@@ -8,20 +8,20 @@
 [ext_resource type="Texture2D" uid="uid://b2dntrk4sjohc" path="res://assets/bichos/galinhas brancas (espaçadas).png" id="4_o1d8o"]
 [ext_resource type="Texture2D" uid="uid://e3pqvt4ofmsj" path="res://assets/bichos/galinhas cinza ou azul (espaçadas).png" id="4_yte4y"]
 [ext_resource type="Texture2D" uid="uid://bv0xxeayoo4jr" path="res://assets/tiles/matos-sheet.png" id="5_yte4y"]
-[ext_resource type="PackedScene" uid="uid://buip1atybndxw" path="res://galinha_marrom.tscn" id="6_40kmw"]
+[ext_resource type="PackedScene" uid="uid://bdcet518f8iye" path="res://galinha_marrom.tscn" id="6_40kmw"]
 [ext_resource type="Texture2D" uid="uid://vctcu3amyoyr" path="res://assets/tiles/arvores-Sheet.png" id="6_onobx"]
 [ext_resource type="Texture2D" uid="uid://nb3sk0tv0j0a" path="res://assets/bichos/galinhas marrons (espaçadas).png" id="6_wtuen"]
-[ext_resource type="Texture2D" uid="uid://cckd68p54yhsm" path="res://assets/NPC's/Capivara npc.png" id="7_wtuen"]
+[ext_resource type="Texture2D" uid="uid://cckd68p54yhsm" path="res://assets/npc's/Capivara npc.png" id="7_wtuen"]
 [ext_resource type="Texture2D" uid="uid://yxt32p604yia" path="res://assets/tiles/cerca e milho-Sheet.png" id="8_2taq1"]
-[ext_resource type="Texture2D" uid="uid://c4fw7acjxou58" path="res://assets/NPC's/Galo npc.png" id="8_40kmw"]
-[ext_resource type="Texture2D" uid="uid://c5yvp8je355n6" path="res://assets/NPC's/Npc genérico 1.png" id="9_h2s23"]
-[ext_resource type="PackedScene" uid="uid://eqlfnvs5dmif" path="res://galinha_azul.tscn" id="10_h2s23"]
-[ext_resource type="Texture2D" uid="uid://chhet3pegcxm2" path="res://assets/NPC's/Npc genérico 2.png" id="10_uxaa3"]
-[ext_resource type="Texture2D" uid="uid://dsv82n5fqba0h" path="res://assets/NPC's/Nov genérico 4.png" id="11_xjwaw"]
-[ext_resource type="Texture2D" uid="uid://b3q1kgew3xdd4" path="res://assets/NPC's/Noc genérico 3.png" id="12_errj6"]
-[ext_resource type="PackedScene" uid="uid://7m5ucawpqr8d" path="res://galinha.tscn" id="17_onobx"]
-[ext_resource type="PackedScene" uid="uid://ddry44an54yp1" path="res://player.tscn" id="17_wtuen"]
-[ext_resource type="PackedScene" uid="uid://coea13jga18gc" path="res://transicao_circulo.tscn" id="22_xjwaw"]
+[ext_resource type="Texture2D" uid="uid://c4fw7acjxou58" path="res://assets/npc's/Galo npc.png" id="8_40kmw"]
+[ext_resource type="Texture2D" uid="uid://c5yvp8je355n6" path="res://assets/npc's/Npc genérico 1.png" id="9_h2s23"]
+[ext_resource type="PackedScene" uid="uid://8pygw1g244bv" path="res://galinha_azul.tscn" id="10_h2s23"]
+[ext_resource type="Texture2D" uid="uid://chhet3pegcxm2" path="res://assets/npc's/Npc genérico 2.png" id="10_uxaa3"]
+[ext_resource type="Texture2D" uid="uid://dsv82n5fqba0h" path="res://assets/npc's/Nov genérico 4.png" id="11_xjwaw"]
+[ext_resource type="Texture2D" uid="uid://b3q1kgew3xdd4" path="res://assets/npc's/Noc genérico 3.png" id="12_errj6"]
+[ext_resource type="PackedScene" path="res://galinha.tscn" id="17_onobx"]
+[ext_resource type="PackedScene" uid="uid://ciys4ji5ypsg2" path="res://player.tscn" id="17_wtuen"]
+[ext_resource type="PackedScene" uid="uid://403yv2oepw2m" path="res://transicao_circulo.tscn" id="22_xjwaw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qwqg2"]
 resource_name = "terra/grama"
@@ -114,7 +114,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_errj6")
 }],
 "loop": true,
-"name": &"default",
+"name": &"walk",
 "speed": 5.0
 }]
 
@@ -150,7 +150,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_40kmw")
 }],
 "loop": true,
-"name": &"default",
+"name": &"walk",
 "speed": 5.0
 }]
 
@@ -186,7 +186,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_rpdb6")
 }],
 "loop": true,
-"name": &"default",
+"name": &"walk",
 "speed": 5.0
 }]
 
@@ -507,20 +507,22 @@ scale = Vector2(0.9, 0.9)
 position = Vector2(-302, 79)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_4lb47")
-autoplay = "default"
-frame_progress = 0.21051529
+animation = &"walk"
+autoplay = "walk"
 flip_h = true
 
 [node name="galinha_branca" type="AnimatedSprite2D" parent="." unique_id=687126979]
 position = Vector2(-200, 75)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_h2s23")
+animation = &"walk"
 
 [node name="galinha_marrom" type="AnimatedSprite2D" parent="." unique_id=1584868577]
 position = Vector2(-193.99998, 102)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_shuy5")
-autoplay = "default"
+animation = &"walk"
+autoplay = "walk"
 
 [node name="galinha_azul2" parent="." unique_id=300982436 instance=ExtResource("10_h2s23")]
 position = Vector2(199, 465)

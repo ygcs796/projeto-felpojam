@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsv82n5fqba0h"
-path="res://.godot/imported/Nov genérico 4.png-2d712f2fb119d04f5546fe43435fc7dd.ctex"
+uid="uid://xs5gmyupstuw"
+path="res://.godot/imported/mesa-cima.png-66c83de5ab56fdcf61251928a5f50d01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/npc's/Nov genérico 4.png"
-dest_files=["res://.godot/imported/Nov genérico 4.png-2d712f2fb119d04f5546fe43435fc7dd.ctex"]
+source_file="res://assets/cartório/mesa-cima.png"
+dest_files=["res://.godot/imported/mesa-cima.png-66c83de5ab56fdcf61251928a5f50d01.ctex"]
 
 [params]
 

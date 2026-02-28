@@ -1064,10 +1064,7 @@ sources/1 = SubResource("TileSetAtlasSource_m3wdo")
 size = Vector2(127, 23)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cms7o"]
-size = Vector2(37.125, 214)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_h274e"]
-size = Vector2(14, 145)
+size = Vector2(14.25, 91)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oneej"]
 size = Vector2(367, 19)
@@ -1083,9 +1080,6 @@ size = Vector2(15.5, 236.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ubdi"]
 size = Vector2(177.75, 16)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hv2fv"]
-size = Vector2(15.5, 236.5)
 
 [node name="Cenario_santa_catarina" type="Node2D" unique_id=840574297]
 position = Vector2(427, -87)
@@ -1141,13 +1135,11 @@ autoplay = "default"
 frame_progress = 0.58045787
 
 [node name="shekira" type="AnimatedSprite2D" parent="." unique_id=100153589]
-position = Vector2(-71, 118.00001)
+position = Vector2(428, 51)
 scale = Vector2(1.2, 1.2)
 sprite_frames = SubResource("SpriteFrames_sorij")
-animation = &"idle_frente"
+animation = &"idle_lado"
 autoplay = "idle_lado"
-frame = 3
-frame_progress = 0.96376634
 
 [node name="arvoreatras2" type="TileMapLayer" parent="." unique_id=247795914]
 tile_map_data = PackedByteArray("AAD9//7/AAAGAAAAAAAQAAAAAAAGAAAAAAA=")
@@ -1184,19 +1176,11 @@ shape = SubResource("RectangleShape2D_w2esr")
 [node name="colisao_rua" type="Area2D" parent="." unique_id=85363225]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colisao_rua" unique_id=924979118]
-position = Vector2(290.5625, 63)
+position = Vector2(302, 60)
 shape = SubResource("RectangleShape2D_cms7o")
-
-[node name="colisao_interior" type="Area2D" parent="." unique_id=1790607042]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="colisao_interior" unique_id=87468136]
-position = Vector2(591, 613.5)
-shape = SubResource("RectangleShape2D_h274e")
 
 [node name="spawn_cartorio" type="Marker2D" parent="." unique_id=1877069798]
 position = Vector2(538, 646)
-
-[node name="transicao_circulo" parent="." unique_id=790840408 instance=ExtResource("20_w2esr")]
 
 [node name="Colisor do mapa" type="StaticBody2D" parent="." unique_id=1780198717]
 
@@ -1225,10 +1209,7 @@ shape = SubResource("RectangleShape2D_b2k1y")
 position = Vector2(547, 691)
 shape = SubResource("RectangleShape2D_5ubdi")
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Colisor do mapa" unique_id=893751755]
-position = Vector2(314, 53)
-shape = SubResource("RectangleShape2D_hv2fv")
+[node name="transicao_circulo" parent="." unique_id=790840408 instance=ExtResource("20_w2esr")]
 
 [connection signal="area_entered" from="colisao_cartorio" to="." method="_on_colisao_cartorio_area_entered"]
 [connection signal="area_entered" from="colisao_rua" to="." method="_on_colisao_rua_area_entered"]
-[connection signal="area_entered" from="colisao_interior" to="." method="_on_colisao_interior_area_entered"]
