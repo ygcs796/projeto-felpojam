@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ca8qdy0hmu50v"
+path="res://.godot/imported/musica de loop.ogg-0a37210c2f0471bbddb489e80bad41cd.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sfx/musica/musica de loop.ogg"
+dest_files=["res://.godot/imported/musica de loop.ogg-0a37210c2f0471bbddb489e80bad41cd.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

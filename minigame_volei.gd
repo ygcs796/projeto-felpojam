@@ -10,8 +10,16 @@ var pontos_adversario = 0
 @onready var placar_vermelho = $placar/vermelho
 @onready var placar_azul = $placar/azul
 @onready var apito = $apito
+@onready var music_player = $musica
+
+var musica_inicio = preload("res://assets/sfx/musica/1inicioreggaeton.ogg")
+var musica_loop = preload("res://assets/sfx/musica/2loopreggaeton.ogg")
 
 func _ready() -> void:
+	music_player.finished.connect(_on_musica_terminou)
+	music_player.stream = musica_inicio
+	music_player.play()
+	
 	label_contagem.text = ""
 	comecar_contador()
 		
@@ -78,4 +86,9 @@ func verificar_resultado_adversario():
 		
 	else:
 		resetar_partida_bola_do_adversario()
+
+func _on_musica_terminou():
+	if music_player.stream == musica_inicio:
 		
+		music_player.stream = musica_loop
+		music_player.play()
