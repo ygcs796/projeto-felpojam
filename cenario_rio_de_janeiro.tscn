@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://yi2qi1u8r47t" path="res://assets/tiles/predios_rj.png" id="5_eai0h"]
 [ext_resource type="Texture2D" uid="uid://cqlwv0xd5smut" path="res://assets/tiles/Copacabana e areia arcos-sheet.png" id="5_te7vk"]
 [ext_resource type="Texture2D" uid="uid://dy6svju8bcnaq" path="res://assets/tiles/objetos_gerais_praia_sheet.png" id="6_vx1bk"]
-[ext_resource type="PackedScene" uid="uid://ddry44an54yp1" path="res://player.tscn" id="7_vx1bk"]
 [ext_resource type="Texture2D" uid="uid://vxwppn1pw7wi" path="res://assets/NPC's/Lobo guará npc.png" id="8_biqnf"]
 [ext_resource type="Texture2D" uid="uid://bgm2rtwb2cwb1" path="res://assets/NPC's/gato npc (1).png" id="9_cb1w8"]
 [ext_resource type="Texture2D" uid="uid://23epgsxlwcbh" path="res://assets/NPC's/Npc genérico 2.png" id="10_q3oy6"]
@@ -3358,9 +3357,6 @@ shape = SubResource("SegmentShape2D_biqnf")
 [node name="Borda agua 4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1341376617]
 position = Vector2(-25, 421)
 shape = SubResource("SegmentShape2D_cb1w8")
-
-[node name="Player" parent="." unique_id=895579848 instance=ExtResource("7_vx1bk")]
-position = Vector2(-171, 165)
 
 [node name="Lobo NPC" type="AnimatedSprite2D" parent="." unique_id=191364935]
 position = Vector2(443, 181)

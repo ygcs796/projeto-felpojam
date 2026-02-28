@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var velocidade_max = 35
+@export var velocidade_max = 37
 @export var velocidade_pulo = -125
 @export var sensibilidade = 0.1
 @export var altura_gatilho = 100
@@ -63,6 +63,6 @@ func pular():
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is RigidBody2D:
 		body.linear_velocity = Vector2.ZERO
-		var direcao = Vector2(-1, -1)
+		var direcao = Vector2(-2, -2)
 		body.apply_central_impulse(direcao * forca_cabecada)
 	pass # Replace with function body.

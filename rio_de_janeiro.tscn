@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cxypotqbampln"]
+
+[ext_resource type="Script" uid="uid://dsxwtuh8o050w" path="res://rio_de_janeiro.gd" id="1_s5mu5"]
+[ext_resource type="PackedScene" uid="uid://hytydjoennko" path="res://cenario_rio_de_janeiro.tscn" id="2_sr12p"]
+[ext_resource type="PackedScene" uid="uid://ddry44an54yp1" path="res://player.tscn" id="3_cfd3k"]
+[ext_resource type="PackedScene" uid="uid://coea13jga18gc" path="res://transicao_circulo.tscn" id="4_cgfib"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gnrii"]
+size = Vector2(30, 27)
+
+[node name="rio_de_janeiro" type="Node2D" unique_id=1171712668]
+script = ExtResource("1_s5mu5")
+
+[node name="Cenario Rio de Janeiro" parent="." unique_id=840574297 instance=ExtResource("2_sr12p")]
+
+[node name="Player" parent="." unique_id=895579848 instance=ExtResource("3_cfd3k")]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1218045958]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2123454755]
+position = Vector2(434, 176.5)
+shape = SubResource("RectangleShape2D_gnrii")
+
+[node name="transicao_circulo" parent="." unique_id=790840408 instance=ExtResource("4_cgfib")]
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -10,7 +10,7 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("ui_up") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
@@ -45,7 +45,7 @@ func atualizar_animacao():
 func _on_cabeca_body_entered(body: Node2D) -> void:
 	if body is RigidBody2D:
 		body.linear_velocity = Vector2.ZERO
-		var direcao = Vector2(1, -1)
+		var direcao = Vector2(2, -2)
 		body.apply_central_impulse(direcao * forca_cabecada)
 		
 func ganhou():
