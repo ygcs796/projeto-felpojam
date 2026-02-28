@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cgjhi544i8s85"]
+
+[ext_resource type="Texture2D" uid="uid://4430jcgeaa52" path="res://assets/fundo_minigame_volei.png" id="2_6k2nq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_enc4q"]
+size = Vector2(240, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8edm"]
+size = Vector2(20, 143.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6k2nq"]
+size = Vector2(240, 20)
+
+[node name="chao" type="StaticBody2D" unique_id=1193712267]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1637610999]
+offset_left = -8.0
+offset_top = -1.0
+offset_right = 120.0
+offset_bottom = 64.0
+scale = Vector2(2, 2)
+texture = ExtResource("2_6k2nq")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1220117448]
+offset_top = 128.0
+offset_right = 240.0
+offset_bottom = 162.0
+color = Color(0.90588236, 0.7490196, 0.2, 1)
+
+[node name="colisao_chao" type="CollisionShape2D" parent="." unique_id=1953305359]
+position = Vector2(120, 144)
+shape = SubResource("RectangleShape2D_enc4q")
+
+[node name="parede_esquerda" type="CollisionShape2D" parent="." unique_id=34575267]
+position = Vector2(-10, 71.5)
+shape = SubResource("RectangleShape2D_i8edm")
+
+[node name="parede_direita" type="CollisionShape2D" parent="." unique_id=1632488959]
+position = Vector2(250, 71.75)
+shape = SubResource("RectangleShape2D_i8edm")
+
+[node name="parede_superior" type="CollisionShape2D" parent="." unique_id=1312094457]
+position = Vector2(120, -10)
+shape = SubResource("RectangleShape2D_6k2nq")
