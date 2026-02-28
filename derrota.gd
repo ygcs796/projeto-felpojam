@@ -6,6 +6,5 @@ func _on_restart_button_down() -> void:
 	print("Recomeçando")
 	pass
 
-
 func _on_quit_button_down() -> void:
 	get_tree().quit()
