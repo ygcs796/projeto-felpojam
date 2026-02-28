@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://4y02l26n8q2s"]
+
+[ext_resource type="Script" uid="uid://x0mgx142wuf1" path="res://scripts/jacaré.gd" id="1_3wf8y"]
+[ext_resource type="Texture2D" uid="uid://da576ar5akdms" path="res://assets/minigame_ritmo/Crocodilo lutador/Ataques.png" id="1_cwvhs"]
+[ext_resource type="Texture2D" uid="uid://dsidp6i5oe8a8" path="res://assets/minigame_ritmo/Crocodilo lutador/Idle.png" id="2_3wf8y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhg23"]
+atlas = ExtResource("1_cwvhs")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arvik"]
+atlas = ExtResource("1_cwvhs")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_palqk"]
+atlas = ExtResource("1_cwvhs")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnely"]
+atlas = ExtResource("1_cwvhs")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ucn5k"]
+atlas = ExtResource("2_3wf8y")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ntks0"]
+atlas = ExtResource("2_3wf8y")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mfij"]
+atlas = ExtResource("2_3wf8y")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqf5j"]
+atlas = ExtResource("2_3wf8y")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gi0vp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhg23")
+}],
+"loop": false,
+"name": &"attack_down",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_arvik")
+}],
+"loop": false,
+"name": &"attack_left",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_palqk")
+}],
+"loop": false,
+"name": &"attack_right",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mnely")
+}],
+"loop": false,
+"name": &"attack_up",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ucn5k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ntks0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0mfij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqf5j")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Jacaré" type="CharacterBody2D" unique_id=2004422182]
+script = ExtResource("1_3wf8y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1630362417]
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_gi0vp")
+animation = &"idle"
+autoplay = "idle"

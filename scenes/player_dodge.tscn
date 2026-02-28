@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://bogvko6es15qp"]
+
+[ext_resource type="Script" uid="uid://ch70q6b35jhd3" path="res://scripts/player_dodge.gd" id="1_06lvm"]
+[ext_resource type="Texture2D" uid="uid://rdbyjv0xropa" path="res://assets/minigame_ritmo/Linuz/Idle parado.png" id="1_552nf"]
+[ext_resource type="Texture2D" uid="uid://d357qa4j763u6" path="res://assets/minigame_ritmo/Linuz/Errando golpe.png" id="2_06lvm"]
+[ext_resource type="Texture2D" uid="uid://cbcay0c26f05h" path="res://assets/minigame_ritmo/Linuz/Desviando para os lados opostos do ataque do crocodilo por conta de ser capoeira.png" id="2_hh7y0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gk1uo"]
+atlas = ExtResource("1_552nf")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5psh"]
+atlas = ExtResource("2_06lvm")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhxgu"]
+atlas = ExtResource("2_hh7y0")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hh7y0"]
+atlas = ExtResource("2_hh7y0")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ut2kw"]
+atlas = ExtResource("2_hh7y0")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_auxn8"]
+atlas = ExtResource("2_hh7y0")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqy8g"]
+atlas = ExtResource("1_552nf")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fadet"]
+atlas = ExtResource("1_552nf")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knqh8"]
+atlas = ExtResource("1_552nf")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gfkj7"]
+atlas = ExtResource("1_552nf")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0hem7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gk1uo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5psh")
+}],
+"loop": false,
+"name": &"damage",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rhxgu")
+}],
+"loop": false,
+"name": &"dodge_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hh7y0")
+}],
+"loop": false,
+"name": &"dodge_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ut2kw")
+}],
+"loop": false,
+"name": &"dodge_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_auxn8")
+}],
+"loop": false,
+"name": &"dodge_up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqy8g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fadet")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knqh8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gfkj7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="PlayerDodge" type="CharacterBody2D" unique_id=1343146290]
+script = ExtResource("1_06lvm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1177066261]
+scale = Vector2(1.3, 1.3)
+sprite_frames = SubResource("SpriteFrames_0hem7")
+animation = &"idle"
+autoplay = "idle"

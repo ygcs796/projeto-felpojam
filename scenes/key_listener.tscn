@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://svoilkicjvay"]
+
+[ext_resource type="Texture2D" uid="uid://cjauoj54i2e30" path="res://assets/minigame_ritmo/falling_keys.png" id="1_64e6d"]
+[ext_resource type="Script" uid="uid://b3k8pga3do2yc" path="res://scripts/key_listener.gd" id="2_64e6d"]
+
+[node name="KeyListener" type="Sprite2D" unique_id=2088530918]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_64e6d")
+script = ExtResource("2_64e6d")

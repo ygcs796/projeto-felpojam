@@ -1,0 +1,206 @@
+[gd_scene format=3 uid="uid://dm2l3b5pu4c1l"]
+
+[ext_resource type="Script" uid="uid://dvscljroxi8a8" path="res://scripts/minigame_ritmo.gd" id="1_2p2qe"]
+[ext_resource type="PackedScene" path="res://scenes/key_listener.tscn" id="1_nwtba"]
+[ext_resource type="Script" uid="uid://dbgbgmmq5f4en" path="res://scripts/ui.gd" id="3_bimw4"]
+[ext_resource type="AudioStream" uid="uid://bo3701axvv1cj" path="res://assets/minigame_ritmo/músicas/3parte2dojogoderitmo.ogg" id="3_d3yxg"]
+[ext_resource type="PackedScene" path="res://scenes/player_dodge.tscn" id="3_swsp4"]
+[ext_resource type="PackedScene" path="res://scenes/jacaré.tscn" id="4_tf5fv"]
+[ext_resource type="PackedScene" uid="uid://b5sghocrqjrxd" path="res://scenes/cenário.tscn" id="4_tttxi"]
+[ext_resource type="AudioStream" uid="uid://do1m283a4851i" path="res://assets/minigame_ritmo/músicas/2parte1dojogoderitmo.ogg" id="6_3pcax"]
+[ext_resource type="Texture2D" uid="uid://bxd43ln840f2h" path="res://assets/minigame_ritmo/Energia Dança -Sheet.png" id="9_8i0vm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jx6lg"]
+atlas = ExtResource("9_8i0vm")
+region = Rect2(384, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_puuj2"]
+atlas = ExtResource("9_8i0vm")
+region = Rect2(416, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3r03"]
+atlas = ExtResource("9_8i0vm")
+region = Rect2(448, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hkbhc"]
+atlas = ExtResource("9_8i0vm")
+region = Rect2(288, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkoxk"]
+atlas = ExtResource("9_8i0vm")
+region = Rect2(320, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jp412"]
+atlas = ExtResource("9_8i0vm")
+region = Rect2(352, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8i0vm"]
+atlas = ExtResource("9_8i0vm")
+region = Rect2(192, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_unpg0"]
+atlas = ExtResource("9_8i0vm")
+region = Rect2(224, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_irvr4"]
+atlas = ExtResource("9_8i0vm")
+region = Rect2(256, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfgwi"]
+atlas = ExtResource("9_8i0vm")
+region = Rect2(96, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6mqa"]
+atlas = ExtResource("9_8i0vm")
+region = Rect2(128, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycm5f"]
+atlas = ExtResource("9_8i0vm")
+region = Rect2(160, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kh7d5"]
+atlas = ExtResource("9_8i0vm")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ojge"]
+atlas = ExtResource("9_8i0vm")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qdv3t"]
+atlas = ExtResource("9_8i0vm")
+region = Rect2(64, 0, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tttxi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jx6lg")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_puuj2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w3r03")
+}],
+"loop": false,
+"name": &"life_1",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hkbhc")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_lkoxk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jp412")
+}],
+"loop": false,
+"name": &"life_2",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8i0vm")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_unpg0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_irvr4")
+}],
+"loop": false,
+"name": &"life_3",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfgwi")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_b6mqa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycm5f")
+}],
+"loop": false,
+"name": &"life_4",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kh7d5")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_1ojge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qdv3t")
+}],
+"loop": false,
+"name": &"life_5",
+"speed": 7.0
+}]
+
+[node name="Minigame Ritmo" type="Node2D" unique_id=1939867043]
+script = ExtResource("1_2p2qe")
+music_part1 = ExtResource("6_3pcax")
+music_part2 = ExtResource("3_d3yxg")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=343907532]
+
+[node name="Cenário" parent="." unique_id=179273170 instance=ExtResource("4_tttxi")]
+scale = Vector2(2.5, 2.5)
+
+[node name="PlayerDodge" parent="." unique_id=1343146290 instance=ExtResource("3_swsp4")]
+position = Vector2(-46, 16)
+
+[node name="Jacaré" parent="." unique_id=2004422182 instance=ExtResource("4_tf5fv")]
+position = Vector2(40, 0)
+
+[node name="KeyListener1" parent="." unique_id=2088530918 instance=ExtResource("1_nwtba")]
+position = Vector2(-59.5, 62)
+hframes = 4
+key_name = "ui_left"
+
+[node name="KeyListener2" parent="." unique_id=1047822103 instance=ExtResource("1_nwtba")]
+position = Vector2(-19.5, 62)
+hframes = 4
+frame = 1
+key_name = "ui_down"
+
+[node name="KeyListener3" parent="." unique_id=826436353 instance=ExtResource("1_nwtba")]
+position = Vector2(20.5, 62)
+hframes = 4
+frame = 2
+key_name = "ui_up"
+
+[node name="KeyListener4" parent="." unique_id=1831083940 instance=ExtResource("1_nwtba")]
+position = Vector2(60.5, 62)
+hframes = 4
+frame = 3
+key_name = "ui_right"
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=2076017441]
+script = ExtResource("3_bimw4")
+
+[node name="Lives" type="AnimatedSprite2D" parent="UI" unique_id=932477809]
+position = Vector2(12, 24)
+sprite_frames = SubResource("SpriteFrames_tttxi")
+animation = &"life_5"
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=1544604541]
+one_shot = true
+autostart = true
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=514620400]
+stream = ExtResource("6_3pcax")
+autoplay = true
+
+[node name="HitLine" type="Node2D" parent="MusicPlayer" unique_id=740825045]
+
+[connection signal="hit" from="KeyListener1" to="." method="_on_key_listener_hit"]
+[connection signal="miss" from="KeyListener1" to="." method="_on_key_listener_miss"]
+[connection signal="pressed" from="KeyListener1" to="." method="_on_key_listener_pressed"]
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
