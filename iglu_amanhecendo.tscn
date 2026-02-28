@@ -1,6 +1,8 @@
-[gd_scene format=3 uid="uid://fvetr1h6hekq"]
+[gd_scene format=3 uid="uid://1ij3a6xv51k7"]
 
+[ext_resource type="Script" uid="uid://by6whcro8q2x4" path="res://iglu_amanhecendo.gd" id="1_3r60p"]
 [ext_resource type="Texture2D" uid="uid://ciw0o3sggr2sl" path="res://assets/iglu_amanhecendo.png" id="1_myq5j"]
+[ext_resource type="PackedScene" path="res://transicao_circulo.tscn" id="3_h5a5r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3r60p"]
 atlas = ExtResource("1_myq5j")
@@ -158,6 +160,7 @@ animations = [{
 }]
 
 [node name="iglu_amanhecendo" type="Node2D" unique_id=705040130]
+script = ExtResource("1_3r60p")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1998973990]
 position = Vector2(126, 80)
@@ -166,3 +169,5 @@ sprite_frames = SubResource("SpriteFrames_vc8ri")
 autoplay = "default"
 frame = 20
 frame_progress = 1.0
+
+[node name="transicao_circulo" parent="." unique_id=790840408 instance=ExtResource("3_h5a5r")]
