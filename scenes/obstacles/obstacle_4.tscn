@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c6buagc7pt774"]
+
+[ext_resource type="Texture2D" uid="uid://mow1ye7opi2o" path="res://assets/tiles/polo sul/polo sul-Sheet1.png" id="1_23146"]
+[ext_resource type="Script" uid="uid://cttbh383ph28j" path="res://scripts/obstacles.gd" id="2_wggcw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wggcw"]
+atlas = ExtResource("1_23146")
+region = Rect2(99, 134, 10, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5gjra"]
+size = Vector2(7, 10)
+
+[node name="Obstacle4" type="Area2D" unique_id=1185941702]
+script = ExtResource("2_wggcw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1904024969]
+texture = SubResource("AtlasTexture_wggcw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=611571386]
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_5gjra")
