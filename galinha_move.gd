@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var tiles_to_walk := 2
-@export var tile_size := 16
+@export var tile_size := 16 * transform.get_scale().x
 @export var speed := 40.0
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
