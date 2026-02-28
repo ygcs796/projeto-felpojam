@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://demccca4j4cw4"
-path="res://.godot/imported/Capivara npc.png-91704fc8ec7caf3129c4c99a5472bb61.ctex"
+uid="uid://cckd68p54yhsm"
+path="res://.godot/imported/Capivara npc.png-48d489753e88a7ee9c781f9ab1c87ded.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/npc's/Capivara npc.png"
-dest_files=["res://.godot/imported/Capivara npc.png-91704fc8ec7caf3129c4c99a5472bb61.ctex"]
+source_file="res://assets/NPC's/Capivara npc.png"
+dest_files=["res://.godot/imported/Capivara npc.png-48d489753e88a7ee9c781f9ab1c87ded.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5yvp8je355n6"
-path="res://.godot/imported/Npc genérico 1.png-f89efeb9d0daad93cefbd9968e406c78.ctex"
+uid="uid://nb3sk0tv0j0a"
+path="res://.godot/imported/galinhas marrons (espaçadas).png-a4e7845f7b5980d6b468c1f9b1af2516.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NPC's/Npc genérico 1.png"
-dest_files=["res://.godot/imported/Npc genérico 1.png-f89efeb9d0daad93cefbd9968e406c78.ctex"]
+source_file="res://assets/bichos/galinhas marrons (espaçadas).png"
+dest_files=["res://.godot/imported/galinhas marrons (espaçadas).png-a4e7845f7b5980d6b468c1f9b1af2516.ctex"]
 
 [params]
 

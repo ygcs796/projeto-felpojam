@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5yvp8je355n6"
-path="res://.godot/imported/Npc genérico 1.png-f89efeb9d0daad93cefbd9968e406c78.ctex"
+uid="uid://e3pqvt4ofmsj"
+path="res://.godot/imported/galinhas cinza ou azul (espaçadas).png-b9fa5cd2a41400a243ca24fc494cfb24.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NPC's/Npc genérico 1.png"
-dest_files=["res://.godot/imported/Npc genérico 1.png-f89efeb9d0daad93cefbd9968e406c78.ctex"]
+source_file="res://assets/bichos/galinhas cinza ou azul (espaçadas).png"
+dest_files=["res://.godot/imported/galinhas cinza ou azul (espaçadas).png-b9fa5cd2a41400a243ca24fc494cfb24.ctex"]
 
 [params]
 
