@@ -10,7 +10,21 @@ config_version=5
 
 [application]
 
+config/name="Projeto Felpojam"
 config/features=PackedStringArray("4.6")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*uid://dmpa61s1wkta"
+
+[display]
+
+window/size/viewport_width=240
+window/size/viewport_height=160
+window/size/window_width_override=1152
+window/size/window_height_override=648
+window/stretch/mode="canvas_items"
 
 [physics]
 

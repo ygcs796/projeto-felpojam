@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bwecy7vnfjefy"]
 
-[ext_resource type="Script" uid="uid://cp408gu0bjc2p" path="res://cutscene_encontro.gd" id="1_tkwoi"]
+[ext_resource type="Script" path="res://cutscene_encontro.gd" id="1_tkwoi"]
 [ext_resource type="Texture2D" uid="uid://bcmb225m6p3bj" path="res://assets/cutscenes/shekira_encontrando_linuz_na_praia.png" id="2_hqhu8"]
-[ext_resource type="PackedScene" uid="uid://coea13jga18gc" path="res://transicao_circulo.tscn" id="3_4abpy"]
+[ext_resource type="PackedScene" uid="uid://403yv2oepw2m" path="res://transicao_circulo.tscn" id="3_4abpy"]
 
 [node name="cutscene_encontro" type="Node2D" unique_id=1630826171]
 script = ExtResource("1_tkwoi")
