@@ -457,6 +457,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3je1t"]
 size = Vector2(10, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_40kmw"]
+size = Vector2(20, 623.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2s23"]
+size = Vector2(882, 17.375)
+
 [node name="interior_sc" type="Node2D" unique_id=763761225]
 
 [node name="terreno" type="TileMap" parent="." unique_id=1118463242]
@@ -628,3 +634,21 @@ sprite_frames = SubResource("SpriteFrames_b2k1y")
 shape = SubResource("RectangleShape2D_5ubdi")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1676880276]
+
+[node name="Limites do mapa" type="StaticBody2D" parent="." unique_id=851300862]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites do mapa" unique_id=1127955751]
+position = Vector2(-392, 335.25)
+shape = SubResource("RectangleShape2D_40kmw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Limites do mapa" unique_id=2076424411]
+position = Vector2(471, 340)
+shape = SubResource("RectangleShape2D_40kmw")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Limites do mapa" unique_id=1618157868]
+position = Vector2(38, 644.3125)
+shape = SubResource("RectangleShape2D_h2s23")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Limites do mapa" unique_id=567573082]
+position = Vector2(42, 27)
+shape = SubResource("RectangleShape2D_h2s23")
