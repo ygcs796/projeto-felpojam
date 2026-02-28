@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://7m5ucawpqr8d"]
+
+[ext_resource type="Script" uid="uid://cid4gql8w75q2" path="res://galinha_move.gd" id="1_0ulxr"]
+[ext_resource type="Texture2D" uid="uid://b2dntrk4sjohc" path="res://assets/bichos/galinhas brancas (espaçadas).png" id="2_oi035"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axmqm"]
+atlas = ExtResource("2_oi035")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yun1s"]
+atlas = ExtResource("2_oi035")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehqfw"]
+atlas = ExtResource("2_oi035")
+region = Rect2(34, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbuu2"]
+atlas = ExtResource("2_oi035")
+region = Rect2(50, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oi035"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axmqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yun1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ehqfw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kbuu2")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oi035"]
+size = Vector2(15, 16)
+
+[node name="Galinha" type="CharacterBody2D" unique_id=466746459]
+script = ExtResource("1_0ulxr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=355070378]
+sprite_frames = SubResource("SpriteFrames_oi035")
+animation = &"walk"
+autoplay = "walk"
+frame_progress = 0.1673671
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1579075227]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_oi035")
