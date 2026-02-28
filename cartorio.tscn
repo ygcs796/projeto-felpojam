@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://pii6lenj4i38"]
+
+[ext_resource type="Script" path="res://cartorio.gd" id="1_4gslf"]
+[ext_resource type="Texture2D" uid="uid://xs5gmyupstuw" path="res://assets/cartório/mesa-cima.png" id="1_hth1e"]
+[ext_resource type="Texture2D" uid="uid://o6glmai5cdtg" path="res://assets/cartório/documento-linuz.png" id="2_x5aep"]
+[ext_resource type="Texture2D" uid="uid://lljool7ivkm1" path="res://assets/cartório/caneta e borracha.png" id="3_x5aep"]
+
+[node name="Cartório" type="Node2D" unique_id=1960175408]
+script = ExtResource("1_4gslf")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1766792606]
+position = Vector2(121, 80)
+
+[node name="Mesa" type="Sprite2D" parent="." unique_id=1515846075]
+position = Vector2(132.00002, 79.99999)
+scale = Vector2(2, 2)
+texture = ExtResource("1_hth1e")
+
+[node name="Documento" type="Sprite2D" parent="." unique_id=830274080]
+position = Vector2(71.99999, 80.00001)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_x5aep")
+
+[node name="Lápis e borracha" type="Sprite2D" parent="." unique_id=1627843025]
+position = Vector2(140, 81)
+texture = ExtResource("3_x5aep")
