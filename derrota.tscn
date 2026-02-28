@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://btvwahi5pk6lb"]
+[gd_scene format=3 uid="uid://cpnriyksfymj4"]
 
-[ext_resource type="Script" uid="uid://b0yivgdpcx6ap" path="res://derrota.gd" id="1_kkwv5"]
+[ext_resource type="Script" path="res://derrota.gd" id="1_kkwv5"]
+[ext_resource type="PackedScene" uid="uid://67ss1gxk1mol" path="res://player.tscn" id="2_11exg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ypvqh"]
 
@@ -59,6 +60,9 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 27
 text = "QUIT"
+
+[node name="Player" parent="." unique_id=1041606734 instance=ExtResource("2_11exg")]
+position = Vector2(162, 58)
 
 [connection signal="button_down" from="ColorRect/VBoxContainer/restart_button" to="." method="_on_restart_button_down"]
 [connection signal="button_down" from="ColorRect/VBoxContainer/quit_button" to="." method="_on_quit_button_down"]

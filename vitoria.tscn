@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://bo3y6m68utb6h"]
+[gd_scene format=3 uid="uid://7ywmr53a5eri"]
 
-[ext_resource type="Script" uid="uid://cxmnmrl31elwn" path="res://vitoria.gd" id="1_8wiqx"]
+[ext_resource type="Script" path="res://vitoria.gd" id="1_8wiqx"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8wiqx"]
 
