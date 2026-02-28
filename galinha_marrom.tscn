@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://csb1aidhpml1g"]
+[gd_scene format=3 uid="uid://buip1atybndxw"]
 
 [ext_resource type="Script" uid="uid://cid4gql8w75q2" path="res://galinha_move.gd" id="1_p2hup"]
 [ext_resource type="Texture2D" uid="uid://nb3sk0tv0j0a" path="res://assets/bichos/galinhas marrons (espaçadas).png" id="2_40e0e"]
