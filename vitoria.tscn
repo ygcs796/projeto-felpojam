@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://7ywmr53a5eri"]
+
+[ext_resource type="Script" uid="uid://cxmnmrl31elwn" path="res://vitoria.gd" id="1_8wiqx"]
+[ext_resource type="Texture2D" uid="uid://boa875ak5vwy2" path="res://assets/voce_ganhou.png" id="2_14ec6"]
+
+[node name="Vitoria" type="Control" unique_id=660914674]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8wiqx")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1893117888]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.57254905, 0.57254905, 0.57254905, 0.23137255)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=374898298]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 62.000004
+offset_right = 254.0
+offset_bottom = 88.0
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_14ec6")
