@@ -1,9 +1,10 @@
-[gd_scene format=3 uid="uid://cfpre2fum2wj8"]
+[gd_scene format=3 uid="uid://br3i8xsuev3ha"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_lti8b"]
 [ext_resource type="Texture2D" uid="uid://ciw0o3sggr2sl" path="res://assets/iglu_amanhecendo.png" id="2_ouk20"]
 [ext_resource type="PackedScene" path="res://menu_celular.tscn" id="3_mae5d"]
 [ext_resource type="Texture2D" uid="uid://b48cidml61aq0" path="res://assets/nome_jogo.png" id="4_4hy44"]
+[ext_resource type="AudioStream" uid="uid://dm27xonheivjp" path="res://assets/songs/1-tema do menu.wav" id="5_ytr4m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mae5d"]
 atlas = ExtResource("2_ouk20")
@@ -57,3 +58,7 @@ offset_right = 135.0
 offset_bottom = 90.0
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("4_4hy44")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=268637575]
+stream = ExtResource("5_ytr4m")
+autoplay = true

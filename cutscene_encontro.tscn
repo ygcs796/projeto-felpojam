@@ -1,8 +1,9 @@
-[gd_scene format=3 uid="uid://by62wktpbmt2l"]
+[gd_scene format=3 uid="uid://ggoulkim0cex"]
 
-[ext_resource type="Script" uid="uid://cp408gu0bjc2p" path="res://cutscene_encontro.gd" id="1_tkwoi"]
+[ext_resource type="Script" path="res://cutscene_encontro.gd" id="1_tkwoi"]
 [ext_resource type="Texture2D" uid="uid://bcmb225m6p3bj" path="res://assets/cutscenes/shekira_encontrando_linuz_na_praia.png" id="2_hqhu8"]
 [ext_resource type="PackedScene" uid="uid://coea13jga18gc" path="res://transicao_circulo.tscn" id="3_4abpy"]
+[ext_resource type="AudioStream" uid="uid://dyjrgi5l5ghdw" path="res://músicas/1chegouemsc.ogg" id="4_hqhu8"]
 
 [node name="cutscene_encontro" type="Node2D" unique_id=1630826171]
 script = ExtResource("1_tkwoi")
@@ -15,3 +16,8 @@ scale = Vector2(2.5, 2.5)
 texture = ExtResource("2_hqhu8")
 
 [node name="transicao_circulo" parent="." unique_id=790840408 instance=ExtResource("3_4abpy")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1303819432]
+stream = ExtResource("4_hqhu8")
+autoplay = true
+parameters/looping = false

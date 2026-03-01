@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://dnkqotkqiyqq4"]
+[gd_scene format=4 uid="uid://dq432sot3tp44"]
 
 [ext_resource type="Texture2D" uid="uid://b2iyu5pih1rfs" path="res://assets/tiles/Santa catarina pisos -sheet.png" id="1_4xe5d"]
 [ext_resource type="Script" uid="uid://dgaafkn01hcth" path="res://interiorsc.gd" id="1_uxaa3"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://b3q1kgew3xdd4" path="res://assets/npc's/Noc genérico 3.png" id="12_errj6"]
 [ext_resource type="PackedScene" path="res://galinha_branca_interior.tscn" id="17_onobx"]
 [ext_resource type="PackedScene" uid="uid://coea13jga18gc" path="res://transicao_circulo.tscn" id="22_xjwaw"]
+[ext_resource type="AudioStream" uid="uid://djwccmj8g7jya" path="res://músicas/4andandopelointerior.ogg" id="23_errj6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qwqg2"]
 resource_name = "terra/grama"
@@ -684,5 +685,10 @@ position = Vector2(17, 102)
 shape = SubResource("RectangleShape2D_xjwaw")
 
 [node name="transicao_circulo" parent="." unique_id=790840408 instance=ExtResource("22_xjwaw")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1567865702]
+stream = ExtResource("23_errj6")
+autoplay = true
+parameters/looping = true
 
 [connection signal="area_entered" from="colisao_shekira" to="." method="_on_colisao_shekira_area_entered"]

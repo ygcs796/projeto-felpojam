@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://wk3f4d8ctsmj"]
+
+[ext_resource type="Script" uid="uid://cp408gu0bjc2p" path="res://cutscene_encontro.gd" id="1_ciwcn"]
+[ext_resource type="PackedScene" uid="uid://coea13jga18gc" path="res://transicao_circulo.tscn" id="2_1ripj"]
+[ext_resource type="AudioStream" uid="uid://dyjrgi5l5ghdw" path="res://músicas/1chegouemsc.ogg" id="3_tprku"]
+
+[node name="cutscene_carimbo_sc" type="Node2D" unique_id=1630826171]
+script = ExtResource("1_ciwcn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2009964078]
+
+[node name="transicao_circulo" parent="." unique_id=790840408 instance=ExtResource("2_1ripj")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1303819432]
+stream = ExtResource("3_tprku")
+autoplay = true
+parameters/looping = false

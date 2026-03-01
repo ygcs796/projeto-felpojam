@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://defbltnmuyvlw"]
+
+[ext_resource type="Script" uid="uid://c5u0pfg0ky2wh" path="res://galinha_marrom.gd" id="1_xp37j"]
+[ext_resource type="Texture2D" uid="uid://bkux210qnjjon" path="res://assets/galinhas_sprites/galinhas_marrons.png" id="2_p2hup"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40e0e"]
+atlas = ExtResource("2_p2hup")
+region = Rect2(0, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnone"]
+atlas = ExtResource("2_p2hup")
+region = Rect2(17, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1mxp3"]
+atlas = ExtResource("2_p2hup")
+region = Rect2(34, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y206r"]
+atlas = ExtResource("2_p2hup")
+region = Rect2(50, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bcg6d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_40e0e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qnone")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1mxp3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y206r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2apl7"]
+
+[node name="galinha_marrom" type="Area2D" unique_id=1122922911]
+script = ExtResource("1_xp37j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1823279834]
+sprite_frames = SubResource("SpriteFrames_bcg6d")
+autoplay = "default"
+frame = 2
+frame_progress = 0.30187953
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=740998969]
+shape = SubResource("RectangleShape2D_2apl7")
