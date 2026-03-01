@@ -5,7 +5,6 @@ var _current_lives: int = 5
 
 func _ready() -> void:
 	if lives_sprite == null:
-		push_error("UI: Não encontrei o nó AnimatedSprite2D 'Lives'. Confira o nome e o caminho (ex.: 'HUD/Lives').")
 		return
 
 	_show_static(_current_lives)
@@ -20,7 +19,6 @@ func set_lives(value: int) -> void:
 		_show_static(value)
 		return
 
-	# perda de 1 vida -> toca a animação da vida ANTES (life_5 anima 5->4 etc.)
 	if value == _current_lives - 1:
 		_play_hit_animation_from(_current_lives)
 		_current_lives = value
@@ -46,7 +44,6 @@ func _show_static(lives: int) -> void:
 	lives_sprite.show()
 
 	if lives <= 0:
-		# último frame da life_1 (zerado)
 		lives_sprite.play("life_1")
 		var count := lives_sprite.sprite_frames.get_frame_count("life_1")
 		lives_sprite.frame = max(count - 1, 0)

@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://diosykslj53f3"]
+
+[ext_resource type="Script" uid="uid://katwssqeyax0" path="res://cutscene_linuz_batendo_iceberg.gd" id="1_a6m5a"]
+[ext_resource type="PackedScene" uid="uid://coea13jga18gc" path="res://transicao_circulo.tscn" id="2_a6m5a"]
+[ext_resource type="Texture2D" uid="uid://ct381qnondn7f" path="res://assets/cutscenes/linuz batendo no iceberg (espaçado) (triste).png" id="2_um1el"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnv83"]
+atlas = ExtResource("2_um1el")
+region = Rect2(0, 0, 129, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_686pf"]
+atlas = ExtResource("2_um1el")
+region = Rect2(129, 0, 129, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxk44"]
+atlas = ExtResource("2_um1el")
+region = Rect2(258, 0, 129, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wyy4w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vnv83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_686pf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxk44")
+}],
+"loop": false,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="cutscene_linuz_batendo_iceberg" type="Node2D" unique_id=1630826171]
+script = ExtResource("1_a6m5a")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=89824481]
+position = Vector2(127, 80)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_wyy4w")
+autoplay = "default"
+frame = 2
+frame_progress = 1.0
+
+[node name="transicao_circulo" parent="." unique_id=790840408 instance=ExtResource("2_a6m5a")]

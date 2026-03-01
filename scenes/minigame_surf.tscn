@@ -170,13 +170,13 @@ script = ExtResource("3_5vpe1")
 process_mode = 1
 anchor_mode = 0
 
-[node name="Linuz" parent="." unique_id=895579848 instance=ExtResource("3_oeutb")]
-process_mode = 1
-position = Vector2(120, 147)
-
 [node name="Spawner" parent="." unique_id=2042530505 instance=ExtResource("4_qjjgo")]
 process_mode = 1
 iceberg_scene = ExtResource("6_7cqgg")
+
+[node name="Linuz" parent="." unique_id=895579848 instance=ExtResource("3_oeutb")]
+process_mode = 1
+position = Vector2(120, 147)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=473049225]
 process_mode = 1

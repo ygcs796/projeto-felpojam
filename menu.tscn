@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://bpsmrbckgwuog"]
+[gd_scene format=3 uid="uid://kh7ujl3ltgnd"]
 
-[ext_resource type="Script" path="res://menu.gd" id="1_lti8b"]
+[ext_resource type="Script" uid="uid://btsykbbcv5bgy" path="res://menu.gd" id="1_lti8b"]
 [ext_resource type="Texture2D" uid="uid://ciw0o3sggr2sl" path="res://assets/iglu_amanhecendo.png" id="2_ouk20"]
 [ext_resource type="PackedScene" path="res://menu_celular.tscn" id="3_mae5d"]
 [ext_resource type="Texture2D" uid="uid://b48cidml61aq0" path="res://assets/nome_jogo.png" id="4_4hy44"]

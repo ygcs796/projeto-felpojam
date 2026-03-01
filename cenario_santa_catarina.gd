@@ -23,11 +23,10 @@ func _ready() -> void:
 		if spawn and player:
 			player.global_position = spawn.global_position
 
-		# Se voltou do cartório
+		# Se voltou do cartório, não pode entrar no cartório novamente
 		if spawn_name == "spawn_cartorio":
 			came_from_cartorio = true
 
-			# Não pode entrar no cartório novamente
 			if colisao_cartorio:
 				colisao_cartorio.monitoring = false
 				colisao_cartorio.monitorable = false
@@ -72,7 +71,6 @@ func _on_colisao_interior_area_entered(area: Area2D) -> void:
 	if transitioning:
 		return
 
-	# 🔒 BLOQUEADO até passar pelo cartório
 	if not came_from_cartorio:
 		return
 
