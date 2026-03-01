@@ -1,15 +1,14 @@
 extends CharacterBody2D
 
 # Configurações
-var tile_size = 16  # O tamanho do seu passo (conforme você pediu)
-var move_speed = 0.28 # Tempo em segundos para dar um passo (quanto menor, mais rápido)
+var tile_size = 16  # O tamanho do passo
+var move_speed = 0.28 # Tempo em segundos para dar um passo
 
 # Variáveis de controle
-var is_moving = false # Trava o input enquanto o boneco anda
+var is_moving = false # Trava o input quando an
 var input_direction = Vector2.ZERO
 var previous_direction = input_direction
 var primeira_perna = true # variável para deixar a animação mais realista
-
 @onready var ray = $RayCast2D
 @onready var anim = $AnimatedSprite2D
 
@@ -18,7 +17,6 @@ func _physics_process(_delta):
 	if is_moving:
 		return
 
-	# Verifica as teclas (configure "ui_up", "ui_down", etc. no mapa de entrada)
 	input_direction = Vector2.ZERO
 	if Input.is_key_pressed(KEY_W):
 		input_direction = Vector2.UP
@@ -48,10 +46,9 @@ func move(dir, prev_dir):
 	# 2. Verifica colisão com RayCast antes de andar
 	# Aponta o raio para onde queremos ir (ex: 160px para a direita)
 	ray.target_position = dir * (tile_size + 2)
-	ray.force_raycast_update() # Força a atualização imediata do raio
-	#
+	ray.force_raycast_update()
+	
 	if ray.is_colliding():
-		## Se o raio bateu em algo, não anda!
 		return
 	
 	# 3. Inicia o movimento (Tween)
@@ -100,7 +97,7 @@ func update_animation(dir, prev_dir):
 		else:
 			anim.play("walk_right_2")
 			primeira_perna = true
-		#sprite.flip_h = false # Espelhar se necessário
+		#sprite.flip_h = false
 	elif dir == Vector2.RIGHT:
 		# mudando o valor da variável 
 		# para não deixar a animação invertida
@@ -112,9 +109,7 @@ func update_animation(dir, prev_dir):
 		else:
 			anim.play("walk_right_2")
 			primeira_perna = true
-		#sprite.flip_h = true
 	else:
-		# animações idle (parado)
 		idle_animations(prev_dir)
 			
 func idle_animations(prev_dir):
@@ -129,8 +124,6 @@ func idle_animations(prev_dir):
 		anim.flip_h = false
 		anim.play("idle_right")
 	elif prev_dir == Vector2.LEFT:
-		# invertendo uma animação que eu 
-		# já tenho
 		anim.flip_h = true
 		anim.play("idle_right")
 	else: #animação padrão

@@ -13,8 +13,7 @@ func _ready() -> void:
 	camera.limit_left = limites_mapa.position.x * tile_size
 	camera.limit_top = limites_mapa.position.y * tile_size
 	camera.limit_bottom = limites_mapa.end.y * tile_size
-	camera.limit_right = limites_mapa.end.x * tile_size
-	
+	camera.limit_right = limites_mapa.end.x * tile_size 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	anim.play("apagar")
