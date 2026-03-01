@@ -143,7 +143,6 @@ func _stop_talk(portrait: AnimatedSprite2D) -> void:
 
 func _start_talk(portrait: AnimatedSprite2D) -> void:
 	if not is_instance_valid(portrait): return
-	portrait.play("talk")
 
 func _set_portrait_for(character_name: String) -> void:
 	var frames_path: String = "res://assets/characters/%s/portrait.tres" % character_name

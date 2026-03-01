@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bim3h8kay7re8"
+path="res://.godot/imported/sra_capivara.dialogue-cbecf690955d91724f4f3825f963a9de.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/sra_capivara.dialogue"
+dest_files=["res://.godot/imported/sra_capivara.dialogue-cbecf690955d91724f4f3825f963a9de.tres"]
+
+[params]
+
+defaults=true
