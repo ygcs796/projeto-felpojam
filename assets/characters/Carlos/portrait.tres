@@ -1,0 +1,25 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dlmv8clesc0rm"]
+
+[ext_resource type="Texture2D" uid="uid://bsymaf5vay3u1" path="res://assets/characters/Carlos/Sprites de fala básicos.png" id="1_2rty2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32vny"]
+atlas = ExtResource("1_2rty2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4uqe"]
+atlas = ExtResource("1_2rty2")
+region = Rect2(32, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_32vny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4uqe")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]

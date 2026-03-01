@@ -1,0 +1,25 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://batqc6dmec12o"]
+
+[ext_resource type="Texture2D" uid="uid://docimp00smdm4" path="res://assets/characters/Shekira/portrait.png" id="1_x08uv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwcrl"]
+atlas = ExtResource("1_x08uv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61edl"]
+atlas = ExtResource("1_x08uv")
+region = Rect2(32, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwcrl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_61edl")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
