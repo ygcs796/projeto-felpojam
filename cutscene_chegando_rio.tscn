@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://bm14rotgl53mv"]
+
+[ext_resource type="Texture2D" uid="uid://cdunjmjne8pmt" path="res://assets/cutscenes/Linuz e shekira chegando no Rio (espaçado).png" id="1_otjvk"]
+[ext_resource type="PackedScene" uid="uid://coea13jga18gc" path="res://transicao_circulo.tscn" id="1_tf2fl"]
+[ext_resource type="AudioStream" uid="uid://c01nht1lkv8cf" path="res://assets/songs/musica de loop.ogg" id="3_u5ixr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otjvk"]
+atlas = ExtResource("1_otjvk")
+region = Rect2(0, 0, 129, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5ixr"]
+atlas = ExtResource("1_otjvk")
+region = Rect2(130, 0, 129, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15lvf"]
+atlas = ExtResource("1_otjvk")
+region = Rect2(260, 0, 129, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dg4cr"]
+atlas = ExtResource("1_otjvk")
+region = Rect2(390, 0, 129, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frv8e"]
+atlas = ExtResource("1_otjvk")
+region = Rect2(520, 0, 128, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_otjvk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otjvk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5ixr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15lvf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dg4cr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frv8e")
+}],
+"loop": false,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="cutscene_chegando_rio" type="Node2D" unique_id=1630826171]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=344427869]
+position = Vector2(120.00001, 81)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_otjvk")
+autoplay = "default"
+frame = 4
+frame_progress = 1.0
+
+[node name="transicao_circulo" parent="." unique_id=790840408 instance=ExtResource("1_tf2fl")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1303819432]
+stream = ExtResource("3_u5ixr")
+autoplay = true
+parameters/looping = false

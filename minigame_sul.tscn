@@ -2,12 +2,13 @@
 
 [ext_resource type="Script" uid="uid://d13qcggucvpqn" path="res://minigame_sul.gd" id="1_qgkl5"]
 [ext_resource type="PackedScene" path="res://cenario_minigame_sul.tscn" id="1_rh4ta"]
-[ext_resource type="PackedScene" path="res://linuz_andando.tscn" id="2_r3iah"]
+[ext_resource type="PackedScene" uid="uid://cdbo8ku08w6p1" path="res://linuz_andando.tscn" id="2_r3iah"]
 [ext_resource type="PackedScene" path="res://spawner_galinhas.tscn" id="4_gvnuj"]
 [ext_resource type="Script" uid="uid://dlvejpbak5t3p" path="res://hud_eggs.gd" id="5_hj5hm"]
 [ext_resource type="Texture2D" uid="uid://dj3sfcuq2qwip" path="res://assets/Vidas/Galinha CORRETA-Sheet.png" id="6_qgkl5"]
 [ext_resource type="Texture2D" uid="uid://dj3xvxmvqe3v7" path="res://assets/Vidas/Galinha ERRADA- Sheet.png" id="7_8ybvf"]
 [ext_resource type="AudioStream" uid="uid://b2ksdxvnr0xpr" path="res://assets/songs/5minigameinteriorsc.ogg" id="8_gvnuj"]
+[ext_resource type="PackedScene" uid="uid://coea13jga18gc" path="res://transicao_circulo.tscn" id="9_vt8gu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8ybvf"]
 atlas = ExtResource("6_qgkl5")
@@ -311,3 +312,5 @@ animation = &"bad_1"
 stream = ExtResource("8_gvnuj")
 autoplay = true
 parameters/looping = true
+
+[node name="transicao_circulo" parent="." unique_id=790840408 instance=ExtResource("9_vt8gu")]

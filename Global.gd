@@ -1,6 +1,6 @@
 extends Node
 
-var velocidade_jogo = 130.0
+var velocidade_jogo = 100.0
 
 func _process(delta: float) -> void:
 	

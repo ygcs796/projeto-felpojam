@@ -9,8 +9,7 @@ var linuz_position = 2
 var is_moving = false
 var input_direction = Vector2.ZERO
 
-func _physics_process(delta):
-	
+func _physics_process(_delta):
 	# Se já estiver andando, não aceita novos comandos
 	if is_moving:
 		return
@@ -27,7 +26,6 @@ func _physics_process(delta):
 		move(input_direction)
 
 func move(dir):
-	
 	ray.target_position = dir * tile_size
 	ray.force_raycast_update()
 	

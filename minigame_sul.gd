@@ -7,6 +7,8 @@ var score := 0
 var erros := 0
 
 @onready var hud: CanvasLayer = $CanvasLayer
+@onready var transicao: AnimationPlayer = $transicao_circulo/AnimationPlayer
+var transitioning := false
 
 func _ready() -> void:
 	_atualizar_hud_inicial()
@@ -16,6 +18,9 @@ func registrar_galinha(nova_galinha) -> void:
 
 # Brancas são as galinhas certas e as de outras cores são as erradas
 func _on_galinha_coletada(tipo: String) -> void:
+	if transitioning:
+		return
+
 	if tipo == "branca":
 		score = clamp(score + 1, 0, max_good)
 		if hud.has_method("set_good"):
@@ -30,12 +35,24 @@ func _on_galinha_coletada(tipo: String) -> void:
 	atualizar_placar()
 
 func verificar_vitoria() -> void:
-	if score >= max_good:
-		pass
+	if score >= max_good and not transitioning:
+		transitioning = true
+
+		get_tree().paused = true
+		await get_tree().create_timer(0.5).timeout
+
+		# transição (escurece)
+		if transicao and transicao.has_animation("apagar"):
+			transicao.play("apagar")
+			await transicao.animation_finished
+
+		get_tree().paused = false
+		get_tree().change_scene_to_file("res://cutscene_carimbo_sc.tscn")
 
 func verificar_gameover() -> void:
 	if erros >= max_bad:
-		pass
+		await get_tree().create_timer(0.5).timeout
+		get_tree().reload_current_scene()
 
 func atualizar_placar() -> void:
 	if hud.has_method("update_score_text"):
