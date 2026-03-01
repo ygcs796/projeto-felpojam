@@ -1,16 +1,17 @@
-[gd_scene format=3 uid="uid://bwecy7vnfjefy"]
+[gd_scene format=3 uid="uid://by62wktpbmt2l"]
 
-[ext_resource type="Script" path="res://cutscene_encontro.gd" id="1_tkwoi"]
+[ext_resource type="Script" uid="uid://cp408gu0bjc2p" path="res://cutscene_encontro.gd" id="1_tkwoi"]
 [ext_resource type="Texture2D" uid="uid://bcmb225m6p3bj" path="res://assets/cutscenes/shekira_encontrando_linuz_na_praia.png" id="2_hqhu8"]
-[ext_resource type="PackedScene" uid="uid://403yv2oepw2m" path="res://transicao_circulo.tscn" id="3_4abpy"]
+[ext_resource type="PackedScene" uid="uid://coea13jga18gc" path="res://transicao_circulo.tscn" id="3_4abpy"]
 
 [node name="cutscene_encontro" type="Node2D" unique_id=1630826171]
 script = ExtResource("1_tkwoi")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1866019849]
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(10.3, 10.3)
+offset_left = -58.999992
+offset_right = 69.00001
+offset_bottom = 64.0
+scale = Vector2(2.5, 2.5)
 texture = ExtResource("2_hqhu8")
 
 [node name="transicao_circulo" parent="." unique_id=790840408 instance=ExtResource("3_4abpy")]
