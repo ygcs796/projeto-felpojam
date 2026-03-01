@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var wait_seconds := 1.2
-@export var return_scene := "res://minigame_surf.tscn"
+@export var return_scene := "res://scenes/minigame_surf.tscn"
 
 @onready var transicao: AnimationPlayer = $transicao_circulo/AnimationPlayer
 

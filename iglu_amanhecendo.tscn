@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://1ij3a6xv51k7"]
+[gd_scene format=3 uid="uid://dkqn65pw4i3pn"]
 
 [ext_resource type="Script" uid="uid://by6whcro8q2x4" path="res://iglu_amanhecendo.gd" id="1_3r60p"]
 [ext_resource type="Texture2D" uid="uid://ciw0o3sggr2sl" path="res://assets/iglu_amanhecendo.png" id="1_myq5j"]
-[ext_resource type="PackedScene" path="res://transicao_circulo.tscn" id="3_h5a5r"]
+[ext_resource type="PackedScene" uid="uid://coea13jga18gc" path="res://transicao_circulo.tscn" id="3_h5a5r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3r60p"]
 atlas = ExtResource("1_myq5j")

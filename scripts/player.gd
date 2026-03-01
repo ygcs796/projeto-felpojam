@@ -1,14 +1,14 @@
 extends CharacterBody2D
 
 # Configurações
-var tile_size = 16  # O tamanho do passo
-var move_speed = 0.28 # Tempo em segundos para dar um passo
+var tile_size = 16 
+var move_speed = 0.28
 
 # Variáveis de controle
-var is_moving = false # Trava o input quando an
+var is_moving = false 
 var input_direction = Vector2.ZERO
 var previous_direction = input_direction
-var primeira_perna = true # variável para deixar a animação mais realista
+var primeira_perna = true
 @onready var ray = $RayCast2D
 @onready var anim = $AnimatedSprite2D
 
@@ -45,7 +45,6 @@ func move(dir, prev_dir):
 	
 	if ray.is_colliding():
 		return
-	
 	
 	var target_position = position + (dir * tile_size)
 	

@@ -1,9 +1,10 @@
-[gd_scene format=3 uid="uid://gsuw25vpayvf"]
+[gd_scene format=3 uid="uid://bk7g0m6gkc7oy"]
 
-[ext_resource type="Script" uid="uid://cwu7ualyh0q5k" path="res://scripts/polo_sul.gd" id="1_k8fmu"]
-[ext_resource type="PackedScene" uid="uid://bbt6f3mldvv1n" path="res://scenes/cenario_polo_sul.tscn" id="2_d453o"]
-[ext_resource type="PackedScene" uid="uid://ddry44an54yp1" path="res://scenes/player.tscn" id="3_n1vv5"]
+[ext_resource type="Script" uid="uid://cb56uqfft6m2e" path="res://polo_sul.gd" id="1_k8fmu"]
+[ext_resource type="PackedScene" path="res://scenes/cenario_polo_sul.tscn" id="2_d453o"]
+[ext_resource type="PackedScene" uid="uid://bc8eb1km04253" path="res://scenes/player.tscn" id="3_n1vv5"]
 [ext_resource type="PackedScene" uid="uid://coea13jga18gc" path="res://transicao_circulo.tscn" id="4_8e51d"]
+[ext_resource type="Script" uid="uid://b4bq2haw2kk7w" path="res://scripts/player.gd" id="4_ys514"]
 [ext_resource type="AudioStream" uid="uid://cqxkl6uocnyn7" path="res://assets/songs/1polostart.ogg" id="5_nrcdt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c6vhw"]
@@ -79,8 +80,8 @@ script = ExtResource("1_k8fmu")
 position = Vector2(65, -7)
 
 [node name="Player" parent="." unique_id=895579848 instance=ExtResource("3_n1vv5")]
-process_mode = 1
-position = Vector2(120, 79)
+position = Vector2(121, 76)
+script = ExtResource("4_ys514")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=372103593]
 
