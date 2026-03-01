@@ -2,7 +2,7 @@ extends RigidBody2D
 
 var posicao_inicial : Vector2
 var posicao_adversario = Vector2(200, 29)
-var deve_resetar = false # flag para resetar a posição da bolinha
+var deve_resetar = false
 var quem_joga = "player"
 
 # Called when the node enters the scene tree for the first time.
@@ -15,7 +15,6 @@ func _process(delta: float) -> void:
 	pass
 	
 func _input(event: InputEvent) -> void:
-	# resetando a posição da bolinha para DEBUG
 	if Input.is_key_pressed(KEY_R):
 		deve_resetar = true
 		

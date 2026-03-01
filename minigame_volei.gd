@@ -72,7 +72,7 @@ func comecar_contador():
 	
 func verificar_resultado_player():
 	
-	if pontos_player == 5: #vitória
+	if pontos_player == 5:
 		get_tree().paused = true
 		$Vitoria.visible = true
 	else:
@@ -80,7 +80,7 @@ func verificar_resultado_player():
 		
 func verificar_resultado_adversario():
 	
-	if pontos_adversario == 5: #derrota
+	if pontos_adversario == 5:
 		get_tree().paused = true
 		$Derrota.visible = true
 		

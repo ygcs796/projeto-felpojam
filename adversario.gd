@@ -16,10 +16,8 @@ func _physics_process(delta: float) -> void:
 	
 	var diferenca_x = bola.global_position.x - global_position.x
 	
-	# aplicando velocidade com um suavizador (sensibilidade)
 	velocity.x = diferenca_x * (velocidade_max * sensibilidade)
 	
-	# limitador de velocidade (pra não ficar infinita)
 	velocity.x = clamp(velocity.x, -velocidade_max, velocidade_max)
 	
 	if is_on_floor() and pode_pular: 
