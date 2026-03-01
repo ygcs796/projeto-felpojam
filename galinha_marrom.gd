@@ -7,10 +7,8 @@ signal coletada(cor)
 func _ready() -> void:
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	# fazendo a galinha andar da direita para a esquerda
 	position.x -= Global.velocidade_jogo * delta
 	
 	if position.x <= -20:
