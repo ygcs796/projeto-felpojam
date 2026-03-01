@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://gsuw25vpayvf"]
+
+[ext_resource type="Script" uid="uid://cwu7ualyh0q5k" path="res://scripts/polo_sul.gd" id="1_k8fmu"]
+[ext_resource type="PackedScene" uid="uid://bbt6f3mldvv1n" path="res://scenes/cenario_polo_sul.tscn" id="2_d453o"]
+[ext_resource type="PackedScene" uid="uid://ddry44an54yp1" path="res://scenes/player.tscn" id="3_n1vv5"]
+[ext_resource type="PackedScene" uid="uid://coea13jga18gc" path="res://transicao_circulo.tscn" id="4_8e51d"]
+[ext_resource type="AudioStream" uid="uid://cqxkl6uocnyn7" path="res://assets/songs/1polostart.ogg" id="5_nrcdt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c6vhw"]
+size = Vector2(687.5, 65)
+
+[sub_resource type="Animation" id="Animation_8p4md"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["estou vivendo a tempos aqui."]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ys514"]
+resource_name = "narração"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.4333334, 4.266667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["estou vivendo a tempos aqui.", "estou vivendo a tempos aqui.", "após o intercambio,
+percebi que ficou bem
+ tedioso viver neste lugar"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.6666667, 4.3333335, 7.1, 7.9230824, 8.443035),
+"transitions": PackedFloat32Array(0.37892908, 0.06037117, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0, 1.0, 1.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k8fmu"]
+_data = {
+&"RESET": SubResource("Animation_8p4md"),
+&"narração": SubResource("Animation_ys514")
+}
+
+[node name="polo_sul" type="Node2D" unique_id=31709391]
+script = ExtResource("1_k8fmu")
+
+[node name="cenario_polo_sul" parent="." unique_id=733751591 instance=ExtResource("2_d453o")]
+position = Vector2(65, -7)
+
+[node name="Player" parent="." unique_id=895579848 instance=ExtResource("3_n1vv5")]
+process_mode = 1
+position = Vector2(120, 79)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=372103593]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1177934701]
+position = Vector2(233.25, -180)
+shape = SubResource("RectangleShape2D_c6vhw")
+
+[node name="Label" type="Label" parent="." unique_id=1904264197]
+modulate = Color(0, 0, 0, 1)
+offset_left = 3.0
+offset_top = -5.0
+offset_right = 226.0
+offset_bottom = 44.0
+text = "estou vivendo a tempos aqui."
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Label" unique_id=1315791820]
+position = Vector2(-7, 2)
+stream = ExtResource("5_nrcdt")
+
+[node name="transicao_circulo" parent="." unique_id=790840408 instance=ExtResource("4_8e51d")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1479971152]
+root_node = NodePath("../Label")
+libraries/ = SubResource("AnimationLibrary_k8fmu")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
