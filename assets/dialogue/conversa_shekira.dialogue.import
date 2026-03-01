@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dddp3vqlrs32n"
+path="res://.godot/imported/conversa_shekira.dialogue-26da314c62301bc89965c09efadf49fd.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/conversa_shekira.dialogue"
+dest_files=["res://.godot/imported/conversa_shekira.dialogue-26da314c62301bc89965c09efadf49fd.tres"]
+
+[params]
+
+defaults=true

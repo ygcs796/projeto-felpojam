@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bm14rotgl53mv"]
 
+[ext_resource type="Script" uid="uid://fykqw4d8ue0i" path="res://cutscene_chegando_rio.gd" id="1_15lvf"]
 [ext_resource type="Texture2D" uid="uid://cdunjmjne8pmt" path="res://assets/cutscenes/Linuz e shekira chegando no Rio (espaçado).png" id="1_otjvk"]
 [ext_resource type="PackedScene" uid="uid://coea13jga18gc" path="res://transicao_circulo.tscn" id="1_tf2fl"]
 [ext_resource type="AudioStream" uid="uid://c01nht1lkv8cf" path="res://assets/songs/musica de loop.ogg" id="3_u5ixr"]
@@ -48,6 +49,7 @@ animations = [{
 }]
 
 [node name="cutscene_chegando_rio" type="Node2D" unique_id=1630826171]
+script = ExtResource("1_15lvf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=344427869]
 position = Vector2(120.00001, 81)

@@ -1,0 +1,43 @@
+~ shekira_1
+Shekira: VOCÊ?
+Linuz: Eu?
+Shekira: É O MEU AMIGO LÁ?
+Linuz: Sim sou eu, você é a Shekira?
+Shekira: SOU, QUANTO TEMPO! Faz o que aqui?
+Linuz: Bom, eu vim para ver meus amigos...
+Linuz: ... eu peguei minha prancha de surf e...
+Linuz: ... aí a única coisa que eu lembro é de bater num iceberg e acordar aqui!
+Shekira: Entendi! Incrivelmente... louco você decidir vir surfando até aqui...
+Shekira: Além disso, posso dizer que é uma grande coincidência.
+Shekira: Já você pode ir visitar nossos amigos tranquilo por causa de uma promoção grande
+Shekira: que está tendo nas companhia aéreas.
+Shekira: Se você conseguir vencer torneios, você consegue uma passagem aérea totalmente de graça através de um carimbo.
+Shekira: Você só tem que conseguir vencer.
+Shekira: Só que primeiro vamos fazer os seus documentos e arrumar você, porque você está todo acabado.
+=> END
+
+~ shekira_2
+Shekira: Chegamos, vamos rapidinho só pegar o seu passaporte.
+Linuz: ...isso é... ok.
+=> END
+
+~ shekira_3
+Linuz: Foi mais facil do que eu imaginava... que bom.
+Shekira: Você estava com medo, Linuz?
+Linuz: Nãoooo..... vamos logo...
+Shekira: Certo, é por ali à direita.
+=> END
+
+~ shekira_interior_1
+Shekira: Chegamos, essa é a pequena cidade que está participando de um dos programas que dá esse "prêmio"
+Shekira: Garanto você ver as pessoas por aí, talvez elas tenham dicas ou algo do tipo.
+Linuz: Ok, em busca da vitória, eba!
+Shekira: ... quem é vitória...?
+=> END
+
+~ shekira_interior_2
+Shekira: CARACA Linuz, nunca pensei que você fosse bom como mostrou...
+Shekira: Estou curiosa, acho que vou ir junto com você.
+Linuz: Mas você já não ia?
+Shekira: Sim
+=> END

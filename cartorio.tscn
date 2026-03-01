@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://pii6lenj4i38"]
 
-[ext_resource type="Script" path="res://cartorio.gd" id="1_4gslf"]
+[ext_resource type="Script" uid="uid://bgie34xhoiv8k" path="res://cartorio.gd" id="1_4gslf"]
 [ext_resource type="Texture2D" uid="uid://xs5gmyupstuw" path="res://assets/cartório/mesa-cima.png" id="1_hth1e"]
 [ext_resource type="Texture2D" uid="uid://o6glmai5cdtg" path="res://assets/cartório/documento-linuz.png" id="2_x5aep"]
 [ext_resource type="Texture2D" uid="uid://lljool7ivkm1" path="res://assets/cartório/caneta e borracha.png" id="3_x5aep"]

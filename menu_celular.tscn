@@ -26,6 +26,7 @@ corner_radius_bottom_left = 175
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_irewv"]
 
 [node name="menu_celular" type="Control" unique_id=1213116894]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

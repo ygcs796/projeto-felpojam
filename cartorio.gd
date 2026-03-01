@@ -39,4 +39,6 @@ func _exit_to_beach() -> void:
 		await anim.animation_finished
 
 	# Troca de cena
+	get_tree().set_meta("spawn_point", "spawn_cartorio")
+	get_tree().set_meta("play_dialogue", "shekira_3")
 	get_tree().change_scene_to_file(target_scene)

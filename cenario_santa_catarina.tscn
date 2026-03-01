@@ -1,8 +1,10 @@
 [gd_scene format=4 uid="uid://cdu8psmyekmmb"]
 
 [ext_resource type="Texture2D" uid="uid://bcncj08fn1y4b" path="res://assets/tiles/ondas-Sheet verde.png" id="1_4lyjy"]
-[ext_resource type="Script" path="res://cenario_santa_catarina.gd" id="1_srrsr"]
+[ext_resource type="Script" uid="uid://dqt6jdf5hid4j" path="res://cenario_santa_catarina.gd" id="1_srrsr"]
+[ext_resource type="Resource" uid="uid://dddp3vqlrs32n" path="res://assets/dialogue/conversa_shekira.dialogue" id="2_2l2gl"]
 [ext_resource type="Texture2D" uid="uid://cqlwv0xd5smut" path="res://assets/tiles/Copacabana e areia arcos-sheet.png" id="3_4lyjy"]
+[ext_resource type="PackedScene" uid="uid://bgxawjvok4l2q" path="res://scenes/balloon.tscn" id="3_b2k1y"]
 [ext_resource type="Texture2D" uid="uid://b2iyu5pih1rfs" path="res://assets/tiles/Santa catarina pisos -sheet.png" id="3_ldibt"]
 [ext_resource type="Texture2D" uid="uid://vacux58e48f2" path="res://assets/tiles/Pernambuco2.png" id="4_ijkiv"]
 [ext_resource type="Texture2D" uid="uid://bogxkagvmdt8" path="res://assets/tiles/Rua e calçada generica-Sheet.png" id="5_81fqf"]
@@ -898,19 +900,19 @@ region = Rect2(32, 0, 16, 16)
 atlas = ExtResource("16_b2k1y")
 region = Rect2(48, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oneej"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1iqx"]
 atlas = ExtResource("18_cms7o")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jepqc"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xb2ma"]
 atlas = ExtResource("18_cms7o")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2l2gl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_moq26"]
 atlas = ExtResource("18_cms7o")
 region = Rect2(32, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_b2k1y"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5bmnc"]
 atlas = ExtResource("18_cms7o")
 region = Rect2(48, 0, 16, 16)
 
@@ -1003,16 +1005,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_oneej")
+"texture": SubResource("AtlasTexture_r1iqx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jepqc")
+"texture": SubResource("AtlasTexture_xb2ma")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2l2gl")
+"texture": SubResource("AtlasTexture_moq26")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_b2k1y")
+"texture": SubResource("AtlasTexture_5bmnc")
 }],
 "loop": true,
 "name": &"idle_lado",
@@ -1093,9 +1095,14 @@ size = Vector2(177.75, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hv2fv"]
 size = Vector2(15.5, 236.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2n15y"]
+size = Vector2(177.75, 16)
+
 [node name="Cenario_santa_catarina" type="Node2D" unique_id=840574297]
 position = Vector2(427, -87)
 script = ExtResource("1_srrsr")
+shekira_dialogue = ExtResource("2_2l2gl")
+balloon_scene = ExtResource("3_b2k1y")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=774621669]
 stream = SubResource("AudioStreamPlaylist_6fgx3")
@@ -1147,7 +1154,7 @@ autoplay = "default"
 frame_progress = 0.58045787
 
 [node name="shekira" type="AnimatedSprite2D" parent="." unique_id=100153589]
-position = Vector2(-87, 121)
+position = Vector2(-93, 120.00001)
 scale = Vector2(1.2, 1.2)
 sprite_frames = SubResource("SpriteFrames_sorij")
 animation = &"idle_lado"
@@ -1233,6 +1240,10 @@ shape = SubResource("RectangleShape2D_5ubdi")
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Colisor do mapa" unique_id=893751755]
 position = Vector2(314, 53)
 shape = SubResource("RectangleShape2D_hv2fv")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Colisor do mapa" unique_id=978362700]
+position = Vector2(532, 514)
+shape = SubResource("RectangleShape2D_2n15y")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1515164446]
 stream = ExtResource("22_oneej")

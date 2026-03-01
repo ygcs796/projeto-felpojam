@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bgtyx6haepouy"
+path="res://.godot/imported/cutscene_polo_sul2.dialogue-9cd7cca89b6cb124306b92dda0e4b159.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/cutscene_polo_sul2.dialogue"
+dest_files=["res://.godot/imported/cutscene_polo_sul2.dialogue-9cd7cca89b6cb124306b92dda0e4b159.tres"]
+
+[params]
+
+defaults=true

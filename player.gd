@@ -2,18 +2,24 @@ extends CharacterBody2D
 
 # Configurações
 var tile_size = 16  
-var move_speed = 0.3 #
+var move_speed = 0.3
 
 # Variáveis de controle
 var is_moving = false 
 var input_direction = Vector2.ZERO
 var previous_direction = input_direction
-var primeira_perna = true 
+var primeira_perna = true
+var dialogue_open = false
 
 @onready var ray = $RayCast2D
 @onready var anim = $AnimatedSprite2D
 
 func _physics_process(_delta):
+	if dialogue_open:
+		input_direction = Vector2.ZERO
+		update_animation(Vector2.ZERO, previous_direction)
+		return
+		
 	if is_moving:
 		return
 

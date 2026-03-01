@@ -1,10 +1,18 @@
 extends CanvasLayer
+signal dialogue_finished
 
 @export var dialogue_resource: DialogueResource
 @export var start_from_title: String = ""
 @export var auto_start: bool = false
 @export var next_action: StringName = &"ui_accept"
 @export var skip_action: StringName = &"ui_cancel"
+@export var hide_character_name: bool = false
+@export var hide_portraits: bool = false
+
+@export var cutscene_auto: bool = false
+@export var seconds_per_character: float = 0.03
+@export var min_hold_time: float = 0.9
+@export var max_hold_time: float = 4.0
 
 var temporary_game_states: Array = []
 var is_waiting_for_input: bool = false
@@ -19,6 +27,8 @@ var dialogue_line: DialogueLine:
 			var player = get_tree().get_first_node_in_group("player")
 			if player:
 				player.dialogue_open = false
+
+			emit_signal("dialogue_finished")
 
 			if owner == null:
 				queue_free()
@@ -70,10 +80,13 @@ func apply_dialogue_line() -> void:
 	balloon.focus_mode = Control.FOCUS_ALL
 	balloon.grab_focus()
 
-	character_label.visible = not dialogue_line.character.is_empty()
+	character_label.visible = (not hide_character_name) and (not dialogue_line.character.is_empty())
 	character_label.text = tr(dialogue_line.character, "dialogue")
 
-	_set_portrait_for(dialogue_line.character)
+	portrait_player.visible = not hide_portraits
+	portrait_npc.visible = not hide_portraits
+	if not hide_portraits:
+		_set_portrait_for(dialogue_line.character)
 
 	dialogue_label.hide()
 	dialogue_label.dialogue_line = dialogue_line
@@ -81,14 +94,11 @@ func apply_dialogue_line() -> void:
 	responses_menu.hide()
 	responses_menu.responses = dialogue_line.responses
 
-	# Show our balloon
 	balloon.show()
 
-	# Sempre começa sem ninguém falando
 	_stop_talk(portrait_player)
 	_stop_talk(portrait_npc)
 
-	# Digitar texto + animar boca SÓ enquanto digita
 	dialogue_label.show()
 	if not dialogue_line.text.is_empty():
 		var speaker: AnimatedSprite2D = _get_speaker_sprite(dialogue_line.character)
@@ -97,14 +107,24 @@ func apply_dialogue_line() -> void:
 		await dialogue_label.finished_typing
 		_stop_talk(speaker)
 
-	# Depois que terminou de digitar, decide o que fazer
+	if cutscene_auto:
+		responses_menu.hide()
+
+		var dialogue = clamp(dialogue_line.text.length() * seconds_per_character, min_hold_time, max_hold_time)
+		if dialogue_line.time != "":
+			dialogue = dialogue_line.text.length() * seconds_per_character if dialogue_line.time == "auto" else dialogue_line.time.to_float()
+
+		await get_tree().create_timer(dialogue).timeout
+		next(dialogue_line.next_id)
+		return
+
 	if dialogue_line.responses.size() > 0:
 		balloon.focus_mode = Control.FOCUS_NONE
 		responses_menu.show()
 
 	elif dialogue_line.time != "":
-		var t: float = dialogue_line.text.length() * 0.02 if dialogue_line.time == "auto" else dialogue_line.time.to_float()
-		await get_tree().create_timer(t).timeout
+		var t2: float = dialogue_line.text.length() * 0.02 if dialogue_line.time == "auto" else dialogue_line.time.to_float()
+		await get_tree().create_timer(t2).timeout
 		next(dialogue_line.next_id)
 
 	else:
@@ -150,6 +170,9 @@ func next(next_id: String) -> void:
 
 
 func _on_balloon_gui_input(event: InputEvent) -> void:
+	if cutscene_auto:
+		return
+		
 	if dialogue_label.is_typing:
 
 		var mouse_click: bool = (

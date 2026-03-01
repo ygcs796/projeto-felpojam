@@ -2,7 +2,10 @@
 
 [ext_resource type="Script" uid="uid://by6whcro8q2x4" path="res://iglu_amanhecendo.gd" id="1_3r60p"]
 [ext_resource type="Texture2D" uid="uid://ciw0o3sggr2sl" path="res://assets/iglu_amanhecendo.png" id="1_myq5j"]
+[ext_resource type="Resource" uid="uid://bgtyx6haepouy" path="res://assets/dialogue/cutscene_polo_sul2.dialogue" id="2_gb1u4"]
+[ext_resource type="PackedScene" uid="uid://dsjl1w72ouhd2" path="res://balloon_cutscenes.tscn" id="2_rs7gh"]
 [ext_resource type="PackedScene" uid="uid://coea13jga18gc" path="res://transicao_circulo.tscn" id="3_h5a5r"]
+[ext_resource type="AudioStream" uid="uid://j4oqjq7ja38q" path="res://assets/songs/2-a vida no polo.wav" id="6_v844k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3r60p"]
 atlas = ExtResource("1_myq5j")
@@ -154,6 +157,74 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pe55j")
 }],
+"loop": true,
+"name": &"amanhecer_loop",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3r60p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5a5r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rs7gh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gb1u4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v844k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y46q5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rh6r1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8re7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7tb37")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxfow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8r1c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ohs3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ta5n3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwqvj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvxun")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l7ngm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcdlq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y8npf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6r6m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svpvh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pe55j")
+}],
 "loop": false,
 "name": &"default",
 "speed": 5.0
@@ -161,13 +232,18 @@ animations = [{
 
 [node name="iglu_amanhecendo" type="Node2D" unique_id=705040130]
 script = ExtResource("1_3r60p")
+dialogue_return = ExtResource("2_gb1u4")
+cutscene_balloon = ExtResource("2_rs7gh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1998973990]
 position = Vector2(126, 80)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_vc8ri")
+animation = &"amanhecer_loop"
 autoplay = "default"
-frame = 20
-frame_progress = 1.0
 
 [node name="transicao_circulo" parent="." unique_id=790840408 instance=ExtResource("3_h5a5r")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1219336957]
+stream = ExtResource("6_v844k")
+autoplay = true
